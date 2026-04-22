@@ -124,7 +124,7 @@ body::before {
 .md-search__form {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 999px;
+  border-radius: 16px;
 }
 
 .md-search__input::placeholder {
@@ -144,7 +144,7 @@ body::before {
 .md-sidebar__inner {
   background: linear-gradient(180deg, var(--yatsu-surface-strong-color), var(--yatsu-surface-color));
   border: 1px solid var(--yatsu-border-color);
-  border-radius: 0;
+  border-radius: 16px;
   box-shadow:
     0 18px 40px -26px rgba(15, 23, 42, 0.32),
     0 10px 22px -18px var(--yatsu-shadow-color),
@@ -175,7 +175,7 @@ body::before {
 .md-nav--primary .md-nav__title,
 .md-nav--secondary .md-nav__title {
   margin-bottom: 0.4rem;
-  border-radius: 0;
+  border-radius: 16;
   background: transparent;
 }
 
@@ -213,13 +213,13 @@ body::before {
 }
 
 .md-typeset .md-button {
-  border-radius: 0;
+  border-radius: 16;
   font-weight: 700;
 }
 
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 0;
+  border-radius: 16;
   border: 1px solid color-mix(in srgb, var(--yatsu-accent-color) 18%, var(--yatsu-border-color));
   box-shadow: none;
 }
@@ -281,7 +281,7 @@ body::before {
   .md-typeset .admonition,
   .md-typeset details,
   .md-typeset .md-button {
-    border-radius: 0;
+    border-radius: 16px;
   }
 
   .md-content__inner {

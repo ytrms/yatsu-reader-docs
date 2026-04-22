@@ -4,9 +4,7 @@ site_url: https://docs.yatsu.moe/
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
-  - Reader Guide: reader-guide.md
-  - Troubleshooting: troubleshooting.md
+  - Setting up Drive Sync: google-drive-sync.md
 
 theme:
   name: material

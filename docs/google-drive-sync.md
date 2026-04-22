@@ -97,6 +97,10 @@ You will see a dialog pop up, where you will see your Client ID and your Client 
 
 ![](assets/secrets.png)
 
+Lastly, click on "Audience" on the left, and then click on "Publish app".
+
+![](assets/publish-app.png)
+
 That's it when it comes to the Google side. Now, in Yatsu, go to Settings, and then click on "Data". Scroll down to "Sync and Sources" and open that box. Then, click on "+ Add":
 
 ![](assets/yatsu-sources.png)

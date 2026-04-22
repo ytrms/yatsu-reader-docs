@@ -1,8 +1,6 @@
 site_name: Yatsu Reader Docs
 site_description: Documentation for Yatsu Reader, a web-based ebook reader for Japanese learners.
 site_url: https://docs.yatsu.moe/
-repo_name: ytrms/yatsu-reader-docs
-repo_url: https://github.com/ytrms/yatsu-reader-docs
 
 nav:
   - Home: index.md
@@ -18,8 +16,6 @@ theme:
   font:
     text: Noto Sans JP
     code: JetBrains Mono
-  icon:
-    repo: fontawesome/brands/github
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -56,12 +52,6 @@ extra:
     - icon: material/open-in-new
       link: https://app.yatsu.moe
       name: Open Yatsu Reader
-    - icon: fontawesome/brands/github
-      link: https://github.com/ytrms/yatsu-reader
-      name: Main repository
-    - icon: material/file-document-outline
-      link: https://github.com/ytrms/yatsu-reader-docs
-      name: Documentation repository
 
 markdown_extensions:
   - admonition

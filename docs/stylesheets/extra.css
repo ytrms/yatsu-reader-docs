@@ -27,11 +27,17 @@
   --md-typeset-font-size: 0.8rem;
   --md-text-font: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --md-code-font: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  --md-footer-fg-color: rgba(21, 32, 51, 0.82);
-  --md-footer-fg-color--light: rgba(21, 32, 51, 0.62);
-  --md-footer-fg-color--lighter: rgba(21, 32, 51, 0.44);
+  --md-footer-fg-color: rgba(21, 32, 51, 0.9);
+  --md-footer-fg-color--light: rgba(21, 32, 51, 0.72);
+  --md-footer-fg-color--lighter: rgba(21, 32, 51, 0.58);
   --md-footer-bg-color: transparent;
   --md-footer-bg-color--dark: transparent;
+}
+
+[data-md-color-scheme='default'] {
+  --md-footer-fg-color: rgba(21, 32, 51, 0.9);
+  --md-footer-fg-color--light: rgba(21, 32, 51, 0.72);
+  --md-footer-fg-color--lighter: rgba(21, 32, 51, 0.58);
 }
 
 [data-md-color-scheme='slate'] {
@@ -126,7 +132,7 @@ body::before {
 }
 
 .md-main__inner {
-  margin-top: 0;
+  margin-top: 1rem;
   align-items: start;
 }
 
@@ -228,6 +234,21 @@ body::before {
   background: transparent;
 }
 
+[data-md-color-scheme='default'] .md-footer,
+[data-md-color-scheme='default'] .md-footer__link,
+[data-md-color-scheme='default'] .md-footer__title,
+[data-md-color-scheme='default'] .md-footer__button,
+[data-md-color-scheme='default'] .md-social__link,
+[data-md-color-scheme='default'] .md-copyright {
+  color: rgba(21, 32, 51, 0.9);
+}
+
+[data-md-color-scheme='default'] .md-footer__direction,
+[data-md-color-scheme='default'] .md-copyright__highlight,
+[data-md-color-scheme='default'] .md-footer-meta.md-typeset a {
+  color: rgba(21, 32, 51, 0.72);
+}
+
 .md-footer__link,
 .md-footer__link:hover,
 .md-footer a,
@@ -242,7 +263,9 @@ body::before {
 }
 
 .md-social__link:hover,
-.md-footer a:hover {
+.md-footer a:hover,
+[data-md-color-scheme='default'] .md-social__link:hover,
+[data-md-color-scheme='default'] .md-footer a:hover {
   color: var(--yatsu-accent-strong-color);
 }
 

@@ -1,0 +1,27 @@
+:root {
+  --md-primary-fg-color: #0f766e;
+  --md-primary-fg-color--light: #14b8a6;
+  --md-primary-fg-color--dark: #115e59;
+  --md-accent-fg-color: #0f766e;
+}
+
+.md-header {
+  backdrop-filter: blur(16px);
+}
+
+.md-typeset .hero {
+  margin: 0 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(15, 118, 110, 0.18);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(255, 255, 255, 0.8));
+}
+
+[data-md-color-scheme='slate'] .md-typeset .hero {
+  border-color: rgba(45, 212, 191, 0.18);
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.16), rgba(15, 23, 42, 0.84));
+}
+
+.md-typeset .hero p:last-child {
+  margin-bottom: 0;
+}

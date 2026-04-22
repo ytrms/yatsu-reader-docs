@@ -1,0 +1,72 @@
+site_name: Yatsu Reader Docs
+site_description: Documentation for Yatsu Reader, a web-based ebook reader for Japanese learners.
+site_url: https://docs.yatsu.moe/
+repo_name: ytrms/yatsu-reader
+repo_url: https://github.com/ytrms/yatsu-reader
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Reader Guide: reader-guide.md
+  - Troubleshooting: troubleshooting.md
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/book-open-page-variant
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ytrms/yatsu-reader
+      name: Main repository
+    - icon: material/file-document-outline
+      link: https://github.com/ytrms/yatsu-reader-docs
+      name: Documentation repository
+    - icon: material/open-in-new
+      link: https://app.yatsu.moe
+      name: Open Yatsu Reader
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright © Yatsu Reader

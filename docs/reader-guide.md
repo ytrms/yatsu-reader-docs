@@ -1,37 +1,43 @@
-# Reader Guide
+# Sample Reference Page
 
-<div class="yatsu-page-intro">
-  <span class="yatsu-pill">Planned guide</span>
-  <p>This section will become the main product walkthrough for the reading experience itself: layouts, controls, customization, tracking, and day-to-day usage.</p>
-</div>
+Use a page like this for feature reference, settings reference, or option-by-option explanations.
 
-<div class="yatsu-card-grid yatsu-card-grid--compact">
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Layout</span>
-    <h3>Read the way you want</h3>
-    <p>Pagination, continuous reading, vertical text, horizontal text, and page-flow tradeoffs.</p>
-  </div>
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Appearance</span>
-    <h3>Customize the reader</h3>
-    <p>Fonts, theme options, spacing controls, and the visual settings that shape readability.</p>
-  </div>
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Memory</span>
-    <h3>Save what matters</h3>
-    <p>Highlights, bookmarks, progress tracking, and how the reader remembers your position.</p>
-  </div>
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Stats</span>
-    <h3>Track your reading</h3>
-    <p>Statistics, reading goals, and the data surfaces that help you monitor consistency.</p>
-  </div>
-</div>
+## Short Sections
 
-## Draft outline
+### Example Feature
 
-- Reader controls and navigation
-- Appearance settings and theme behavior
-- Font handling and script support
-- Highlights, bookmarks, and progress
-- Statistics and reading goals
+Describe one feature in one short section. If a page is getting long, split it into more headings instead of writing one giant block of text.
+
+### Example Setting
+
+State what the setting does, what values are possible, and what effect the change has for the reader.
+
+## Table
+
+| Setting | Example value | What it changes |
+| --- | --- | --- |
+| Theme | Dark | Switches the reader appearance |
+| Font size | 120% | Makes text larger |
+| Writing direction | Vertical | Changes page flow |
+
+## Definition List
+
+Term
+: Short explanation of the term.
+
+Another term
+: Another short explanation.
+
+## Code Example
+
+```yaml
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Reader Guide: reader-guide.md
+  - Troubleshooting: troubleshooting.md
+```
+
+## Link Back
+
+Return to the [home page](index.md) when you want the broad reference again.

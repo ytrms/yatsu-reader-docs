@@ -1,9 +1,9 @@
 :root {
   --yatsu-font-color: #152033;
-  --yatsu-background-color: #eef3f6;
-  --yatsu-surface-color: rgba(255, 255, 255, 0.8);
-  --yatsu-surface-strong-color: rgba(255, 255, 255, 0.92);
-  --yatsu-border-color: rgba(148, 163, 184, 0.26);
+  --yatsu-background-color: #dbe8ef;
+  --yatsu-surface-color: rgba(255, 255, 255, 0.82);
+  --yatsu-surface-strong-color: rgba(255, 255, 255, 0.94);
+  --yatsu-border-color: rgba(148, 163, 184, 0.28);
   --yatsu-shadow-color: rgba(15, 23, 42, 0.12);
   --yatsu-accent-color: #0f766e;
   --yatsu-accent-strong-color: #115e59;
@@ -27,13 +27,18 @@
   --md-typeset-font-size: 0.8rem;
   --md-text-font: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --md-code-font: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --md-footer-fg-color: rgba(21, 32, 51, 0.82);
+  --md-footer-fg-color--light: rgba(21, 32, 51, 0.62);
+  --md-footer-fg-color--lighter: rgba(21, 32, 51, 0.44);
+  --md-footer-bg-color: transparent;
+  --md-footer-bg-color--dark: transparent;
 }
 
 [data-md-color-scheme='slate'] {
   --yatsu-font-color: rgba(248, 250, 252, 0.94);
   --yatsu-background-color: #08111a;
-  --yatsu-surface-color: rgba(15, 23, 42, 0.78);
-  --yatsu-surface-strong-color: rgba(15, 23, 42, 0.9);
+  --yatsu-surface-color: rgba(15, 23, 42, 0.8);
+  --yatsu-surface-strong-color: rgba(15, 23, 42, 0.92);
   --yatsu-border-color: rgba(148, 163, 184, 0.2);
   --yatsu-shadow-color: rgba(2, 6, 23, 0.36);
   --yatsu-header-bg: rgba(2, 6, 23, 0.76);
@@ -45,24 +50,38 @@
   --md-typeset-a-color: #5eead4;
   --md-code-fg-color: rgba(248, 250, 252, 0.92);
   --md-code-bg-color: rgba(255, 255, 255, 0.06);
+  --md-footer-fg-color: rgba(248, 250, 252, 0.86);
+  --md-footer-fg-color--light: rgba(248, 250, 252, 0.68);
+  --md-footer-fg-color--lighter: rgba(248, 250, 252, 0.46);
 }
 
 html {
   scroll-behavior: smooth;
+  background: var(--yatsu-background-color);
 }
 
 body {
+  position: relative;
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, rgba(20, 184, 166, 0.16), transparent 32%),
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.12), transparent 24%),
-    linear-gradient(180deg, var(--yatsu-background-color), color-mix(in srgb, var(--yatsu-background-color) 90%, white));
+  background: transparent;
   color: var(--yatsu-font-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-[data-md-color-scheme='slate'] body {
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.15), transparent 32%),
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 24%),
+    linear-gradient(180deg, color-mix(in srgb, var(--yatsu-background-color) 94%, white), var(--yatsu-background-color));
+}
+
+[data-md-color-scheme='slate'] body::before {
   background:
     radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 28%),
     radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 24%),
@@ -107,16 +126,21 @@ body {
 }
 
 .md-main__inner {
-  margin-top: 1rem;
+  margin-top: 0;
+  align-items: start;
+}
+
+.md-sidebar {
+  padding: 0;
 }
 
 .md-content__inner,
 .md-sidebar__inner {
   background: linear-gradient(180deg, var(--yatsu-surface-strong-color), var(--yatsu-surface-color));
   border: 1px solid var(--yatsu-border-color);
-  border-radius: 1.5rem;
+  border-radius: 0;
   box-shadow:
-    0 18px 40px -26px rgba(15, 23, 42, 0.38),
+    0 18px 40px -26px rgba(15, 23, 42, 0.32),
     0 10px 22px -18px var(--yatsu-shadow-color),
     inset 0 1px 0 rgba(255, 255, 255, 0.68);
 }
@@ -132,28 +156,24 @@ body {
   padding: clamp(1rem, 2.1vw, 1.6rem);
 }
 
-.md-sidebar__scrollwrap,
-.md-sidebar__inner {
-  border-radius: 1.5rem;
-}
-
 .md-sidebar__scrollwrap {
-  padding: 0.6rem;
+  margin: 0;
+  padding: 0;
 }
 
 .md-sidebar__inner {
-  min-height: 100%;
-  overflow: hidden;
+  padding: 1rem;
+  overflow: visible;
 }
 
 .md-nav--primary .md-nav__title,
 .md-nav--secondary .md-nav__title {
   margin-bottom: 0.4rem;
-  border-radius: 1rem;
+  border-radius: 0;
+  background: transparent;
 }
 
 .md-nav__link {
-  border-radius: 0.9rem;
   transition:
     background-color 180ms ease,
     color 180ms ease,
@@ -171,210 +191,59 @@ body {
 
 .md-typeset h1,
 .md-typeset h2,
-.md-typeset h3 {
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-.md-typeset h1 {
-  margin-bottom: 1rem;
+.md-typeset img {
+  display: block;
+  width: auto;
+  max-width: min(100%, 22rem);
+  margin: 1rem auto;
 }
 
 .md-typeset .md-button {
-  border-radius: 999px;
+  border-radius: 0;
   font-weight: 700;
-}
-
-.md-typeset .md-button--primary {
-  background: var(--yatsu-accent-color);
-  color: var(--yatsu-accent-fg);
-  box-shadow: 0 12px 24px -16px rgba(15, 118, 110, 0.8);
-}
-
-.md-typeset code {
-  border-radius: 0.5rem;
 }
 
 .md-typeset .admonition,
 .md-typeset details {
-  border-radius: 1rem;
+  border-radius: 0;
   border: 1px solid color-mix(in srgb, var(--yatsu-accent-color) 18%, var(--yatsu-border-color));
   box-shadow: none;
 }
 
-.md-footer {
+.md-typeset code {
+  border-radius: 0.25rem;
+}
+
+.md-footer,
+.md-footer-meta,
+.md-footer__inner {
   background: transparent;
 }
 
-.md-footer-meta {
-  background: transparent;
+.md-footer__link,
+.md-footer__link:hover,
+.md-footer a,
+.md-social__link,
+.md-copyright {
+  color: var(--md-footer-fg-color);
 }
 
-.yatsu-hero {
-  display: grid;
-  gap: 1rem;
-  margin: 0 0 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
-  align-items: stretch;
+.md-footer__direction,
+.md-copyright__highlight {
+  color: var(--md-footer-fg-color--light);
 }
 
-.yatsu-brand-lockup,
-.yatsu-status-panel,
-.yatsu-page-intro,
-.yatsu-card,
-.yatsu-list-panel {
-  background: linear-gradient(180deg, var(--yatsu-surface-strong-color), var(--yatsu-surface-color));
-  border: 1px solid var(--yatsu-border-color);
-  border-radius: 1.35rem;
-  box-shadow:
-    0 18px 40px -26px rgba(15, 23, 42, 0.38),
-    0 10px 22px -18px var(--yatsu-shadow-color),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72);
-}
-
-.yatsu-brand-lockup,
-.yatsu-status-panel,
-.yatsu-page-intro,
-.yatsu-list-panel {
-  padding: 1.3rem 1.4rem;
-}
-
-.yatsu-brand-lockup {
-  position: relative;
-  overflow: hidden;
-}
-
-.yatsu-brand-lockup::after {
-  content: '';
-  position: absolute;
-  inset: auto -10% -32% auto;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 999px;
-  background: radial-gradient(circle, rgba(20, 184, 166, 0.22), transparent 72%);
-  pointer-events: none;
-}
-
-.yatsu-pill,
-.yatsu-card-kicker,
-.yatsu-status-label {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--yatsu-accent-color) 14%, transparent);
-  border: 1px solid color-mix(in srgb, var(--yatsu-accent-color) 24%, var(--yatsu-border-color));
+.md-social__link:hover,
+.md-footer a:hover {
   color: var(--yatsu-accent-strong-color);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.yatsu-hero-logo {
-  display: block;
-  width: min(100%, 23rem);
-  margin: 0.9rem 0 1.2rem;
-}
-
-.yatsu-lead,
-.yatsu-page-intro p {
-  margin: 0;
-  font-size: clamp(1.05rem, 2vw, 1.2rem);
-  line-height: 1.7;
-  color: color-mix(in srgb, var(--yatsu-font-color) 92%, transparent);
-}
-
-.yatsu-copy,
-.yatsu-status-note,
-.yatsu-card p,
-.yatsu-list-panel p {
-  color: color-mix(in srgb, var(--yatsu-font-color) 76%, transparent);
-}
-
-.yatsu-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.25rem;
-}
-
-.yatsu-status-panel {
-  display: grid;
-  gap: 0.85rem;
-  align-content: start;
-}
-
-.yatsu-status-row {
-  display: grid;
-  gap: 0.32rem;
-  padding-bottom: 0.85rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--yatsu-font-color) 8%, var(--yatsu-border-color));
-}
-
-.yatsu-status-row:last-of-type {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.yatsu-status-row strong {
-  font-size: 1rem;
-}
-
-.yatsu-status-note {
-  margin: 0.2rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-
-.yatsu-card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
-  gap: 1rem;
-  margin: 1rem 0 2rem;
-}
-
-.yatsu-card-grid--compact {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
-}
-
-.yatsu-card {
-  display: block;
-  padding: 1.15rem 1.2rem;
-  color: inherit;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.yatsu-card:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--yatsu-accent-color) 26%, var(--yatsu-border-color));
-  box-shadow:
-    0 22px 40px -28px rgba(15, 118, 110, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72);
-}
-
-.yatsu-card h3,
-.yatsu-list-panel h3 {
-  margin: 0.65rem 0 0.45rem;
-  font-size: 1.02rem;
-}
-
-.yatsu-card p,
-.yatsu-list-panel p {
-  margin: 0;
-  line-height: 1.7;
-}
-
-.yatsu-list-panel {
-  display: grid;
-  gap: 1rem;
-  margin: 1rem 0 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
 }
 
 @media (max-width: 1219px) {
@@ -386,16 +255,10 @@ body {
 @media (max-width: 959px) {
   .md-content__inner,
   .md-sidebar__inner,
-  .yatsu-brand-lockup,
-  .yatsu-status-panel,
-  .yatsu-page-intro,
-  .yatsu-card,
-  .yatsu-list-panel {
-    border-radius: 1.15rem;
-  }
-
-  .md-sidebar__scrollwrap {
-    border-radius: 1.15rem;
+  .md-typeset .admonition,
+  .md-typeset details,
+  .md-typeset .md-button {
+    border-radius: 0;
   }
 
   .md-content__inner {

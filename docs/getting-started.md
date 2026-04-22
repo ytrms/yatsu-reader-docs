@@ -1,32 +1,38 @@
-# Getting Started
+# Sample Step-by-Step Page
 
-<div class="yatsu-page-intro">
-  <span class="yatsu-pill">Planned guide</span>
-  <p>This section will cover the first-run path from opening Yatsu Reader to importing a book and tuning the basics for a comfortable reading setup.</p>
-</div>
+Use a page like this for setup guides or first-run flows.
 
-<div class="yatsu-card-grid yatsu-card-grid--compact">
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Step 1</span>
-    <h3>Open the app</h3>
-    <p>Explain where to launch Yatsu Reader and what the landing flow looks like on a clean setup.</p>
-  </div>
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Step 2</span>
-    <h3>Import your first book</h3>
-    <p>Walk through EPUB, HTMLZ, and plain-text import, plus what to do if the library starts empty.</p>
-  </div>
-  <div class="yatsu-card">
-    <span class="yatsu-card-kicker">Step 3</span>
-    <h3>Choose your reading mode</h3>
-    <p>Introduce pagination, continuous mode, and vertical versus horizontal layouts.</p>
-  </div>
-</div>
+## Intro
 
-## Draft outline
+Start with one short paragraph that explains what the page helps the reader do and when they should use it.
 
-- Open `app.yatsu.moe`
-- Import your first EPUB, HTMLZ, or text file
-- Choose reading mode and writing direction
-- Adjust theme, fonts, spacing, and furigana behavior
-- Learn where bookmarks, highlights, and statistics live
+## Prerequisites
+
+- One requirement or assumption
+- Another requirement or assumption
+- A link to a related page if needed
+
+## Steps
+
+1. Open Yatsu Reader.
+2. Import a sample book.
+3. Adjust one or two reader settings.
+4. Confirm that the book opens correctly.
+
+## Code Block
+
+```bash
+mkdocs serve
+mkdocs build
+```
+
+## Inline Code
+
+Use `mkdocs.yml` for site navigation and files under `docs/` for page content.
+
+## Checklist-Style Bullet List
+
+- Explain the goal first
+- Keep each step short
+- Put commands in fenced code blocks
+- Add screenshots only when they clarify something

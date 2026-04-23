@@ -60,8 +60,4 @@ The diagnostics bundle is intended to help troubleshoot issues, but you should s
 
 If you were asked for diagnostics, attach the ZIP to your report and include the notes above.
 
-You can open an issue here:
-
-- [Yatsu Reader issue tracker](https://github.com/ytrms/yatsu-reader/issues/new)
-
-Or send it directly to the maintainer through the channel where you were asked to report the bug.
+You can send it directly to `@ytrms` on Discord.

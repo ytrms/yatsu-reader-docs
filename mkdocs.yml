@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Setting up Drive Sync: google-drive-sync.md
   - Reading Tracking: reading-tracking.md
+  - Using Yatsu Offline: offline.md
   - Compatibility with Ttsu: upstream-compatibility.md
   - Frequently Asked Questions: faq.md
   - How to Report Bugs: how-to-report-bugs.md

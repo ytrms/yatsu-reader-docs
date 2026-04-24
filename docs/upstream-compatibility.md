@@ -1,3 +1,5 @@
+# Compatibility with Ttsu
+
 Yatsu comes from ttsu, and one of my goals is that people should be able to use both without worrying that one will ruin the other's data.
 
 If you connect both Yatsu and ttsu to the same Google Drive folder, the intended result is that both apps can keep using that same library.

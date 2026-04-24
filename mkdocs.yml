@@ -6,6 +6,7 @@ nav:
   - Home: index.md
   - Setting up Drive Sync: google-drive-sync.md
   - Compatibility with Upstream: upstream-compatibility.md
+  - Frequently Asked Questions: faq.md
   - How to Report Bugs: how-to-report-bugs.md
 
 theme:

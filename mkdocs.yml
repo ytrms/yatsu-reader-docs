@@ -5,6 +5,7 @@ site_url: https://docs.yatsu.moe/
 nav:
   - Home: index.md
   - Setting up Drive Sync: google-drive-sync.md
+  - Reading Tracking: reading-tracking.md
   - Compatibility with Upstream: upstream-compatibility.md
   - Frequently Asked Questions: faq.md
   - How to Report Bugs: how-to-report-bugs.md

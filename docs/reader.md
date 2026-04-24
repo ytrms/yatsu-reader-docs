@@ -1,0 +1,206 @@
+# Using the Reader
+
+This page is about the actual reading screen: the place you use after opening a book from the library.
+
+The reader is meant to stay out of the way while still giving quick access to navigation, bookmarks, appearance controls, tracking, and book-specific actions.
+
+## Main Reader Controls
+
+The top bar contains the most common reader actions.
+
+Depending on screen size and book type, some actions may move into the **More reader actions** menu.
+
+Common controls include:
+
+- **Table of contents**: opens the book's chapter list, if Yatsu can find one.
+- **Create bookmark** or **Update bookmark**: saves your current reading position.
+- **Return to bookmark**: jumps back to your saved bookmark, if one exists.
+- **Current autoscroll speed**: shown in continuous mode when autoscroll is available.
+- **Fullscreen**: toggles browser fullscreen.
+- **Appearance**: opens the live appearance panel for reader-specific visual settings.
+- **More reader actions**: opens less frequent reader actions such as completion, custom point controls, image gallery, and keyboard shortcuts.
+
+On narrow screens, the reader uses a compact actions menu so the reading area keeps more space.
+
+## Moving Through a Book
+
+Yatsu has two reader modes: paginated and continuous. The controls are similar, but movement feels different.
+
+In paginated mode:
+
+- Use the page controls, tap edges, or keyboard shortcuts to move page by page.
+- Use **Table of contents** to jump between chapters.
+- Arrow keys can flip pages. Left and right follow the visible page edges, which means vertical text can feel different from horizontal text.
+
+In continuous mode:
+
+- Scroll normally.
+- Autoscroll can move the text for you.
+- The speed indicator shows the current autoscroll multiplier.
+
+The default reader shortcuts include:
+
+| Action | Shortcut |
+| --- | --- |
+| Previous page | `PageUp` / `ArrowUp` |
+| Next page | `PageDown` / `Space` / `ArrowDown` |
+| Flip toward left edge | `ArrowLeft` |
+| Flip toward right edge | `ArrowRight` |
+| Previous chapter | `N` |
+| Next chapter | `M` |
+| Toggle autoscroll | `S` |
+| Increase autoscroll speed | `A` |
+| Decrease autoscroll speed | `D` |
+| Toggle fullscreen | `F` |
+| Show keyboard shortcuts | `?` |
+| Exit reader | `Esc` twice |
+
+!!! note
+
+    Keyboard shortcuts are ignored while many dialogs and menus are open, and while you use modifier keys such as Ctrl or Alt.
+
+## Bookmarks
+
+Bookmarks are the simplest way to save a reading position.
+
+Use **Create bookmark** to save where you are. If you are already on the bookmarked screen, the button may say **Update bookmark** instead.
+
+Use **Return to bookmark** to jump back to that saved position.
+
+The default shortcuts are:
+
+| Action | Shortcut |
+| --- | --- |
+| Create or update bookmark | `B` |
+| Return to bookmark | `R` |
+
+If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a bookmark. Otherwise, it uses the reader's current position.
+
+Bookmarks are stored as progress data. They can be synced or exported with the rest of your reading progress.
+
+## Table of Contents
+
+The table of contents appears when the book includes chapter data that Yatsu can read.
+
+Use it when:
+
+- You want to jump to a specific chapter.
+- You need to check where you are in the book structure.
+- Keyboard chapter shortcuts are too coarse.
+
+If a book does not include usable chapter data, the table of contents control may not appear.
+
+## Custom Reading Point
+
+The custom reading point tells Yatsu which part of the screen should count as your reading position.
+
+This matters for:
+
+- progress calculation
+- bookmarks
+- reading statistics
+- returning to a stable spot after resizing or changing layout
+
+Use **Set Point** from the reader actions menu to choose the point. If a point already exists, the menu can also show **Show Point** and **Reset Point**.
+
+The default shortcut is:
+
+| Action | Shortcut |
+| --- | --- |
+| Set custom reading point | `T` |
+
+In paginated mode, Yatsu may use a text range for the point. In continuous mode, it uses a screen position.
+
+!!! tip
+
+    If progress or bookmarks feel slightly ahead or behind where you expect, set the custom reading point to the place your eyes naturally treat as "current".
+
+## Appearance
+
+The **Appearance** action opens live reader settings without leaving the book.
+
+Use it for changes such as:
+
+- font size and font family
+- line height
+- text margins
+- vertical or horizontal writing behavior
+- page columns
+- furigana display
+- theme and custom theme adjustments
+- publisher style handling
+
+Changes apply while the book is open, so you can adjust the reader until the text feels comfortable.
+
+Some layout changes can move your current position. Yatsu tries to preserve the current reading position, and the custom reading point can make that more predictable.
+
+## Image Gallery
+
+Some books contain images that Yatsu can collect into an image gallery.
+
+When available, **Image gallery** appears in the reader actions menu.
+
+Inside the gallery:
+
+- move between images with the gallery controls
+- use page or arrow shortcuts to move between images
+- press `Esc` to close the gallery
+- spoiler controls may appear if image spoiler settings are enabled
+
+If the current book has no collected images, this action may not appear.
+
+## Reading Tracking
+
+If **Enable Statistics** is turned on, the tracker icon appears in the reader.
+
+The tracker can record:
+
+- reading time
+- characters read
+- reading speed
+- book completion data
+- reading goal progress
+
+Useful defaults:
+
+| Action | Shortcut |
+| --- | --- |
+| Toggle tracking | `P` |
+| Freeze tracking position | `E` |
+
+Use **Freeze tracking position** when you are about to jump around and do not want that movement counted as normal reading.
+
+For more detail, see [Reading Tracking and Statistics](reading-tracking.md).
+
+## Completing a Book
+
+The reader actions menu includes **Complete book**.
+
+Use it when you want Yatsu to record that the book is finished. Depending on your tracking settings, Yatsu may also open the tracker menu or add the remaining character count to the completion entry.
+
+Completion data can appear in statistics and can be affected by tracking settings such as **Overwrite Book Completion** and **Update on Completion**.
+
+## Leaving the Reader
+
+Pressing `Esc` once shows a warning. Pressing `Esc` again within a few seconds returns to the library.
+
+This is meant to prevent accidental exits while reading.
+
+You can also return to the library from the app navigation.
+
+If close confirmation is enabled and your current location has not been bookmarked, Yatsu may ask for confirmation before leaving.
+
+## When Controls Are Missing
+
+Some reader controls only appear when they apply.
+
+For example:
+
+- **Table of contents** needs chapter data.
+- **Return to bookmark** needs an existing bookmark.
+- **Image gallery** needs collected images.
+- **Fullscreen** depends on browser support and current context.
+- **Tracking** needs statistics to be enabled.
+- **Custom point** controls depend on reader mode and custom point settings.
+
+If you do not see a control, it usually means the current book, mode, or settings do not make that function available.

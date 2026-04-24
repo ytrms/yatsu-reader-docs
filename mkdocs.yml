@@ -4,6 +4,7 @@ site_url: https://docs.yatsu.moe/
 
 nav:
   - Home: index.md
+  - Using the Reader: reader.md
   - Setting up Drive Sync: google-drive-sync.md
   - Reading Tracking: reading-tracking.md
   - Using Yatsu Offline: offline.md

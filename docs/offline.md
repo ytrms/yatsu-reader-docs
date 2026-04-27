@@ -17,11 +17,13 @@ Yatsu can be used offline, but only for data that is already on the device.
 In normal use:
 
 1. Open Yatsu once while online.
-2. Open the books you want available offline at least once.
-3. Turn on **Persistent storage** in **Settings** -> **Data** if your browser allows it.
-4. Do not clear Yatsu's site data unless you have exported or synced everything you care about.
+2. Open [**Data settings**](https://app.yatsu.moe/settings?section=data).
+3. Turn on **Full Offline Use** if you want Yatsu itself to be saved for offline PWA use.
+4. Open the books you want available offline at least once.
+5. Turn on **Persistent storage** in **Settings** -> **Data** if your browser allows it.
+6. Do not clear Yatsu's site data unless you have exported or synced everything you care about.
 
-After that, Yatsu should be able to open offline and read local books.
+After that, Yatsu should be able to open offline and read books whose content is already local to this browser.
 
 Google Drive and OneDrive still need an internet connection. When you are offline, Yatsu can keep using local data, but it cannot fetch new cloud data or upload changes until you are online again.
 
@@ -75,21 +77,52 @@ Opening a cloud book gives Yatsu a chance to keep a local copy in browser storag
 
 If you imported a book directly into the **Browser** source, then the book is already local to that browser profile. That is the best option if you mainly care about offline use on one device.
 
-## The app needs to load once while online
+## The app needs to be saved while online
 
 For Yatsu to open while offline, the browser has to save the app files first.
 
-Usually this happens automatically after you open `https://app.yatsu.moe` while online. Installing Yatsu as a PWA can make this feel more like a normal app, but the important part is that the browser has loaded Yatsu successfully at least once.
+Yatsu keeps a small offline cache by default and saves recently used app files as you move through the app. This helps reduce network use, but it is not the same as deliberately saving the complete app for offline use.
+
+If you want Yatsu to behave like a fully prepared offline PWA:
+
+1. Go online.
+2. Open [**Data settings**](https://app.yatsu.moe/settings?section=data).
+3. Turn on **Full Offline Use**.
+4. Wait until Yatsu says it is saved for offline use.
+5. If you use the installed PWA, close and reopen it once while still online.
 
 If you install the PWA and then immediately go offline before the browser finishes saving the app, the PWA may still show the browser's own offline screen.
 
 If that happens:
 
 1. Go online again.
-2. Open `https://app.yatsu.moe`.
-3. Wait for the app to load normally.
-4. Close and reopen the PWA.
-5. Try offline again.
+2. Open [**Data settings**](https://app.yatsu.moe/settings?section=data).
+3. Turn on **Full Offline Use**, or turn it off and on again if it was already enabled.
+4. Wait until Yatsu says it is saved for offline use.
+5. Close and reopen the PWA.
+6. Try offline again.
+
+## Full Offline Use setting
+
+Yatsu has a **Full Offline Use** setting under [**Settings** -> **Data**](https://app.yatsu.moe/settings?section=data).
+
+This setting controls whether Yatsu downloads the complete app shell for offline use. It is off by default so that regular online use does not make every browser download every app file after each update.
+
+When **Full Offline Use** is off:
+
+- Yatsu still caches a small baseline needed to start common flows.
+- Pages and app files can still be cached as you use them.
+- Recently used parts of the app may work offline.
+- A fresh PWA install is not guaranteed to have every Yatsu screen saved offline.
+
+When **Full Offline Use** is on:
+
+- Yatsu downloads the full app shell while you are online.
+- Yatsu shows progress while it saves the app for offline use.
+- Future app updates are saved again for users who keep the setting enabled.
+- This does not download every book; you still need to open books you want available offline.
+
+Turn this on if you expect to open Yatsu itself while offline, especially from an installed PWA.
 
 ## Persistent storage
 

@@ -2,7 +2,7 @@
 
 Yatsu Accounts let you sign in to Yatsu so Reader and Tracking settings can follow you across devices.
 
-For now, accounts are free. The main account feature is **Settings Sync**. A future paid plan, **Yatsu Sync**, is planned for Yatsu-managed book storage and book-related sync, but it is not available yet.
+Making an account is free. The main account feature is **Settings Sync**.
 
 ## Signing in
 
@@ -98,14 +98,6 @@ Streamer mode is a local display preference for screenshots, videos, and streams
 When Streamer mode is on, Yatsu hides the email handle in the header and masks the email address on the account page with `***`.
 
 Streamer mode only affects the current browser or device. It does not change your account email.
-
-## Yatsu Sync
-
-Yatsu Sync is a planned paid account feature for Yatsu-managed book storage.
-
-The goal is to let you upload books to Yatsu and access them from your devices, with synced book progress, bookmarks, highlights, statistics, and reading data.
-
-Yatsu Sync is not available yet, and its features may change during development.
 
 ## Privacy Basics
 

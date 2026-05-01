@@ -40,6 +40,8 @@ Yatsu also stores reading goals separately. A goal can have a time target, a cha
 
 Reading statistics stay in browser storage unless you export them or sync the **Statistics** data type to another storage source. Reading goals work the same way with the **Reading Goals** data type.
 
+Yatsu Account Settings Sync does not sync reading statistics, reading goals, bookmarks, highlights, or book progress. It only syncs Reader and Tracking settings.
+
 If you sync to an external provider, that provider receives the data types you choose to sync.
 
 !!! note

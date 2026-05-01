@@ -9,6 +9,7 @@ nav:
   - Setting up Drive Sync: google-drive-sync.md
   - Reading Tracking: reading-tracking.md
   - Using Yatsu Offline: offline.md
+  - Recovering Old GitHub Pages Data: github-pages-recovery.md
   - Compatibility with Ttsu: upstream-compatibility.md
   - Frequently Asked Questions: faq.md
   - How to Report Bugs: how-to-report-bugs.md

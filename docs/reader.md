@@ -13,8 +13,9 @@ Depending on screen size and book type, some actions may move into the **More re
 Common controls include:
 
 - **Table of contents**: opens the book's chapter list, if Yatsu can find one.
-- **Create bookmark** or **Update bookmark**: saves your current reading position.
-- **Return to bookmark**: jumps back to your saved bookmark, if one exists.
+- **Save current position** or **Update current position**: saves the current reading position Yatsu uses for progress and returning later.
+- **Bookmarks**: opens the saved bookmarks drawer, where you can add, name, rename, delete, and jump to bookmarks.
+- **Return to current position**: jumps back to your saved current reading position, if one exists.
 - **Current autoscroll speed**: shown in continuous mode when autoscroll is available.
 - **Fullscreen**: toggles browser fullscreen.
 - **Appearance**: opens the live appearance panel for reader-specific visual settings.
@@ -59,24 +60,33 @@ The default reader shortcuts include:
 
     Keyboard shortcuts are ignored while many dialogs and menus are open, and while you use modifier keys such as Ctrl or Alt.
 
-## Bookmarks
+## Current Reading Position and Bookmarks
 
-Bookmarks are the simplest way to save a reading position.
+Yatsu separates the **current reading position** from user-created **bookmarks**.
 
-Use **Create bookmark** to save where you are. If you are already on the bookmarked screen, the button may say **Update bookmark** instead.
+The current reading position is the one place Yatsu uses for progress, returning later, and compatibility with older TTU-style progress data. Use **Save current position** or **Update current position** to store it, then use **Return to current position** to jump back.
 
-Use **Return to bookmark** to jump back to that saved position.
+Bookmarks are separate saved locations. Open **Bookmarks** to show the drawer, where you can:
+
+- add a bookmark at the current location
+- give a bookmark an optional name
+- jump to a saved bookmark
+- rename or delete a bookmark from the row actions menu
+
+Saved bookmark markers appear in the reader. When the header is closed, clicking or tapping a bookmark marker opens a small rename/delete flyover for that bookmark.
 
 The default shortcuts are:
 
 | Action | Shortcut |
 | --- | --- |
-| Create or update bookmark | `B` |
-| Return to bookmark | `R` |
+| Open bookmarks drawer | `B` |
+| Add a quick bookmark | `Shift+B` |
+| Save current reading position | `O` |
+| Return to current reading position | `R` |
 
-If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a bookmark. Otherwise, it uses the reader's current position.
+If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a current reading position or bookmark. Otherwise, it uses the current reader position.
 
-Bookmarks are stored as progress data. They can be synced or exported with the rest of your reading progress.
+Current reading position is stored with progress data. Multiple bookmarks are stored separately and can be synced or exported with your reading data when the relevant sync/export options are enabled.
 
 ## Table of Contents
 
@@ -97,6 +107,7 @@ The custom reading point tells Yatsu which part of the screen should count as yo
 This matters for:
 
 - progress calculation
+- current reading position
 - bookmarks
 - reading statistics
 - returning to a stable spot after resizing or changing layout
@@ -188,7 +199,7 @@ This is meant to prevent accidental exits while reading.
 
 You can also return to the library from the app navigation.
 
-If close confirmation is enabled and your current location has not been bookmarked, Yatsu may ask for confirmation before leaving.
+If close confirmation is enabled and your current reading position has not been saved, Yatsu may ask for confirmation before leaving.
 
 ## When Controls Are Missing
 
@@ -197,7 +208,7 @@ Some reader controls only appear when they apply.
 For example:
 
 - **Table of contents** needs chapter data.
-- **Return to bookmark** needs an existing bookmark.
+- **Return to current position** needs a saved current reading position.
 - **Image gallery** needs collected images.
 - **Fullscreen** depends on browser support and current context.
 - **Tracking** needs statistics to be enabled.

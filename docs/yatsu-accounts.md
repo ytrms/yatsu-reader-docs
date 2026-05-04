@@ -15,13 +15,17 @@ Yatsu supports:
 
 Email sign-in uses a short code sent to your email address. You do not need to create or store a password for Yatsu.
 
-When you are signed in, the header shows your account menu. From there you can open the account page, turn on Streamer mode, or sign out.
+When you are signed in, the header shows your account menu. From there you can turn Settings Sync on or off, open the account page, turn on Streamer mode, or sign out.
 
 ## What Settings Sync Does
 
-When you are signed in, Yatsu syncs Reader and Tracking settings in the background.
+When Settings Sync is on, Yatsu syncs Reader and Tracking settings in the background.
 
-This includes settings such as:
+New accounts and fresh devices start with Settings Sync off. To turn it on, open the account menu in the header and switch **Settings sync** to **On**.
+
+If you already used Settings Sync on a device before this control was added, that device keeps Settings Sync on.
+
+Synced settings include:
 
 - Reader appearance
 - Themes and reading mode
@@ -51,15 +55,17 @@ Google Fonts and built-in font choices can sync as settings. Uploaded font files
 
 ## Sync Status
 
-In Settings, synced sections show small status labels:
+When Settings Sync is on, synced sections show small status labels:
 
 - **Syncing** means Yatsu is uploading or applying settings.
 - **Synced** means the latest sync completed successfully.
 - **Does not sync** means that section stays local to the device.
 
-The Settings page also shows when Reader and Tracking settings last synced. You can use the refresh button in that status box to manually check for remote changes.
+The Settings page also shows when Reader and Tracking settings last synced while Settings Sync is on. You can use the refresh button in that status box to manually check for remote changes.
 
-Yatsu also shows the sync status note in the live reader settings panel, so you can check or refresh sync state without leaving your book.
+Yatsu also shows the sync status note in the live reader settings panel while Settings Sync is on, so you can check sync state without leaving your book.
+
+When Settings Sync is off, Reader and Tracking settings show a short note at the bottom instead of sync status labels or per-setting cloud buttons.
 
 ## Per-Device Setting Overrides
 
@@ -85,7 +91,7 @@ If you turn sync back on for that setting, the device rejoins the synced value f
 
 ## Sync Timing and Conflicts
 
-Settings sync automatically while you are signed in.
+Settings sync automatically while you are signed in and Settings Sync is on.
 
 Yatsu syncs after local changes, checks for remote changes while the app is active, and lets you manually refresh from the Settings page. Sync checks pause while the app is inactive.
 

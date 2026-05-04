@@ -1,6 +1,6 @@
 Setting up Drive is usually the hardest part of using ttsu (the reader Yatsu comes from) and/or Yatsu.
 
-Yatsu Accounts can now sync some app settings automatically, but book data sync with Google Drive is still separate. For now, you'll have to set up Drive manually by following the steps in this page. Sorry about that.
+Yatsu Accounts can now sync some app settings when you turn on Settings Sync, but book data sync with Google Drive is still separate. For now, you'll have to set up Drive manually by following the steps in this page. Sorry about that.
 
 ## Prerequisites
 A Google account.

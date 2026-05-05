@@ -17,6 +17,16 @@ Email sign-in uses a short code sent to your email address. You do not need to c
 
 When you are signed in, the header shows your account menu. From there you can turn Settings Sync on or off, open the account page, turn on Streamer mode, or sign out.
 
+## Usernames
+
+Signed-in users can optionally create a username from the account page.
+
+When set, your username appears in the header account button instead of your email handle. The account page still shows your email address so you can confirm which sign-in identity you are using.
+
+Usernames are unique and use lowercase letters, numbers, or underscores. Basic usernames can be 4-12 characters long. Supporter usernames can be 2-24 characters long.
+
+After setting or changing a username, you can change it again after 28 days. If you upgrade from Basic to Supporter after changing your username, Yatsu lets you change it once right away so you can use the wider Supporter range.
+
 ## What Settings Sync Does
 
 When Settings Sync is on, Yatsu syncs Reader and Tracking settings in the background.
@@ -103,7 +113,9 @@ Streamer mode is a local display preference for screenshots, videos, and streams
 
 When Streamer mode is on, Yatsu hides the email handle in the header and masks the email address on the account page with `***`.
 
-Streamer mode only affects the current browser or device. It does not change your account email.
+If you have a username, Streamer mode hides that account name in the header and masks it on the account page too.
+
+Streamer mode only affects the current browser or device. It does not change your account email or username.
 
 ## Privacy Basics
 

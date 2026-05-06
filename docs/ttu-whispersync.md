@@ -38,7 +38,7 @@ Anki is only required if you want to export cards from ttu-whispersync. For list
 
 The quickest way to get started is to install the Yatsu-compatible copy included with these docs:
 
-[Install the Yatsu ttu-whispersync userscript](assets/ttu-whispersync-yatsu.user.js)
+[Install the Yatsu Whispersync userscript](assets/yatsu-whispersync.user.js)
 
 If you already have Violentmonkey or another userscript manager installed, opening that link should show an installation prompt.
 
@@ -59,7 +59,7 @@ If the script only mentions `https://reader.ttsu.app/*`, it is the upstream ttu 
 To install:
 
 1. Install a userscript manager such as Violentmonkey.
-2. Open the bundled [Yatsu ttu-whispersync userscript](assets/ttu-whispersync-yatsu.user.js).
+2. Open the bundled [Yatsu Whispersync userscript](assets/yatsu-whispersync.user.js).
 3. Confirm the installation in the userscript manager.
 4. Reload Yatsu.
 5. Open a book in Yatsu.

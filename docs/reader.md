@@ -86,6 +86,8 @@ The default shortcuts are:
 
 If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a current reading position or bookmark. Otherwise, it uses the current reader position.
 
+For a screen-based position, use **Set Point** before saving. The custom reading point changes what Yatsu treats as "here", so the next saved current position or bookmark can land at the spot you chose on the screen instead of the default page or scroll reference.
+
 Current reading position is stored with progress data. Multiple bookmarks are stored separately and can be synced or exported with your reading data when the relevant sync/export options are enabled.
 
 ## Table of Contents
@@ -120,7 +122,30 @@ The default shortcut is:
 | --- | --- |
 | Set custom reading point | `T` |
 
-In paginated mode, Yatsu may use a text range for the point. In continuous mode, it uses a screen position.
+### Save the current reading position at a screen location
+
+Use this when the saved current position should match the line or area you are actually reading.
+
+1. Open the reader action menu.
+2. Choose **Set Point**, or press `T`.
+3. Click or tap the place on the page that should count as your current reading position.
+4. Choose **Save current position** or **Update current position**, or press `O`.
+
+After that, **Return to current position** jumps back using the position calculated from that point.
+
+### Add a bookmark at a screen location
+
+Use this when you want a bookmark to point to a specific line or area on the visible page.
+
+1. Open the reader action menu.
+2. Choose **Set Point**, or press `T`.
+3. Click or tap the place on the page where the bookmark should be anchored.
+4. Open **Bookmarks** and add a bookmark, or press `Shift+B` to add a quick bookmark.
+5. Rename the bookmark if you want a label for that location.
+
+The bookmark uses the reading position calculated from the point you just set. If **Show Point** is available, you can use it to briefly reveal the active point before saving. Use **Reset Point** if you want to go back to the default reader position.
+
+In paginated mode, Yatsu sets the point from the text location you choose on the current page. When you turn the page, that temporary point is cleared. In continuous mode, Yatsu uses a persistent screen position. Continuous mode requires **Settings** > **Reader** > **Custom Reading Point** to be turned on.
 
 !!! tip
 

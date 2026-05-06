@@ -1,5 +1,5 @@
 // ==UserScript==
-// @author      Renji-xD
+// @author      Original author: Renji-xD, with modifications by ryzusaku and trms
 // @name        Yatsu Whispersync
 // @namespace   https://github.com/Renji-XD
 // @match       https://app.yatsu.moe/*

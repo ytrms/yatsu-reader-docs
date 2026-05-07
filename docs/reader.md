@@ -158,6 +158,7 @@ The **Appearance** action opens live reader settings without leaving the book.
 Use it for changes such as:
 
 - font size and font family
+- reader content language, including Simplified and Traditional Chinese glyph forms
 - line height
 - text margins
 - vertical or horizontal writing behavior
@@ -167,6 +168,8 @@ Use it for changes such as:
 - publisher style handling
 
 Changes apply while the book is open, so you can adjust the reader until the text feels comfortable.
+
+Yatsu normally uses the language stored in the book file. If Chinese text shows Japanese-style character variants, set **Reader content language** to **Simplified** or **Traditional** in the live appearance panel or in **Settings** > **Reader**.
 
 Some layout changes can move your current position. Yatsu tries to preserve the current reading position, and the custom reading point can make that more predictable.
 

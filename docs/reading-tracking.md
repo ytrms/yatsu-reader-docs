@@ -205,6 +205,23 @@ For grouped rows:
 - **Average** values are averages across entries with reading time.
 - **Weighted** values weight time and characters against each other, so large reading entries affect the result more than tiny entries.
 
+### Sharing a Statistics Image
+
+Open **Share** -> **Social image** on the Statistics page to create a PNG from the current activity breakdown.
+
+The image starts from the same filtered data shown in the aggregated activity breakdown. If the page is filtered to This Week, a title subset, or a different aggregation mode, the share image uses that same selection.
+
+In the dialog you can:
+
+- Preview the PNG before saving it.
+- Choose which statistics appear in the image.
+- Pick a square image with one of the built-in pastel backgrounds.
+- Download the PNG or copy it to the clipboard.
+
+Supporters can also choose vertical or horizontal social sizes, use any background color, import a local background image, use a local book cover as the background, adjust fit/fill positioning, add a circular avatar, and show their Yatsu username or a custom display name.
+
+Imported background and avatar images stay in the browser while the dialog is open. They are used only to render the local PNG and are not uploaded or synced.
+
 ### Safeguards and Actions
 
 The View options drawer includes:

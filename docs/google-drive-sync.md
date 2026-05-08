@@ -1,7 +1,3 @@
-!!! note "Yatsu Drive Sync for Supporters"
-
-    This page describes the legacy Google Drive setup where you bring your own Google Cloud project and credentials. The newer **Yatsu Drive Sync** library is different: Supporters connect Google once from Yatsu, and Yatsu stores synced books in Google's private `appDataFolder` for the app. Yatsu Drive Sync keeps its own library identity, ghost cards, and synced statistics manifest instead of reusing the legacy folder format.
-
 Setting up Drive is usually the hardest part of using ttsu (the reader Yatsu comes from) and/or Yatsu.
 
 Yatsu Accounts can now sync some app settings when you turn on Settings Sync, but book data sync with Google Drive is still separate. For now, you'll have to set up Drive manually by following the steps in this page. Sorry about that.

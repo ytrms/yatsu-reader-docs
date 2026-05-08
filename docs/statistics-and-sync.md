@@ -10,7 +10,6 @@ This is inherited from ttsu, the reader Yatsu comes from. It helps keep the read
 
 - The Statistics page reads from this browser's local database.
 - The **Library** selector on the Statistics page can show all statistics together or focus on one library.
-- Yatsu Drive Sync statistics can be loaded from the private Yatsu Drive library when that account is connected.
 - Google Drive and other external storage sources are sync sources, not the live Statistics page database.
 - If sync is set to **Down** or **All**, Yatsu imports Drive statistics when you open a book.
 - If sync is set to **Up** or **All**, Yatsu exports updated local statistics while you read or when you leave the reader.
@@ -22,10 +21,7 @@ The Statistics page has a **Library** selector.
 
 - **All libraries** keeps the old default behavior and shows every loaded statistics row.
 - **This device** shows local browser statistics. Older statistics rows that were created before library-scoped statistics are treated as This device data so existing users do not lose their history after upgrading.
-- **Yatsu Drive** shows statistics associated with the new Yatsu Drive Sync library. When the account is connected, Yatsu can load the Yatsu Drive statistics manifest and cache those rows in the browser database, so a second device can show previous Yatsu Drive reading statistics even before you read locally on that device.
-- Legacy Google Drive and OneDrive statistics keep their existing ttsu-compatible title-based format. They are not content-fingerprinted or rewritten during the migration.
-
-Downloaded Yatsu Drive Sync books still count under **Yatsu Drive Sync**, not **This device**. The downloaded book bytes are cached locally, but the book identity and statistics identity still belong to the synced library.
+- Google Drive and OneDrive statistics keep their existing ttsu-compatible title-based format. They are not content-fingerprinted or rewritten during the migration.
 
 ## Why it works this way
 
@@ -99,15 +95,13 @@ No. This behavior matches the upstream ttsu model: local browser data is the liv
 
 ## Recommended setup
 
-If you use legacy Google Drive or OneDrive and want Drive to be the shared place where your reading data moves between devices, set sync behavior to **All** on devices where you both read and review statistics.
+If you use Google Drive or OneDrive and want external storage to be the shared place where your reading data moves between devices, set sync behavior to **All** on devices where you both read and review statistics.
 
 If you only want a device to receive data from Drive, use **Down**.
 
 If you only want a device to send local updates to Drive, use **Up**.
 
 If you want everything to stay only on the current browser unless you act manually, use **Off**.
-
-Yatsu Drive Sync uses its own manifest-backed statistics path. It does not require the legacy Auto Import/Export settings for its Statistics page to show synced Yatsu Drive reading history.
 
 !!! note
 

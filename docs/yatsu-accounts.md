@@ -11,6 +11,7 @@ Open Yatsu and click **Account** in the top-right of the header.
 Yatsu supports:
 
 - Google sign-in
+- Discord sign-in
 - Email sign-in codes
 
 Email sign-in uses a short code sent to your email address. You do not need to create or store a password for Yatsu.

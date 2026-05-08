@@ -23,7 +23,7 @@ The tracker icon uses these states:
 
 When the tracker is running, Yatsu updates reading time every second and compares your current character position with the previous tracked position. The difference becomes the characters read for the current session.
 
-The character position uses the current book's character counting method. Japanese and Chinese counting is the default; Korean books can use the per-book **Character Counting Method** in the live appearance panel.
+The character position uses the current book's character counting method. Japanese and Chinese counting is the default; Korean books can use the per-book **Character Counting Method** in the live appearance panel. See [Korean Support](korean-support.md) for setup details.
 
 ## What Yatsu Records
 

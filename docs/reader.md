@@ -172,7 +172,7 @@ Changes apply while the book is open, so you can adjust the reader until the tex
 
 Yatsu normally uses the language stored in the book file. If Chinese text shows Japanese-style character variants, set **Reader content language** to **Simplified** or **Traditional** in the live appearance panel or in **Settings** > **Reader**.
 
-Yatsu counts Japanese and Chinese characters by default. For Korean books, set **Character Counting Method** to **Auto** or **Korean** in the live appearance panel. **Auto** only uses Korean counting when the book file declares Korean or the book text looks clearly Korean. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync.
+Yatsu counts Japanese and Chinese characters by default. For Korean books, set **Character Counting Method** to **Auto** or **Korean** in the live appearance panel. **Auto** only uses Korean counting when the book file declares Korean or the book text looks clearly Korean. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. For more detail, see [Korean Support](korean-support.md).
 
 Some layout changes can move your current position. Yatsu tries to preserve the current reading position, and the custom reading point can make that more predictable.
 

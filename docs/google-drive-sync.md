@@ -4,6 +4,8 @@ Yatsu can use Google Drive as a remote library and sync target. For most people,
 
 Yatsu Accounts and Settings Sync are separate from Google Drive. A Yatsu account can sync some app settings, while Google Drive stores books and book-related data in your own Drive.
 
+If you are signed in to Yatsu as a Supporter, the built-in Google Drive source can also keep an encrypted Google refresh token on Yatsu's server so you do not have to reauthorize Drive as often. Anonymous users and non-supporters can still use the same one-click Drive source, but their Drive authorization stays browser-only.
+
 ## Recommended: one-click Google Drive
 
 You only need a Google account.
@@ -11,13 +13,17 @@ You only need a Google account.
 1. Open Yatsu and go to the Library.
 2. Click the storage picker in the header.
 3. Choose **Google Drive**.
-4. Pick your Google account in the Google account picker.
+4. If Google asks, pick the Google account you want to use.
 5. Review the Google permission screen and continue.
 6. Wait for Yatsu to load the Drive library.
 
-The first time you connect, Yatsu creates its own `yatsu-reader-data` folder in your Drive. After that, Yatsu stores the authorization in this browser's local Yatsu data, so reloading the page should not ask you to log in again.
+The first time you connect, Yatsu creates its own `yatsu-reader-data` folder in your Drive.
 
-You may need to sign in again if you clear Yatsu site data, revoke Yatsu's access from your Google account, use a different browser profile or device, or Google expires the authorization.
+For anonymous users and non-supporters, Yatsu stores only a short-lived Drive authorization in this browser's local Yatsu data. Reloading the page usually keeps working until that authorization expires, but you may need to sign in again after some time, after clearing site data, after revoking Yatsu's access from your Google account, or when using a different browser profile or device.
+
+For signed-in Supporters, Yatsu can store the Google refresh token encrypted in Yatsu's database and request short-lived Drive access tokens only when you actively use the built-in Google Drive source. Yatsu still does not store or proxy your Drive books. Listing, downloading, uploading, and syncing book files continue to happen directly between your browser and Google Drive.
+
+To reconnect, disconnect, or choose a different Google account later, open **Settings** -> **Data** -> **Sync & Sources** and use the actions on **Google Drive default**.
 
 ## What Yatsu can access
 

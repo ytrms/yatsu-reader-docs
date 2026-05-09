@@ -1,128 +1,162 @@
-Setting up Drive is usually the hardest part of using ttsu (the reader Yatsu comes from) and/or Yatsu.
+# Google Drive Sync
 
-Yatsu Accounts can now sync some app settings when you turn on Settings Sync, but book data sync with Google Drive is still separate. For now, you'll have to set up Drive manually by following the steps in this page. Sorry about that.
+Yatsu can use Google Drive as a remote library and sync target. For most people, the built-in Google Drive source is now the recommended setup: no Google Cloud project, no OAuth client ID, and no client secret.
 
-## Prerequisites
-A Google account.
+Yatsu Accounts and Settings Sync are separate from Google Drive. A Yatsu account can sync some app settings, while Google Drive stores books and book-related data in your own Drive.
 
-## Steps
-Go to [this page](https://console.cloud.google.com/projectselector2/home/dashboard) and click on "Create Project".
+## Recommended: one-click Google Drive
 
-In the "Project name" field, give it any name you want, then click on Create. You don't need to pick an organization in the "Parent resource" field.
+You only need a Google account.
 
-![](assets/proj-name.png)
+1. Open Yatsu and go to the Library.
+2. Click the storage picker in the header.
+3. Choose **Google Drive**.
+4. Pick your Google account in the Google account picker.
+5. Review the Google permission screen and continue.
+6. Wait for Yatsu to load the Drive library.
 
-You will be automatically redirected to the project page:
+The first time you connect, Yatsu creates its own `yatsu-reader-data` folder in your Drive. After that, Yatsu stores the authorization in this browser's local Yatsu data, so reloading the page should not ask you to log in again.
 
-![](assets/proj-page.png)
+You may need to sign in again if you clear Yatsu site data, revoke Yatsu's access from your Google account, use a different browser profile or device, or Google expires the authorization.
 
-Click on the three lines at the top left to open the sidebar. Hover over "APIs & Services" and then click on "Enabled APIs & services":
+## What Yatsu can access
 
-![](assets/side-menu.png)
+The built-in Google Drive source uses Google's `drive.file` permission. This is a limited Drive permission for app-created or app-authorized files, not broad access to your whole Drive.
 
-Click on "+ Enable APIs and services":
+Because of that limited permission, the built-in source will not automatically pick up an old `ttu-reader-data` folder that was created by upstream ttsu. It uses Yatsu's own `yatsu-reader-data` folder instead.
 
-![](assets/enable-apis.png)
+## Compatibility with ttsu
 
-In the search box, write "Google Drive" and press on Enter.
+The one-click Google Drive source is a Yatsu default source and is not meant to interoperate with upstream ttsu.
 
-Then, click on "Google Drive API":
+If you want to keep an intentionally configured ttsu-compatible storage source, use a custom Google Drive source instead. The old bring-your-own Google Cloud setup is still available below for that advanced case.
 
-![](assets/drive-api.png)
+??? note "Legacy custom Google Drive setup"
 
-Click on the blue Enable button that appears.
+    Use this only if you need a custom Google Drive storage source, your own OAuth client, or an advanced ttsu-compatible setup. Most users should use the one-click Google Drive source above.
 
-You will be redirected to the Google Drive API details. From that screen, click on "OAuth consent screen":
+    ## Prerequisites
 
-![](assets/oauth.png)
+    A Google account.
 
-Click on the blue "Get started" button in the middle. This screen will appear:
+    ## Steps
 
-![](assets/proj-configuration.png)
+    Go to [this page](https://console.cloud.google.com/projectselector2/home/dashboard) and click on "Create Project".
 
-In "App name", you can write whatever you want.
+    In the "Project name" field, give it any name you want, then click on Create. You don't need to pick an organization in the "Parent resource" field.
 
-In "User support email", pick your own email from the list.
+    ![](assets/proj-name.png)
 
-Click on "Next".
+    You will be automatically redirected to the project page:
 
-From "Audience", click on "External", then click on "Next".
+    ![](assets/proj-page.png)
 
-In "Contact Information", enter your own email, then click on Next.
+    Click on the three lines at the top left to open the sidebar. Hover over "APIs & Services" and then click on "Enabled APIs & services":
 
-In "Finish, click on the checkbox to agree to the terms, then click on "Continue".
+    ![](assets/side-menu.png)
 
-Click on "Create".
+    Click on "+ Enable APIs and services":
 
-You will be redirected to this page:
+    ![](assets/enable-apis.png)
 
-![](assets/data-access.png)
+    In the search box, write "Google Drive" and press on Enter.
 
-Click on "Data Access" on the left.
+    Then, click on "Google Drive API":
 
-From the new page that appears, click on the white "Add or remove scopes" button. A table will appear from the right side.
+    ![](assets/drive-api.png)
 
-Click on the text area next to "Filter" and write "drive.file". Then click on the only option that appears. This will filter the table to only show the "Drive file" scope.
+    Click on the blue Enable button that appears.
 
-Click on the checkbox next to the only row that appears, then click on "Update" at the bottom:
+    You will be redirected to the Google Drive API details. From that screen, click on "OAuth consent screen":
 
-![](assets/drive-checkbox.png)
+    ![](assets/oauth.png)
 
-The table will close, and you will see the page you were on before. Click on the "Save" button at the bottom to save:
+    Click on the blue "Get started" button in the middle. This screen will appear:
 
-![](assets/save-scope.png)
+    ![](assets/proj-configuration.png)
 
-From the sidebar on the left, click on "Clients".
+    In "App name", you can write whatever you want.
 
-Click on "+ Create client".
+    In "User support email", pick your own email from the list.
 
-From "Application type", pick "Web application".
+    Click on "Next".
 
-This screen will appear:
+    From "Audience", click on "External", then click on "Next".
 
-![](assets/client-ids.png)
+    In "Contact Information", enter your own email, then click on Next.
 
-In "Name", pick anything you want. "Yatsu" is ok for example.
+    In "Finish", click on the checkbox to agree to the terms, then click on "Continue".
 
-Under "Authorized JavaScript origins", click on "+ Add URI" and enter the `https://app.yatsu.moe` URL.
+    Click on "Create".
 
-Under "Authorized redirect URIs" click on "+Add URI" and enter `https://app.yatsu.moe/auth`.
+    You will be redirected to this page:
 
-Click on the blue "Create" button at the bottom of the page.
+    ![](assets/data-access.png)
 
-You will see a dialog pop up, where you will see your Client ID and your Client secret. Save and store them somewhere, we will need them later in Yatsu:
+    Click on "Data Access" on the left.
 
-!!! Important
-    Once you close this dialog, you will not be able to see your client secret again, which you will need. So please take note of it somewhere and store it. If you lose your secret, you will not be able to connect Yatsu to Drive.
+    From the new page that appears, click on the white "Add or remove scopes" button. A table will appear from the right side.
 
-![](assets/secrets.png)
+    Click on the text area next to "Filter" and write "drive.file". Then click on the only option that appears. This will filter the table to only show the "Drive file" scope.
 
-Lastly, click on "Audience" on the left, and then click on "Publish app".
+    Click on the checkbox next to the only row that appears, then click on "Update" at the bottom:
 
-![](assets/publish-app.png)
+    ![](assets/drive-checkbox.png)
 
-That's it when it comes to the Google side. Now, in Yatsu, go to Settings, and then click on "Data". Scroll down to "Sync and Sources" and open that box. Then, click on "+ Add":
+    The table will close, and you will see the page you were on before. Click on the "Save" button at the bottom to save:
 
-![](assets/yatsu-sources.png)
+    ![](assets/save-scope.png)
 
-This dialog will appear:
+    From the sidebar on the left, click on "Clients".
 
-![](assets/yatsu-setup.png)
+    Click on "+ Create client".
 
-In Name, put whatever you wish.
+    From "Application type", pick "Web application".
 
-Pick "GDrive" from the provider dropdown.
+    This screen will appear:
 
-In "Behavior", pick whatever behavior suits you best.
+    ![](assets/client-ids.png)
 
-In "Credentials", enter the Client ID and Client Secret that we stored before.
+    In "Name", pick anything you want. "Yatsu" is ok for example.
 
-In Protection, you may optionally set a password which will be asked by Yatsu every single time you load books.
+    Under "Authorized JavaScript origins", click on "+ Add URI" and enter the `https://app.yatsu.moe` URL.
 
-Click on "Save".
+    Under "Authorized redirect URIs" click on "+ Add URI" and enter `https://app.yatsu.moe/auth`.
 
-From Yatsu's library, you can now select your storage source and see the books that have been stored there:
+    Click on the blue "Create" button at the bottom of the page.
 
-![](assets/yatsu-select.png)
+    You will see a dialog pop up, where you will see your Client ID and your Client secret. Save and store them somewhere, because you will need them later in Yatsu:
 
-That's it.
+    !!! important
+
+        Once you close this dialog, you will not be able to see your client secret again. Take note of it somewhere safe. If you lose your secret, you will not be able to connect that custom source to Drive.
+
+    ![](assets/secrets.png)
+
+    Lastly, click on "Audience" on the left, and then click on "Publish app".
+
+    ![](assets/publish-app.png)
+
+    That's it when it comes to the Google side. Now, in Yatsu, go to Settings, and then click on "Data". Scroll down to "Sync and Sources" and open that box. Then, click on "+ Add":
+
+    ![](assets/yatsu-sources.png)
+
+    This dialog will appear:
+
+    ![](assets/yatsu-setup.png)
+
+    In Name, put whatever you wish.
+
+    Pick "Google Drive" from the provider dropdown.
+
+    In "Behavior", pick whatever behavior suits you best.
+
+    In "Credentials", enter the Client ID and Client Secret that you stored before.
+
+    In Protection, you may optionally set a password which will be asked by Yatsu every single time you load books.
+
+    Click on "Save".
+
+    From Yatsu's library, you can now select your storage source and see the books that have been stored there:
+
+    ![](assets/yatsu-select.png)

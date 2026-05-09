@@ -2,23 +2,25 @@
 
 Yatsu comes from ttsu, and one of my goals is that people should be able to use both without worrying that one will ruin the other's data.
 
-If you connect both Yatsu and ttsu to the same Google Drive folder, the intended result is that both apps can keep using that same library.
+If you intentionally connect both Yatsu and ttsu to the same custom Google Drive folder, the intended result is that both apps can keep using that same library.
 
 ## Short version
 
-Yes, using Yatsu and ttsu together is supported.
+Yes, using Yatsu and ttsu together is supported for custom ttsu-compatible storage sources.
 
 In normal use:
 
-- Books saved by ttsu should continue to work in Yatsu.
-- Books saved by Yatsu should continue to work in ttsu.
+- Books saved by ttsu in a shared custom source should continue to work in Yatsu.
+- Books saved by Yatsu in a shared custom source should continue to work in ttsu.
 - Using one app should not make your library unusable in the other.
+
+Yatsu's built-in one-click Google Drive source is different. It uses Yatsu's own `yatsu-reader-data` folder and is not meant to share upstream ttsu's default Drive folder.
 
 ## What this means in practice
 
-If you already use ttsu and want to try Yatsu, you do not need to make a separate Google Drive folder just for Yatsu.
+If you already use ttsu and want to try Yatsu with the same Drive library, use a custom ttsu-compatible storage source.
 
-If you already use Yatsu and occasionally open the same library in ttsu, that should also be ok.
+If you use Yatsu's built-in one-click Google Drive source, Yatsu creates and uses a separate `yatsu-reader-data` folder. That default source is simpler to set up, but it is not the shared ttsu-compatible route.
 
 Yatsu may store a little more information than ttsu does, but it does so in a way that ttsu is expected to ignore rather than break on.
 
@@ -38,7 +40,9 @@ That is normal. The important part is that your library should remain usable in 
 
 ### Do I need two different Google Drive folders?
 
-No. If you want to use both Yatsu and ttsu, the goal is that one shared folder should be enough.
+For the built-in one-click Google Drive source, yes: Yatsu uses its own `yatsu-reader-data` folder.
+
+For custom ttsu-compatible storage, no. If you intentionally configure both apps to use the same compatible source, the goal is that one shared folder should be enough.
 
 ### Can Yatsu make my ttsu library unusable?
 

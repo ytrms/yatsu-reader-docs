@@ -24,7 +24,7 @@ Please include:
 - What you expected to happen
 - What actually happened
 - The exact steps that led to the issue
-- Which storage source you were using: Browser, GDrive, OneDrive, or Filesystem
+- Which storage source you were using: Browser, Google Drive, OneDrive, or Filesystem
 - Whether the issue goes away after a reload or still happens in a new tab
 - Whether it affects every book or only some books
 - Your browser and device

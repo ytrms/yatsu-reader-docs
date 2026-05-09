@@ -20,7 +20,7 @@ These docs focus on the parts of Yatsu that usually need extra explanation: how 
 
 ## Sync, storage, and data
 
-- [Setting up Drive Sync](google-drive-sync.md): The current bring-your-own Google Drive setup, including Google Cloud project, OAuth, Drive API, and Yatsu source configuration steps.
+- [Google Drive Sync](google-drive-sync.md): The one-click Google Drive setup, what Yatsu stores in Drive, and the legacy custom Google Cloud setup.
 - [Statistics and Sync](statistics-and-sync.md): How reading statistics behave across local books, Drive-backed books, synced libraries, and multiple devices.
 - [Recovering Old GitHub Pages Data](github-pages-recovery.md): How to export and import data from the old GitHub Pages version of Yatsu.
 - [Compatibility with Ttsu](upstream-compatibility.md): How Yatsu treats TTU/Ttsu data compatibility, what should transfer cleanly, and where behavior may still differ.

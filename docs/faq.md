@@ -6,7 +6,7 @@
 
 If you are new to Yatsu, start with [Using the Reader](reader.md). It explains the reader controls, page movement, bookmarks, appearance settings, tracking controls, and why some controls only appear for certain books or modes.
 
-If you are setting up sync or moving between devices, read [Yatsu Accounts and Settings Sync](yatsu-accounts.md), then [Statistics and Sync](statistics-and-sync.md) or [Setting up Drive Sync](google-drive-sync.md), depending on what you are trying to sync.
+If you are setting up sync or moving between devices, read [Yatsu Accounts and Settings Sync](yatsu-accounts.md), then [Statistics and Sync](statistics-and-sync.md) or [Google Drive Sync](google-drive-sync.md), depending on what you are trying to sync.
 
 ### Do I need a Yatsu account?
 
@@ -89,15 +89,17 @@ Go online, open Yatsu, turn on **Full Offline Use** in **Settings** -> **Data** 
 
 ### Do I need the Google Drive setup?
 
-Only if you want to sync Yatsu with Google Drive.
+Only if you want to use Google Drive as a remote library or sync target.
 
-Yatsu's current Google Drive setup is the bring-your-own Google Cloud project flow described in [Setting up Drive Sync](google-drive-sync.md). Yatsu Accounts and Settings Sync do not set up Google Drive book sync for you.
+Most users can use the built-in one-click setup: open the Library, choose **Google Drive** from the storage picker, and sign in with Google. The old bring-your-own Google Cloud project flow is still available for custom or advanced storage sources.
+
+Yatsu Accounts and Settings Sync do not set up Google Drive book sync for you.
 
 ### Can I use the same Google Drive folder with Yatsu and ttsu?
 
-Yes. Yatsu is designed to stay compatible with ttsu's shared storage layout.
+Yes, but only with an intentionally configured custom storage source.
 
-Yatsu may store extra data for Yatsu-specific features, but it should do so in files that ttsu can ignore. See [Compatibility with Ttsu](upstream-compatibility.md) for details and caveats.
+The built-in one-click Google Drive source uses Yatsu's own `yatsu-reader-data` folder and is not meant to interoperate with upstream ttsu's default folder. Custom ttsu-compatible sources can still use the shared storage layout. See [Compatibility with Ttsu](upstream-compatibility.md) for details and caveats.
 
 ## Statistics and tracking
 

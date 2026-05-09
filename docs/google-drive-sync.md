@@ -17,7 +17,17 @@ You only need a Google account.
 
 The first time you connect, Yatsu creates its own `yatsu-reader-data` folder in your Drive. After that, Yatsu stores the authorization in this browser's local Yatsu data, so reloading the page should not ask you to log in again.
 
-You may need to sign in again if you clear Yatsu site data, revoke Yatsu's access from your Google account, use a different browser profile or device, or Google expires the authorization.
+It is still normal for Google Drive to ask you to sign in again every once in a while. The built-in Drive source stores a short-lived Google access token in this browser, not a permanent Google password or a long-lived server-side Drive session. You may need to authorize Drive again after the token expires, after clearing Yatsu site data, after revoking Yatsu's access from your Google account, after using a different browser profile or device, or after Google asks Yatsu to refresh the authorization.
+
+## Managing the built-in Google Drive source
+
+You can manage the built-in Google Drive connection from **Settings** -> **Data** -> **Sync & Sources**.
+
+- **Reconnect** refreshes the default Google Drive authorization for the current browser.
+- **Switch account** opens Google's account picker so you can choose a different Google account.
+- **Disconnect** makes Yatsu forget the default Google Drive authorization stored in this browser. It does not delete your books or the `yatsu-reader-data` folder from Google Drive.
+
+If you disconnect or switch accounts while using Google Drive as the active library or sync target, you may need to choose the storage source again from the Library header or update your sync settings.
 
 ## What Yatsu can access
 

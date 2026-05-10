@@ -2,7 +2,7 @@
 
 Yatsu can share your current reading activity with Discord Desktop through the optional Yatsu Reader Companion app for Windows.
 
-Discord Rich Presence is controlled from the account menu in the top-right of Yatsu. Open **Discord Rich Presence** to turn it on or off, reset the elapsed timer, toggle privacy mode, open help, or check the current companion status.
+Discord Rich Presence is controlled from the account menu in the top-right of Yatsu. Open **Discord Rich Presence** to turn it on or off, reset the elapsed timer, toggle privacy mode, customize its display, open help, or check the current companion status.
 
 ## Requirements
 
@@ -22,11 +22,11 @@ The status row in the Discord Rich Presence menu shows whether Yatsu can reach t
 - **Blocked** or **Error** means the local request or Discord update failed.
 - **Off** means Yatsu is not sharing activity.
 
-## Supporter Config
+## Supporter Customization
 
-Yatsu Supporters can open **Config** from the Discord Rich Presence menu.
+Yatsu Supporters can open **Customize** from the Discord Rich Presence menu.
 
-The config dialog lets Supporters change:
+The customization dialog lets Supporters change:
 
 - the Discord detail line
 - the reading line
@@ -46,7 +46,7 @@ The dialog includes a small preview for reading and paused states. Chapter and s
 
 The `{chapter}` placeholder can be used in text fields even when automatic chapter or section display is off.
 
-For non-Supporters, the Config item opens the same dialog in a locked preview state, but the default Rich Presence format is used.
+For non-Supporters, the Customize item opens the same dialog in a locked preview state, but the default Rich Presence format is used.
 
 ## Privacy
 
@@ -56,4 +56,4 @@ Privacy mode is available directly from the Discord Rich Presence menu. When pri
 
 Yatsu does not send book files, book content, bookmarks, highlights, storage credentials, or your Yatsu account identifiers to the companion for Rich Presence.
 
-Supporter config is stored in this browser for the signed-in Yatsu account. It does not upload books or reading data.
+Supporter customization is stored in this browser for the signed-in Yatsu account. It does not upload books or reading data.

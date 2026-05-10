@@ -37,7 +37,7 @@ In paginated mode:
   confirmation window to return to the library. Open **Controller navigation**
   from Settings or the live reader settings panel to rebind the controller
   inputs, tune the stick deadzone, or add optional bindings for auto-scroll
-  controls, the table of contents, and the reading tracker.
+  controls, toggling the table of contents, and the reading tracker panel.
 - Use **Table of contents** to jump between chapters.
 - Arrow keys can flip pages. Left and right follow the visible page edges, which means vertical text can feel different from horizontal text.
 

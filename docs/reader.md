@@ -30,12 +30,24 @@ Yatsu has two reader modes: paginated and continuous. The controls are similar, 
 In paginated mode:
 
 - Use the page controls, tap edges, or keyboard shortcuts to move page by page.
+- In supported browsers, you can also use a connected controller for navigation.
+  The standard layout uses D-pad left or L1/LB for previous page and D-pad right
+  or R1/RB for next page. A/Cross saves the current reading position, and
+  B/Circle asks to exit the reader. Press the exit binding again within the
+  confirmation window to return to the library. Open **Controller navigation**
+  from Settings or the live reader settings panel to rebind the controller
+  inputs, tune the stick deadzone, or add optional bindings for auto-scroll
+  controls, the table of contents, and the reading tracker.
 - Use **Table of contents** to jump between chapters.
 - Arrow keys can flip pages. Left and right follow the visible page edges, which means vertical text can feel different from horizontal text.
 
 In continuous mode:
 
 - Scroll normally.
+- In supported browsers, either controller stick can scroll continuously. Push
+  down or up in horizontal text, and left or right in vertical text. The farther
+  you push the stick, the faster Yatsu scrolls. If the reader moves while the
+  sticks are centered, raise the stick deadzone in **Controller navigation**.
 - Autoscroll can move the text for you.
 - The speed indicator shows the current autoscroll multiplier.
 

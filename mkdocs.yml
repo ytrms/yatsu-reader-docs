@@ -29,9 +29,26 @@ theme:
     text: Noto Sans JP
     code: JetBrains Mono
   palette:
-    scheme: default
-    primary: blue
-    accent: blue
+    - media: "(prefers-color-scheme)"
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light theme
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark theme
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/weather-night
+        name: Use system theme
   features:
     - navigation.instant
     - navigation.sections

@@ -2,6 +2,7 @@
   --yatsu-control-radius: 1.18rem;
   --yatsu-ink: #152033;
   --yatsu-muted: #64748b;
+  --yatsu-page-start: #ffffff;
   --yatsu-paper: #fffefa;
   --yatsu-paper-deep: #f7f2df;
   --yatsu-paper-dot: rgba(21, 32, 51, 0.08);
@@ -10,9 +11,25 @@
   --yatsu-surface-strong: rgba(255, 255, 255, 0.9);
   --yatsu-line: rgba(21, 32, 51, 0.12);
   --yatsu-line-strong: rgba(100, 116, 139, 0.3);
+  --yatsu-nav-hover: rgba(255, 255, 255, 0.58);
   --yatsu-shadow: rgba(15, 23, 42, 0.14);
   --yatsu-accent: #169ff5;
   --yatsu-accent-strong: #0b75c9;
+  --yatsu-focus-ring: rgba(22, 159, 245, 0.16);
+  --yatsu-header-highlight: rgba(255, 255, 255, 0.88);
+  --yatsu-header-highlight-strong: rgba(255, 255, 255, 0.9);
+  --yatsu-header-shadow: rgba(15, 23, 42, 0.38);
+  --yatsu-header-shadow-strong: rgba(15, 23, 42, 0.44);
+  --yatsu-panel-highlight: rgba(255, 255, 255, 0.76);
+  --yatsu-panel-shadow: rgba(15, 23, 42, 0.32);
+  --yatsu-control-border: rgba(148, 163, 184, 0.38);
+  --yatsu-control-border-hover: rgba(100, 116, 139, 0.55);
+  --yatsu-control-bg: rgba(255, 255, 255, 0.9);
+  --yatsu-control-bg-hover: rgba(248, 250, 252, 0.96);
+  --yatsu-control-fg: #172033;
+  --yatsu-search-border: rgba(21, 32, 51, 0.14);
+  --yatsu-search-bg: rgba(255, 255, 255, 0.6);
+  --yatsu-footer-line: rgba(21, 32, 51, 0.1);
   --yatsu-header-top: max(16px, env(safe-area-inset-top));
   --yatsu-header-height: 54px;
   --yatsu-header-gap: max(16px, env(safe-area-inset-top));
@@ -38,6 +55,56 @@
   --md-footer-fg-color--lighter: rgba(21, 32, 51, 0.58);
   --md-footer-bg-color: transparent;
   --md-footer-bg-color--dark: transparent;
+}
+
+[data-md-color-scheme="slate"] {
+  color-scheme: dark;
+  --yatsu-ink: #edf3f8;
+  --yatsu-muted: #a7b2be;
+  --yatsu-page-start: #0d1012;
+  --yatsu-paper: #111316;
+  --yatsu-paper-deep: #19150f;
+  --yatsu-paper-dot: rgba(237, 243, 248, 0.075);
+  --yatsu-surface: rgba(25, 28, 32, 0.76);
+  --yatsu-surface-hover: rgba(34, 38, 43, 0.86);
+  --yatsu-surface-strong: rgba(29, 32, 36, 0.92);
+  --yatsu-line: rgba(226, 232, 240, 0.14);
+  --yatsu-line-strong: rgba(148, 163, 184, 0.36);
+  --yatsu-nav-hover: rgba(125, 211, 252, 0.11);
+  --yatsu-shadow: rgba(0, 0, 0, 0.5);
+  --yatsu-accent: #38bdf8;
+  --yatsu-accent-strong: #7dd3fc;
+  --yatsu-focus-ring: rgba(56, 189, 248, 0.24);
+  --yatsu-header-highlight: rgba(255, 255, 255, 0.08);
+  --yatsu-header-highlight-strong: rgba(255, 255, 255, 0.12);
+  --yatsu-header-shadow: rgba(0, 0, 0, 0.52);
+  --yatsu-header-shadow-strong: rgba(0, 0, 0, 0.6);
+  --yatsu-panel-highlight: rgba(255, 255, 255, 0.08);
+  --yatsu-panel-shadow: rgba(0, 0, 0, 0.46);
+  --yatsu-control-border: rgba(148, 163, 184, 0.26);
+  --yatsu-control-border-hover: rgba(125, 211, 252, 0.42);
+  --yatsu-control-bg: rgba(30, 34, 38, 0.9);
+  --yatsu-control-bg-hover: rgba(39, 44, 50, 0.96);
+  --yatsu-control-fg: #edf3f8;
+  --yatsu-search-border: rgba(226, 232, 240, 0.14);
+  --yatsu-search-bg: rgba(22, 25, 29, 0.64);
+  --yatsu-footer-line: rgba(226, 232, 240, 0.11);
+  --md-primary-fg-color: #38bdf8;
+  --md-primary-fg-color--light: #7dd3fc;
+  --md-primary-fg-color--dark: #0ea5e9;
+  --md-accent-fg-color: #7dd3fc;
+  --md-default-fg-color: rgba(237, 243, 248, 0.9);
+  --md-default-fg-color--light: rgba(237, 243, 248, 0.72);
+  --md-default-fg-color--lighter: rgba(237, 243, 248, 0.5);
+  --md-default-fg-color--lightest: rgba(237, 243, 248, 0.22);
+  --md-default-bg-color: transparent;
+  --md-typeset-a-color: var(--yatsu-accent-strong);
+  --md-code-fg-color: #e5edf8;
+  --md-code-bg-color: rgba(237, 243, 248, 0.08);
+  --md-typeset-color: var(--yatsu-ink);
+  --md-footer-fg-color: rgba(237, 243, 248, 0.9);
+  --md-footer-fg-color--light: rgba(237, 243, 248, 0.72);
+  --md-footer-fg-color--lighter: rgba(237, 243, 248, 0.58);
 }
 
 [data-md-color-primary="blue"] {
@@ -68,6 +135,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body[data-md-color-scheme="slate"] {
+  background: var(--yatsu-paper);
+}
+
 ::selection {
   background: rgba(22, 159, 245, 0.22);
 }
@@ -78,7 +149,7 @@ body::before {
   z-index: -1;
   background:
     radial-gradient(circle at 1px 1px, var(--yatsu-paper-dot) 1.2px, transparent 0) 0 0 / 22px 22px,
-    linear-gradient(180deg, #ffffff 0%, var(--yatsu-paper) 46%, var(--yatsu-paper-deep) 100%);
+    linear-gradient(180deg, var(--yatsu-page-start) 0%, var(--yatsu-paper) 46%, var(--yatsu-paper-deep) 100%);
   content: "";
   pointer-events: none;
 }
@@ -92,15 +163,15 @@ body::before {
   background: var(--yatsu-surface);
   color: var(--yatsu-ink);
   box-shadow:
-    0 20px 48px -30px rgba(15, 23, 42, 0.38),
-    inset 0 1px 0 rgba(255, 255, 255, 0.88);
+    0 20px 48px -30px var(--yatsu-header-shadow),
+    inset 0 1px 0 var(--yatsu-header-highlight);
   backdrop-filter: blur(18px);
 }
 
 .md-header[data-md-state="shadow"] {
   box-shadow:
-    0 20px 48px -30px rgba(15, 23, 42, 0.44),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 20px 48px -30px var(--yatsu-header-shadow-strong),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
 }
 
 .md-header__inner {
@@ -142,6 +213,11 @@ body::before {
   height: 32px;
 }
 
+[data-md-color-scheme="slate"] .md-header__button.md-logo img,
+[data-md-color-scheme="slate"] .md-nav__button.md-logo img {
+  filter: invert(1) brightness(1.08);
+}
+
 .md-header__title,
 .md-nav__title {
   color: var(--yatsu-ink);
@@ -169,8 +245,35 @@ body::before {
   line-height: 1.3;
 }
 
-.md-header__option {
-  display: none;
+.md-footer__theme .md-header__option {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.md-footer__theme .md-header__option .md-header__button {
+  margin: 0 2px;
+  border: 1px solid var(--yatsu-control-border);
+  border-radius: 19px;
+  background: var(--yatsu-control-bg);
+  box-shadow:
+    0 9px 24px -18px var(--yatsu-header-shadow),
+    inset 0 1px 0 var(--yatsu-header-highlight);
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease;
+}
+
+.md-footer__theme .md-header__option .md-header__button:hover,
+.md-footer__theme .md-header__option .md-header__button:focus-visible {
+  border-color: var(--yatsu-control-border-hover);
+  background: var(--yatsu-control-bg-hover);
+  box-shadow:
+    0 13px 28px -20px var(--yatsu-header-shadow-strong),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
+  outline: none;
 }
 
 .md-header__app-link {
@@ -186,13 +289,13 @@ body::before {
   justify-content: center;
   margin: 0 0.62rem 0 0.4rem;
   padding: 0 15px;
-  border: 1px solid rgba(148, 163, 184, 0.38);
+  border: 1px solid var(--yatsu-control-border);
   border-radius: 19px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #172033;
+  background: var(--yatsu-control-bg);
+  color: var(--yatsu-control-fg);
   box-shadow:
-    0 9px 24px -18px rgba(15, 23, 42, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 9px 24px -18px var(--yatsu-header-shadow),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
   font-size: 14px;
   font-weight: 750;
   line-height: 1;
@@ -205,20 +308,20 @@ body::before {
 
 .md-header__app-link:hover,
 .md-header__app-link:focus-visible {
-  border-color: rgba(100, 116, 139, 0.55);
-  background: rgba(248, 250, 252, 0.96);
+  border-color: var(--yatsu-control-border-hover);
+  background: var(--yatsu-control-bg-hover);
   box-shadow:
-    0 13px 28px -20px rgba(15, 23, 42, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.94);
-  color: #172033;
+    0 13px 28px -20px var(--yatsu-header-shadow-strong),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
+  color: var(--yatsu-control-fg);
   outline: none;
 }
 
 .md-header__app-link:focus-visible {
   box-shadow:
-    0 0 0 4px rgba(22, 159, 245, 0.16),
-    0 13px 28px -20px rgba(15, 23, 42, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.94);
+    0 0 0 4px var(--yatsu-focus-ring),
+    0 13px 28px -20px var(--yatsu-header-shadow-strong),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
 }
 
 .md-search {
@@ -232,11 +335,11 @@ body::before {
 .md-search__form {
   width: 100%;
   height: 38px;
-  border: 1px solid rgba(21, 32, 51, 0.14);
+  border: 1px solid var(--yatsu-search-border);
   border-radius: 19px;
-  background: rgba(255, 255, 255, 0.6);
+  background: var(--yatsu-search-bg);
   color: var(--yatsu-ink);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  box-shadow: inset 0 1px 0 var(--yatsu-panel-highlight);
   transition:
     background 160ms ease,
     border-color 160ms ease,
@@ -248,8 +351,8 @@ body::before {
   border-color: var(--yatsu-line-strong);
   background: var(--yatsu-surface-hover);
   box-shadow:
-    0 9px 24px -20px rgba(15, 23, 42, 0.38),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    0 9px 24px -20px var(--yatsu-header-shadow),
+    inset 0 1px 0 var(--yatsu-header-highlight-strong);
 }
 
 .md-search__input {
@@ -362,8 +465,8 @@ body::before {
   border-radius: 0.75rem;
   background: var(--yatsu-surface);
   box-shadow:
-    0 20px 48px -34px rgba(15, 23, 42, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.76);
+    0 20px 48px -34px var(--yatsu-panel-shadow),
+    inset 0 1px 0 var(--yatsu-panel-highlight);
   backdrop-filter: blur(18px);
 }
 
@@ -409,7 +512,7 @@ body::before {
 
 .md-nav__link:hover,
 .md-nav__link:focus {
-  background: rgba(255, 255, 255, 0.58);
+  background: var(--yatsu-nav-hover);
   color: var(--yatsu-ink);
 }
 
@@ -482,11 +585,18 @@ body::before {
   background: transparent;
 }
 
+.md-footer__theme {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  margin-left: 0.7rem;
+}
+
 .md-footer {
   margin-top: clamp(2rem, 4vw, 3.5rem);
-  border-top: 1px solid rgba(21, 32, 51, 0.1);
+  border-top: 1px solid var(--yatsu-footer-line);
   background:
-    radial-gradient(circle at 1px 1px, rgba(21, 32, 51, 0.07) 1.2px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(circle at 1px 1px, var(--yatsu-paper-dot) 1.2px, transparent 0) 0 0 / 22px 22px,
     var(--yatsu-paper-deep);
 }
 

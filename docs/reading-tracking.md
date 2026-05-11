@@ -220,7 +220,11 @@ In the dialog you can:
 - Pick a square image with one of the built-in pastel backgrounds.
 - Download the PNG or copy it to the clipboard.
 
-Supporters can also choose vertical or horizontal social sizes, use any background color, import a local background image, use a local book cover as the background, adjust fit/fill positioning, add a circular avatar, and show their Yatsu username or a custom display name.
+Supporters can also add custom title/content statistic rows, reorder those custom
+rows, choose vertical or horizontal social sizes, use any background color,
+import a local background image, use a local book cover as the background,
+adjust fit/fill positioning, add a circular avatar, and show their Yatsu
+username or a custom display name.
 
 Imported background and avatar images stay in the browser while the dialog is open. They are used only to render the local PNG and are not uploaded or synced.
 

@@ -1,5 +1,6 @@
 site/
 .venv/
+.mkdocs-serve.*.log
 .cache/
 __pycache__/
 .pytest_cache/

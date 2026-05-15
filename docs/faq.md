@@ -99,7 +99,13 @@ Yatsu Accounts and Settings Sync do not set up Google Drive book sync for you.
 
 Yes, but only with an intentionally configured custom storage source.
 
-The built-in one-click Google Drive source uses Yatsu's own `yatsu-reader-data` folder and is not meant to interoperate with upstream ttsu's default folder. Custom ttsu-compatible sources can still use the shared storage layout. See [Compatibility with Ttsu](upstream-compatibility.md) for details and caveats.
+The built-in one-click Google Drive source uses Yatsu's own `yatsu-reader-data` folder and is not meant to interoperate with ttsu's default folder. Custom ttsu-compatible sources can still use the shared storage layout. See [Compatibility with Ttsu](ttsu-compatibility.md) for details and caveats.
+
+### How do I move my ttsu library into Yatsu?
+
+Export a **Zip File** backup from ttsu, then import that file in Yatsu with **Import** -> **Import Backup**.
+
+Select **Book Data**, **Bookmark**, and **Statistics** in the ttsu export dialog if you want books, current reading positions, and reading history to move. The full walkthrough is in [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md).
 
 ## Statistics and tracking
 

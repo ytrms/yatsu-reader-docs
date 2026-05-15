@@ -4,6 +4,8 @@ Yatsu comes from ttsu, and one of my goals is that people should be able to use 
 
 If you intentionally connect both Yatsu and ttsu to the same custom Google Drive folder, the intended result is that both apps can keep using that same library.
 
+If you only want to move your library once, use [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md) instead. That guide explains the backup zip export/import workflow.
+
 ## Short version
 
 Yes, using Yatsu and ttsu together is supported for custom ttsu-compatible storage sources.
@@ -14,7 +16,7 @@ In normal use:
 - Books saved by Yatsu in a shared custom source should continue to work in ttsu.
 - Using one app should not make your library unusable in the other.
 
-Yatsu's built-in one-click Google Drive source is different. It uses Yatsu's own `yatsu-reader-data` folder and is not meant to share upstream ttsu's default Drive folder.
+Yatsu's built-in one-click Google Drive source is different. It uses Yatsu's own `yatsu-reader-data` folder and is not meant to share ttsu's default Drive folder.
 
 ## What this means in practice
 

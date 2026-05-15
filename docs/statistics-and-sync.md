@@ -91,7 +91,7 @@ Drive statistics become visible there after they are synced into the browser dat
 
 ### "Is this different from ttsu?"
 
-No. This behavior matches the upstream ttsu model: local browser data is the live app database, and external storage is used through sync/import/export.
+No. This behavior matches the ttsu model: local browser data is the live app database, and external storage is used through sync/import/export.
 
 ## Recommended setup
 

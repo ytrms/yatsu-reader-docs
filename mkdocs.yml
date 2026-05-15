@@ -15,8 +15,9 @@ nav:
   - Reading Tracking: reading-tracking.md
   - Statistics and Sync: statistics-and-sync.md
   - Using Yatsu Offline: offline.md
+  - Migrating from Ttsu to Yatsu: migrating-from-ttsu.md
   - Recovering Old GitHub Pages Data: github-pages-recovery.md
-  - Compatibility with Ttsu: upstream-compatibility.md
+  - Compatibility with Ttsu: ttsu-compatibility.md
   - Frequently Asked Questions: faq.md
   - How to Report Bugs: how-to-report-bugs.md
 

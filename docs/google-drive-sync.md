@@ -33,11 +33,11 @@ If you disconnect or switch accounts while using Google Drive as the active libr
 
 The built-in Google Drive source uses Google's `drive.file` permission. This is a limited Drive permission for app-created or app-authorized files, not broad access to your whole Drive.
 
-Because of that limited permission, the built-in source will not automatically pick up an old `ttu-reader-data` folder that was created by upstream ttsu. It uses Yatsu's own `yatsu-reader-data` folder instead.
+Because of that limited permission, the built-in source will not automatically pick up an old `ttu-reader-data` folder that was created by ttsu. It uses Yatsu's own `yatsu-reader-data` folder instead.
 
 ## Compatibility with ttsu
 
-The one-click Google Drive source is a Yatsu default source and is not meant to interoperate with upstream ttsu.
+The one-click Google Drive source is a Yatsu default source and is not meant to interoperate with ttsu.
 
 If you want to keep an intentionally configured ttsu-compatible storage source, use a custom Google Drive source instead. The old bring-your-own Google Cloud setup is still available below for that advanced case.
 

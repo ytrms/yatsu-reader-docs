@@ -46,7 +46,7 @@ If you already have Violentmonkey or another userscript manager installed, openi
 
     This bundled userscript is the community ttu-whispersync script adapted to run on Yatsu. It is included here for convenience, but it is still third-party code rather than a built-in Yatsu feature.
 
-The normal upstream ttu-whispersync project targets `reader.ttsu.app`. To use it with Yatsu, the installed userscript must also target Yatsu.
+The normal ttu-whispersync project targets `reader.ttsu.app`. To use it with Yatsu, the installed userscript must also target Yatsu.
 
 Before installing, check that the userscript metadata includes Yatsu, for example:
 
@@ -54,7 +54,7 @@ Before installing, check that the userscript metadata includes Yatsu, for exampl
 // @match       https://app.yatsu.moe/*
 ```
 
-If the script only mentions `https://reader.ttsu.app/*`, it is the upstream ttu version and will not run on Yatsu by itself.
+If the script only mentions `https://reader.ttsu.app/*`, it is the ttu version and will not run on Yatsu by itself.
 
 To install:
 
@@ -122,7 +122,7 @@ ttu-whispersync can store playback position and persisted subtitles in the brows
 
 If you use Yatsu with a ttu-compatible external storage setup, those small data records may be imported or exported with the usual auto import/export behavior. The audio file is still local to your device.
 
-Matched book content is separate. Upstream ttu-whispersync documents that matched book data is not automatically synced the same way; it may require a manual **Book Data** export if you are moving that setup between browsers.
+Matched book content is separate. The ttu-whispersync docs explain that matched book data is not automatically synced the same way; it may require a manual **Book Data** export if you are moving that setup between browsers.
 
 ## External storage note
 
@@ -142,7 +142,7 @@ Check these first:
 - the book URL includes an `id` parameter
 - you reloaded the Yatsu tab after installing the script
 
-If you installed the regular upstream script, it may only run on `reader.ttsu.app`.
+If you installed the regular script, it may only run on `reader.ttsu.app`.
 
 ### Matching is slow or inaccurate
 
@@ -162,7 +162,7 @@ If this happens with an MP3, try converting the file to a constant-bitrate MP3 o
 
 Desktop Chromium browsers usually handle file reloads best. Other browsers may require selecting the subtitle or audio file again after reload.
 
-If ttu-whispersync asks to reopen files and then stays stuck, disable its filesystem API setting and reload the page. In the browser developer console, the upstream workaround is:
+If ttu-whispersync asks to reopen files and then stays stuck, disable its filesystem API setting and reload the page. In the browser developer console, the recommended workaround is:
 
 ```js
 window.localStorage.setItem('ttu-whispersync-reader-enable-filesystem-api', 0)

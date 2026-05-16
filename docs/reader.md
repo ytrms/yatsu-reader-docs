@@ -182,6 +182,13 @@ Use it for changes such as:
 
 Changes apply while the book is open, so you can adjust the reader until the text feels comfortable.
 
+### Vertical text spacing
+
+When **Writing mode** is set to vertical text, Yatsu shows extra text spacing controls:
+
+- **Enable Font Kerning** lets the selected font fine-tune spacing between vertical characters when the font and browser support it. Leave it off if you want Japanese characters to stay on a stricter grid.
+- **Proportional vertical spacing** uses the font's proportional vertical alternates when available. This can tighten kana and punctuation, but adjacent columns may no longer line up exactly. Turn it off when aligned Japanese columns are more important than compact spacing.
+
 Yatsu normally uses the language stored in the book file. If Chinese text shows Japanese-style character variants, set **Reader content language** to **Simplified** or **Traditional** in the live appearance panel. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. For more detail, see [Chinese Support](chinese-support.md).
 
 Yatsu counts Japanese and Chinese characters by default. For Korean books, set **Character Counting Method** to **Auto** or **Korean** in the live appearance panel. **Auto** only uses Korean counting when the book file declares Korean or the book text looks clearly Korean. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. For more detail, see [Korean Support](korean-support.md).

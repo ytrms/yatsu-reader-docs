@@ -4,6 +4,7 @@ site_url: https://docs.yatsu.moe/
 
 nav:
   - Home: index.md
+  - Using the Library: library.md
   - Yatsu Accounts and Settings Sync: yatsu-accounts.md
   - Using the Reader: reader.md
   - Chinese Support: chinese-support.md

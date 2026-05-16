@@ -7,6 +7,7 @@ These docs focus on the parts of Yatsu that usually need extra explanation: how 
 ## Start here
 
 - [Using the Reader](reader.md): Reader controls, page movement, bookmarks, table of contents, appearance settings, image gallery, reading tracking, and completion behavior.
+- [Using the Library](library.md): Opening books, select mode, range selection, drag selection, and bulk library actions.
 - [Yatsu Accounts and Settings Sync](yatsu-accounts.md): Signing in, usernames, what Settings Sync includes, what stays local, sync status, per-device overrides, and privacy basics.
 - [Using Yatsu Offline](offline.md): What works offline, how to prepare books, persistent storage, full offline use, cache data, and syncing again after being offline.
 - [Frequently Asked Questions](faq.md): Short answers for common confusing cases.

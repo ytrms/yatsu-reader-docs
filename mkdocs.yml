@@ -3,24 +3,29 @@ site_description: Documentation for Yatsu Reader, a web-based ebook reader for J
 site_url: https://docs.yatsu.moe/
 
 nav:
-  - Home: index.md
-  - Using the Library: library.md
-  - Yatsu Accounts and Settings Sync: yatsu-accounts.md
-  - Using the Reader: reader.md
-  - Chinese Support: chinese-support.md
-  - Korean Support: korean-support.md
-  - Using Yatsu with Jiten Reader: jiten-reader.md
-  - Using Yatsu with ttu-whispersync: ttu-whispersync.md
-  - Discord Rich Presence: discord-rich-presence.md
-  - Google Drive Sync: google-drive-sync.md
-  - Reading Tracking: reading-tracking.md
-  - Statistics and Sync: statistics-and-sync.md
-  - Using Yatsu Offline: offline.md
-  - Migrating from Ttsu to Yatsu: migrating-from-ttsu.md
-  - Recovering Old GitHub Pages Data: github-pages-recovery.md
-  - Compatibility with Ttsu: ttsu-compatibility.md
-  - Frequently Asked Questions: faq.md
-  - How to Report Bugs: how-to-report-bugs.md
+  - Start Here:
+      - Home: index.md
+      - Using the Reader: reader.md
+      - Using the Library: library.md
+      - Yatsu Accounts and Settings Sync: yatsu-accounts.md
+      - Using Yatsu Offline: offline.md
+  - Reading and Languages:
+      - Reading Tracking: reading-tracking.md
+      - Chinese Support: chinese-support.md
+      - Korean Support: korean-support.md
+  - Sync, Storage, and Data:
+      - Google Drive Sync: google-drive-sync.md
+      - Statistics and Sync: statistics-and-sync.md
+      - Migrating from Ttsu to Yatsu: migrating-from-ttsu.md
+      - Recovering Old GitHub Pages Data: github-pages-recovery.md
+      - Compatibility with Ttsu: ttsu-compatibility.md
+  - Integrations:
+      - Using Yatsu with Jiten Reader: jiten-reader.md
+      - Using Yatsu with ttu-whispersync: ttu-whispersync.md
+      - Discord Rich Presence: discord-rich-presence.md
+  - Support:
+      - Frequently Asked Questions: faq.md
+      - How to Report Bugs: how-to-report-bugs.md
 
 theme:
   name: material

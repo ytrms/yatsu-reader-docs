@@ -6,9 +6,12 @@ Even if your books are in Google Drive, OneDrive, or another external storage so
 
 This is inherited from ttsu, the reader Yatsu comes from. It helps keep the reader fast and usable offline, but it also means the Statistics page can look different from what is currently stored on Drive until sync has happened.
 
+This is also separate from Yatsu Account **Settings Sync**. Settings Sync syncs Reader and Tracking preferences only. It does not import reading statistics, streaks, progress, highlights, reading goals, or books.
+
 ## Short version
 
 - The Statistics page reads from this browser's local database.
+- Settings Sync does not sync statistics or streaks.
 - The **Library** selector on the Statistics page can show all statistics together or focus on one library.
 - Google Drive and other external storage sources are sync sources, not the live Statistics page database.
 - If sync is set to **Down** or **All**, Yatsu imports Drive statistics when you open a book.
@@ -63,6 +66,18 @@ If sync behavior is **Up** or **All**, Yatsu can then export those updated stati
 This means a newly tracked reading session usually appears locally first, then reaches Drive after the export/sync step finishes.
 
 ## Common situations
+
+### "Settings Sync is on. Why are my stats different on phone and PC?"
+
+Settings Sync only syncs Reader and Tracking settings through your Yatsu Account. It does not sync the statistics rows that power the Statistics page, current streak, longest streak, or reading totals.
+
+Statistics sync through storage sync instead:
+
+- both devices need to use the same Google Drive, OneDrive, or other storage source
+- the device where you read needs to export statistics with sync behavior **Up** or **All**
+- the device where you check stats needs to import statistics with sync behavior **Down** or **All**
+
+If one device shows a 5-day streak and another shows `0`, the second browser probably has not imported those statistics yet, or both devices are not using the same storage source.
 
 ### "My Drive book has statistics, but the Statistics page is empty"
 

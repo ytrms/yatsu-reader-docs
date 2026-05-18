@@ -4,6 +4,8 @@ Yatsu Accounts let you sign in to Yatsu so Reader and Tracking settings can foll
 
 Making an account is free. The main account feature is **Settings Sync**.
 
+Settings Sync is account sync for preferences. It is separate from Google Drive, OneDrive, Browser storage, and manual backups. Reading data such as statistics, streaks, progress, highlights, and reading goals does not move through Settings Sync.
+
 ## Signing in
 
 Open Yatsu and click **Account** in the top-right of the header.
@@ -47,6 +49,8 @@ Synced settings include:
 
 Settings Sync is meant for the common case where you read on one device, then continue using Yatsu on another device and want the app to feel familiar.
 
+It does not make the Statistics page shared by itself. If you want reading statistics to move between a phone and a computer, set up storage sync with the same Google Drive or OneDrive source on both devices.
+
 ## What Does Not Sync
 
 Settings Sync does not currently sync:
@@ -61,6 +65,8 @@ Settings Sync does not currently sync:
 - Storage credentials or cloud provider permissions
 - Data settings
 - Uploaded font files
+
+Reading statistics and streaks can still sync, but they use Yatsu's storage sync/import/export system rather than your Yatsu Account Settings Sync. For example, both devices need to use the same Google Drive or OneDrive storage source, and the reading device needs to export statistics while the other device imports them.
 
 Google Fonts and built-in font choices can sync as settings. Uploaded font files stay on the device where you uploaded them, so a synced custom font choice may not work on another device until that font file is also available there.
 

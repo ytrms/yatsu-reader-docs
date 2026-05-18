@@ -4,6 +4,8 @@ Yatsu can use Google Drive as a remote library and sync target. For most people,
 
 Yatsu Accounts and Settings Sync are separate from Google Drive. A Yatsu account can sync some app settings, while Google Drive stores books and book-related data in your own Drive.
 
+If you want statistics or streaks to appear on another device, Google Drive must be used as storage sync on both devices. Turning on Settings Sync in the account menu is not enough, because Settings Sync only syncs Reader and Tracking preferences.
+
 ## Recommended: one-click Google Drive
 
 You only need a Google account.
@@ -28,6 +30,21 @@ You can manage the built-in Google Drive connection from **Settings** -> **Data*
 - **Disconnect** makes Yatsu forget the default Google Drive authorization stored in this browser. It does not delete your books or the `yatsu-reader-data` folder from Google Drive.
 
 If you disconnect or switch accounts while using Google Drive as the active library or sync target, you may need to choose the storage source again from the Library header or update your sync settings.
+
+## What Google Drive sync can move
+
+Google Drive storage sync can move reading data between this browser and your Drive, including:
+
+- current reading progress
+- saved bookmarks
+- highlights
+- reading statistics and streak data
+- reading goals
+- audiobook and subtitle data
+
+Yatsu still uses the browser database as the live app database while you read. Drive is the shared storage source that Yatsu imports from and exports to when sync runs.
+
+For statistics, that means a device can show `0` locally even when another device has a streak, until statistics have been exported to Drive and imported on the second device. See [Statistics and Sync](statistics-and-sync.md) for the exact behavior.
 
 ## What Yatsu can access
 

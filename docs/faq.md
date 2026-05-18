@@ -22,6 +22,8 @@ Settings Sync syncs Reader and Tracking settings, such as appearance, reading mo
 
 It does not sync books, book progress, bookmarks, highlights, reading statistics, reading goals, storage sources, cloud credentials, data settings, or uploaded font files.
 
+If you want statistics, streaks, progress, highlights, or reading goals to move between devices, use storage sync with the same Google Drive, OneDrive, or other storage source on each device.
+
 ### Why did my synced font setting not work on another device?
 
 Built-in fonts and Google Fonts can sync as settings. Uploaded font files stay on the device where you uploaded them.
@@ -123,11 +125,13 @@ The device where you read needs to export the statistics, and this device needs 
 
 For external storage sources, a common setup is **Up** or **All** on the reading device and **Down** or **All** on the device where you review statistics.
 
+Settings Sync being on does not change this. Settings Sync only moves Reader and Tracking preferences through your Yatsu Account; statistics and streaks move through storage sync.
+
 ### Does Settings Sync sync reading statistics or goals?
 
 No. Yatsu Account Settings Sync does not sync reading statistics, reading goals, bookmarks, highlights, book progress, or books.
 
-Statistics and goals are local first. They can move through manual export, manual sync, automatic storage sync, or provider-specific sync features.
+Statistics and goals are local first. They can move through manual export, manual sync, or automatic storage sync with Google Drive, OneDrive, or another configured storage source.
 
 ### The tracker is visible, but nothing is counting
 

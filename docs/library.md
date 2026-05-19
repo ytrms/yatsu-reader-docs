@@ -41,3 +41,14 @@ selected books.
 
 Some actions depend on the current storage source. For example, renaming and
 local statistics actions are only available for books stored in this browser.
+
+## Book actions
+
+Open a book's three-dot menu to update per-book details such as series, tags,
+cover visibility, and reading progress.
+
+Yatsu Supporters can also choose **Change cover** from this menu and upload a
+JPG or PNG image. This replaces the book's stored cover. For browser libraries,
+the replacement is saved in this browser. For Drive, OneDrive, and file-system
+libraries, the replacement is saved as the book's cover file in that storage
+source, so other devices using the same library can display it.

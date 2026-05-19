@@ -45,10 +45,21 @@ local statistics actions are only available for books stored in this browser.
 ## Book actions
 
 Open a book's three-dot menu to update per-book details such as series, tags,
-cover visibility, and reading progress.
+cover visibility, and reading progress. The details submenu shows stored
+metadata such as author, character count, last read time, bookmark time, and
+last update time when available.
+
+The library display settings can show optional cover-card details. Author,
+series, tags, and character count appear as compact strips when those fields are
+enabled and available, with multiple tags shown as comma-separated text.
 
 Yatsu Supporters can also choose **Change cover** from this menu and upload a
 JPG or PNG image. This replaces the book's stored cover. For browser libraries,
 the replacement is saved in this browser. For Drive, OneDrive, and file-system
 libraries, the replacement is saved as the book's cover file in that storage
 source, so other devices using the same library can display it.
+
+Yatsu imports author metadata from new EPUB/HTMLZ imports when the book file
+includes creator metadata. Supporters can also choose **Edit author** from the
+book menu to choose an existing author or add, change, or clear the stored
+author field for any book.

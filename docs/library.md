@@ -42,6 +42,27 @@ selected books. Supporters can also set or clear the author for selected books.
 Some actions depend on the current storage source. For example, renaming and
 local statistics actions are only available for books stored in this browser.
 
+## Complete local backups
+
+Use **More library actions** -> **Get complete local backup** when you want
+one portable `.zip` copy of the data Yatsu has stored in this browser. This is
+different from exporting a selected set of books: it always reads from the local
+Browser library and includes every supported local book-data type Yatsu can
+export.
+
+The backup can include local books, current reading positions, saved bookmarks,
+highlights and notes, statistics, reading goals, audiobook state, subtitle data,
+covers, and a versioned settings snapshot. The settings snapshot is limited to
+known safe Yatsu settings such as Reader, Tracking, Library, and Statistics
+preferences. It does not include account sign-in, cloud authorization, browser
+extension data, uploaded local font files, or unrelated browser storage.
+
+To restore the backup in another browser, choose **Browser** as the storage
+source, then use **Import** -> **Import Backup** and select the downloaded zip.
+Older backup zips without a settings snapshot still import normally. If a future
+backup contains settings that the current Yatsu version does not recognize,
+those unknown settings are ignored.
+
 ## Book actions
 
 Open a book's three-dot menu to update per-book details such as series, tags,

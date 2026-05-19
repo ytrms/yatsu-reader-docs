@@ -69,6 +69,21 @@ Browser labels differ, but look for one of these areas:
 
 After revoking or clearing storage, reload Yatsu. The **Persistent storage** setting should no longer show as enabled.
 
+### How do I delete all local Yatsu data from this browser?
+
+Open **Settings** -> **Data** -> **Advanced**, then use **Danger Zone** ->
+**Delete all local data**. Yatsu will ask you to type `I am absolutely sure`
+before the final **Delete** button becomes available.
+
+This removes local Yatsu data in the current browser profile, including local
+books, reading state, reading goals, settings, caches, storage-source
+credentials, and local account session data. It does not delete files in Google
+Drive, OneDrive, a filesystem folder, synced settings stored in your Yatsu
+account, or the Yatsu account itself.
+
+If the browser blocks part of the cleanup, use your browser's site-data settings
+for `app.yatsu.moe` to remove anything left behind.
+
 ### Can I use Yatsu offline?
 
 Yes, but only for data that is already on the device.

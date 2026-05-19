@@ -216,3 +216,14 @@ Importing from Google Drive or OneDrive needs a connection.
 I do not recommend it.
 
 Browser storage is convenient and works well for offline use, but it is still controlled by the browser and the device. Keep backups or sync important books and progress somewhere else.
+
+For a portable copy of the local browser library, use **More library actions** ->
+**Get complete local backup** from the Library. That creates a zip with the
+local Browser books, reading data, reading goals, and a safe Yatsu settings
+snapshot that can be restored later with **Import** -> **Import Backup**.
+
+To intentionally wipe local Yatsu data from this browser, use **Settings** ->
+**Data** -> **Advanced** -> **Danger Zone** -> **Delete all local data**. This is
+local-only and does not delete remote storage or your Yatsu account, but it does
+remove the current browser's local Yatsu library, settings, caches, and local
+session data.

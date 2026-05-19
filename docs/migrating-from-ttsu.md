@@ -102,6 +102,11 @@ Yatsu imports the parts that are present in the backup zip. If you did not selec
 
 Backup imports can also restore extra Yatsu-compatible data if the zip contains it, such as saved bookmarks, highlights, highlight notes, reading goals, and cover images. Older ttsu exports may not contain all of those newer Yatsu-specific files.
 
+Yatsu's own **Get complete local backup** zip can also contain a versioned
+safe settings snapshot. That settings snapshot is restored only when importing
+into the Browser storage source. Older ttsu backup zips do not contain this
+Yatsu settings file.
+
 ## What does not get imported
 
 The backup zip is for library and reading data. It does not import everything about your app setup.
@@ -111,7 +116,7 @@ These are not moved by the ttsu backup import:
 - ttsu or Yatsu account sign-in
 - Google Drive or OneDrive authorizations
 - custom storage source credentials
-- reader appearance settings and app settings
+- reader appearance settings and app settings from ordinary ttsu backup exports
 - browser/PWA install state
 - browser extension or userscript settings
 - uploaded local font files

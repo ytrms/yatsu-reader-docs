@@ -37,7 +37,7 @@ in the current filtered view.
 After selecting books, the select toolbar can update series, add or remove tags,
 blur or show covers, mark progress as complete or unread, export the selection,
 open statistics for selected local books, delete statistics, or delete the
-selected books.
+selected books. Supporters can also set or clear the author for selected books.
 
 Some actions depend on the current storage source. For example, renaming and
 local statistics actions are only available for books stored in this browser.

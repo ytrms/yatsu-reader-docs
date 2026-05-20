@@ -149,7 +149,7 @@ To create or change a goal:
 1. Turn **Enable Statistics** on.
 2. Open **Settings** -> **Tracking** -> **Goals**.
 3. Click **Edit** in the **Current Goal** panel.
-4. Enter a time target, a character target, or both.
+4. Enter a time target, a character target, a reading speed target, or a combination of them.
 5. Choose the goal frequency and start date.
 6. Click **Save**.
 
@@ -157,10 +157,11 @@ A goal can include:
 
 - **Time Goal (Min)**: target reading minutes.
 - **Character Goal**: target characters read.
+- **Reading Speed Goal (Ch/h)**: target reading speed in characters per hour.
 - **Frequency**: Daily, Weekly, or Monthly.
 - **Start Date**: when the goal starts.
 
-Leave both goal values at `0` and save to clear the active goal. If you set a non-zero time or character goal, Yatsu needs a start date so it can place the goal in a window.
+Leave all goal values at `0` and save to clear the active goal. If you set a non-zero time, character, or reading speed goal, Yatsu needs a start date so it can place the goal in a window.
 
 Goal frequencies work like this:
 
@@ -170,36 +171,36 @@ Goal frequencies work like this:
 
 The tracker menu shows active goal progress when a goal applies to the current day. The Statistics page can also show a goal heatmap when reading goal data exists.
 
-### Goal Pace Indicator
+### Goal Progress Tracker
 
-The **Goal Pace Indicator** setting is in **Settings** -> **Tracking** -> **Goals**. It controls the small pace light in the reader footer.
+The **Goal Progress Tracker** setting is in **Settings** -> **Tracking** -> **Goals**. It controls the small progress light in the reader footer.
 
-The pace light appears only when all of these are true:
+The progress light appears only when all of these are true:
 
 - **Enable Statistics** is on.
 - A reading goal is active for the current day.
-- The **Goal Pace Indicator** setting is on.
-- The tracker is running.
+- The **Goal Progress Tracker** setting is on.
 
 The light uses these states:
 
-- **Green**: you are on track or ahead of pace.
-- **Yellow**: you are close to pace, but slightly behind.
-- **Red**: you are materially behind pace.
+- **Gray**: a goal is active, but Yatsu does not yet have enough data for the target currently driving the light.
+- **Green**: the selected target is matching or ahead of the goal.
+- **Yellow**: the selected target is close to the goal, but slightly under.
+- **Red**: the selected target is materially behind the goal.
 
-Click the light to open the pace details popover. The popover shows:
+Click the light to open the progress details popover. The popover shows:
 
 - the current goal window
-- how much of that window has elapsed
-- current time progress compared with the time goal, if one is set
-- current character progress compared with the character goal, if one is set
-- whether each target is on track, close, or behind
+- which target is driving the light
+- time, character, and speed progress for every target included in the active goal
+- whether each target is waiting, on track, close, or behind
+- how many recent turns and how much tracked time the speed estimate is based on, when a speed goal is set
 
-**Window elapsed** means how much of the current goal window has passed. For example, if a daily goal is checked halfway through the tracking day, the window elapsed value is about `50%`. Yatsu compares your current progress with that percentage of the goal target.
+The **Dot tracks** control in the popover chooses which target colors the light. **Auto** is the default: it uses **Reading Speed Goal** when one exists, then falls back to **Character Goal**, then **Time Goal**. You can choose a specific available target instead.
 
-If both a time goal and a character goal are set, the pace light uses the stricter result. For example, if time is on track but characters are behind, the light shows the behind state.
+When the light tracks speed, the estimate is based on forward page turns while the tracker is running. Yatsu compares the characters advanced with the tracked time since the previous forward movement, then smooths the most recent samples. Backward movement, large skips, pauses, and tiny samples are ignored so the light reflects current reading speed rather than navigation noise.
 
-The pace indicator uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Pace Indicator** off if you want to keep the reader footer quieter.
+The goal progress tracker uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Progress Tracker** off if you want to keep the reader footer quieter.
 
 ### Goal Sync and Maintenance
 

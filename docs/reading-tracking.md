@@ -142,7 +142,16 @@ Dictionary Detection changes how popup dictionaries interact with Moderate and S
 
 ## Reading Goals
 
-Reading goals are configured under **Settings** -> **Tracking** -> **Reading Goals**.
+Reading goals are configured under **Settings** -> **Tracking** -> **Goals**.
+
+To create or change a goal:
+
+1. Turn **Enable Statistics** on.
+2. Open **Settings** -> **Tracking** -> **Goals**.
+3. Click **Edit** in the **Current Goal** panel.
+4. Enter a time target, a character target, or both.
+5. Choose the goal frequency and start date.
+6. Click **Save**.
 
 A goal can include:
 
@@ -151,7 +160,7 @@ A goal can include:
 - **Frequency**: Daily, Weekly, or Monthly.
 - **Start Date**: when the goal starts.
 
-Leave both goal values at `0` to clear the active goal.
+Leave both goal values at `0` and save to clear the active goal. If you set a non-zero time or character goal, Yatsu needs a start date so it can place the goal in a window.
 
 Goal frequencies work like this:
 
@@ -160,6 +169,39 @@ Goal frequencies work like this:
 - **Monthly**: thirty-day windows from the goal start date.
 
 The tracker menu shows active goal progress when a goal applies to the current day. The Statistics page can also show a goal heatmap when reading goal data exists.
+
+### Goal Pace Indicator
+
+The **Goal Pace Indicator** setting is in **Settings** -> **Tracking** -> **Goals**. It controls the small pace light in the reader footer.
+
+The pace light appears only when all of these are true:
+
+- **Enable Statistics** is on.
+- A reading goal is active for the current day.
+- The **Goal Pace Indicator** setting is on.
+- The tracker is running.
+
+The light uses these states:
+
+- **Green**: you are on track or ahead of pace.
+- **Yellow**: you are close to pace, but slightly behind.
+- **Red**: you are materially behind pace.
+
+Click the light to open the pace details popover. The popover shows:
+
+- the current goal window
+- how much of that window has elapsed
+- current time progress compared with the time goal, if one is set
+- current character progress compared with the character goal, if one is set
+- whether each target is on track, close, or behind
+
+**Window elapsed** means how much of the current goal window has passed. For example, if a daily goal is checked halfway through the tracking day, the window elapsed value is about `50%`. Yatsu compares your current progress with that percentage of the goal target.
+
+If both a time goal and a character goal are set, the pace light uses the stricter result. For example, if time is on track but characters are behind, the light shows the behind state.
+
+The pace indicator uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Pace Indicator** off if you want to keep the reader footer quieter.
+
+### Goal Sync and Maintenance
 
 Reading goals have their own **Sync**, **Edit**, and **Reset** actions in the Reading Goals panel:
 

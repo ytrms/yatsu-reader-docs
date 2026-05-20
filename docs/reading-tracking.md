@@ -200,6 +200,8 @@ The **Dot tracks** control in the popover chooses which target colors the light.
 
 When the light tracks speed, the estimate is based on forward page turns while the tracker is running. Yatsu compares the characters advanced with the tracked time since the previous forward movement, then smooths the most recent samples. Backward movement, large skips, pauses, and tiny samples are ignored so the light reflects current reading speed rather than navigation noise.
 
+Temporary auto-pauses, such as popup dictionary detection, stop adding time to the speed sample but keep the latest light color visible. Manual pauses and navigation discontinuities can still reset the speed sample back to waiting.
+
 The goal progress tracker uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Progress Tracker** off if you want to keep the reader footer quieter.
 
 ### Goal Sync and Maintenance

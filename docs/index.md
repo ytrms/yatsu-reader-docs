@@ -21,6 +21,7 @@ These docs focus on the parts of Yatsu that usually need extra explanation: how 
 
 ## Sync, storage, and data
 
+- [WebDAV Storage](webdav-sync.md): Use a NAS, self-hosted server, or other WebDAV endpoint as a Yatsu library and sync source.
 - [Google Drive Sync](google-drive-sync.md): The one-click Google Drive setup, what Yatsu stores in Drive, and the legacy custom Google Cloud setup.
 - [Statistics and Sync](statistics-and-sync.md): How reading statistics behave across local books, Drive-backed books, synced libraries, and multiple devices.
 - [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md): How to export a backup zip from ttsu and import it into Yatsu.

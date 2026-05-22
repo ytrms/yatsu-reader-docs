@@ -16,6 +16,7 @@ nav:
   - Sync, Storage, and Data:
       - Google Drive Sync: google-drive-sync.md
       - WebDAV Storage: webdav-sync.md
+      - Windows WebDAV Setup: webdav-windows.md
       - Statistics and Sync: statistics-and-sync.md
       - Migrating from Ttsu to Yatsu: migrating-from-ttsu.md
       - Recovering Old GitHub Pages Data: github-pages-recovery.md

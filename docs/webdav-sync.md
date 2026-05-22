@@ -16,16 +16,18 @@ If you use the hosted Yatsu app over HTTPS, the WebDAV URL should also use HTTPS
 
 Your WebDAV server or reverse proxy must allow browser cross-origin requests from Yatsu. If the server does not send the required CORS headers for `PROPFIND`, `MKCOL`, `GET`, `PUT`, `MOVE`, and `DELETE`, the browser will block the connection before Yatsu can read the response.
 
+If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide](webdav-windows.md). It shows a known-good rclone and Caddy configuration with HTTPS and the CORS headers Yatsu needs.
+
 ## Add a WebDAV source
 
 1. Open **Settings** -> **Data** -> **Sync & Sources**.
 2. Choose **Add source**.
 3. Give the source a name, such as `NAS Library`.
-4. Choose **WebDAV** from the provider dropdown.
+4. Choose **WebDAV (Beta)** from the provider dropdown.
 5. Enter the WebDAV URL, username, and password.
 6. Choose whether this source should be the sync target or default WebDAV source.
 7. Save the source.
-8. Return to the Library and choose **WebDAV** from the storage picker.
+8. Return to the Library and choose **WebDAV (Beta)** from the storage picker.
 
 The WebDAV URL should point to the parent collection where Yatsu is allowed to create its data folder. For example:
 

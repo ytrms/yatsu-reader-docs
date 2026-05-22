@@ -3,8 +3,8 @@
 This guide shows one reliable Windows setup for Yatsu WebDAV storage:
 
 - `rclone` serves a local Windows folder as WebDAV on `127.0.0.1`.
-- `Caddy` exposes that WebDAV server over HTTPS and adds the browser CORS
-  headers Yatsu needs.
+- `Caddy` adds the browser CORS headers Yatsu needs and either exposes HTTPS
+  itself or sits behind a tunnel that provides the public HTTPS URL.
 - Yatsu connects to the public HTTPS URL, not directly to the local rclone
   address.
 
@@ -37,17 +37,71 @@ Yatsu expects a WebDAV collection where it can create and manage a
 You need:
 
 - a Windows 10 or Windows 11 PC that will stay online while you want sync
-- a domain or subdomain for WebDAV, such as `yatsu-webdav.example.com`
-- DNS for that name pointing to the Windows PC or to a tunnel that reaches it
-- inbound access to Caddy on ports `80` and `443`, or a tunnel that gives Caddy
-  a public HTTPS URL
+- a public HTTPS URL for WebDAV, either from a domain/subdomain such as
+  `yatsu-webdav.example.com` or from a tunnel such as ngrok or Cloudflare Tunnel
+- DNS and inbound access to Caddy on ports `80` and `443` if you use your own
+  domain without a tunnel
 - [rclone for Windows](https://rclone.org/downloads/)
 - [Caddy for Windows](https://caddyserver.com/docs/install#windows)
+- ngrok or cloudflared if you choose one of the tunnel options below
 - a strong username and password for the WebDAV account
 
 If you cannot provide a real HTTPS URL, use a tunnel or reverse proxy that gives
 your WebDAV server one. The hosted Yatsu app cannot reliably connect to a plain
 HTTP WebDAV URL because browsers block mixed-content requests from an HTTPS page.
+
+## Choose a Public HTTPS URL
+
+Yatsu only needs a public HTTPS URL that reaches the Caddy proxy from the browser.
+It does not matter whether that URL comes from normal DNS, ngrok, or Cloudflare
+Tunnel.
+
+### Option A: Use Your Own Domain or Subdomain
+
+A subdomain is a DNS name under a domain you control, such as
+`yatsu-webdav.example.com`. In this setup, DNS points that name to the Windows PC
+or router, and Caddy listens publicly on ports `80` and `443`.
+
+Use this option if you already have a domain and can forward inbound HTTPS
+traffic to the Windows PC. Use the public Caddyfile in step 5.
+
+### Option B: Use ngrok
+
+[ngrok](https://ngrok.com/docs/http/) can give you a public HTTPS URL without
+router port forwarding. Free ngrok accounts include an automatically assigned
+[Dev Domain](https://ngrok.com/docs/universal-gateway/domains/#dev-domains).
+Paid plans can use custom domains or randomly generated URLs.
+
+With ngrok, keep rclone on `127.0.0.1:8080`, run Caddy locally on
+`127.0.0.1:18080` with the tunnel Caddyfile in step 5, then point ngrok at
+Caddy:
+
+```powershell
+ngrok http 18080 --url https://your-ngrok-dev-domain.ngrok-free.app
+```
+
+Use the ngrok HTTPS URL as the WebDAV URL in Yatsu.
+
+Do not point ngrok directly at rclone unless you also configure ngrok to handle
+the same CORS and `OPTIONS` preflight behavior as the Caddyfile in this guide.
+
+### Option C: Use Cloudflare Tunnel
+
+[Cloudflare Tunnel](https://developers.cloudflare.com/tunnel/routing/) can expose
+a local service through Cloudflare without opening router ports. If you already
+use Cloudflare for a domain, create a named tunnel and map a public hostname to
+the local Caddy proxy.
+
+For quick testing, Cloudflare also provides temporary
+[Quick Tunnels](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/do-more-with-tunnels/trycloudflare/):
+
+```powershell
+cloudflared tunnel --url http://127.0.0.1:18080
+```
+
+Quick Tunnels return a `trycloudflare.com` HTTPS URL. They are useful for testing,
+but the URL may change when the tunnel restarts. For regular use, prefer a stable
+ngrok Dev Domain or a named Cloudflare Tunnel hostname.
 
 ## 1. Create the Storage Folder
 
@@ -120,7 +174,7 @@ New-Item -ItemType Directory -Force C:\Caddy
 notepad C:\Caddy\Caddyfile
 ```
 
-## 5. Configure Caddy for HTTPS and CORS
+## 5. Configure Caddy for CORS and HTTPS
 
 Use a dedicated subdomain if possible. This avoids path-prefix mistakes and
 makes the WebDAV URL easy to copy into Yatsu.
@@ -152,21 +206,54 @@ yatsu-webdav.example.com {
 }
 ```
 
+If you are using ngrok or Cloudflare Tunnel, the tunnel provides the public HTTPS
+URL. Use this local-only Caddyfile instead:
+
+```caddyfile
+http://127.0.0.1:18080 {
+    @preflight method OPTIONS
+
+    handle @preflight {
+        header Access-Control-Allow-Origin "https://app.yatsu.moe"
+        header Access-Control-Allow-Methods "OPTIONS, PROPFIND, MKCOL, GET, PUT, MOVE, DELETE"
+        header Access-Control-Allow-Headers "Authorization, Content-Type, Depth, Destination, Overwrite"
+        header Access-Control-Expose-Headers "Content-Length, ETag, Last-Modified"
+        header Access-Control-Max-Age "86400"
+        header Vary "Origin"
+        respond "" 204
+    }
+
+    handle {
+        header Access-Control-Allow-Origin "https://app.yatsu.moe"
+        header Access-Control-Allow-Methods "OPTIONS, PROPFIND, MKCOL, GET, PUT, MOVE, DELETE"
+        header Access-Control-Allow-Headers "Authorization, Content-Type, Depth, Destination, Overwrite"
+        header Access-Control-Expose-Headers "Content-Length, ETag, Last-Modified"
+        header Vary "Origin"
+        reverse_proxy 127.0.0.1:8080
+    }
+}
+```
+
 Start Caddy:
 
 ```powershell
 C:\Tools\caddy\caddy.exe run --config C:\Caddy\Caddyfile --adapter caddyfile
 ```
 
-Leave this PowerShell window open while testing. Caddy should obtain and renew
-the HTTPS certificate for the configured subdomain automatically when DNS and
-inbound access are correct. For a normal public DNS setup, Caddy usually needs
-ports `80` and `443` reachable from the internet while it gets the certificate.
+Leave this PowerShell window open while testing.
+
+If you use the public subdomain Caddyfile, Caddy should obtain and renew the
+HTTPS certificate automatically when DNS and inbound access are correct. For a
+normal public DNS setup, Caddy usually needs ports `80` and `443` reachable from
+the internet while it gets the certificate.
+
+If you use the tunnel Caddyfile, Caddy only listens on the Windows PC. Start your
+ngrok or Cloudflare Tunnel command after Caddy is running.
 
 ## 6. Test the Public WebDAV URL
 
 From PowerShell, test the CORS preflight that browsers send before Yatsu's
-WebDAV requests:
+WebDAV requests. Replace the example URL with your real public HTTPS URL:
 
 ```powershell
 curl.exe -i -X OPTIONS "https://yatsu-webdav.example.com/" `
@@ -211,7 +298,8 @@ The `MKCOL` and upload requests should return a success status. The cleanup
 3. Choose **Add source**.
 4. Set **Provider** to **WebDAV (Beta)**.
 5. Enter a name, such as `Home WebDAV`.
-6. Enter the WebDAV URL:
+6. Enter the WebDAV URL. Use your real public HTTPS URL, whether it is your
+   subdomain, ngrok Dev Domain, or Cloudflare Tunnel URL:
 
    ```text
    https://yatsu-webdav.example.com/
@@ -344,3 +432,5 @@ links can point to the wrong location.
 
 - [rclone `serve webdav`](https://rclone.org/commands/rclone_serve_webdav/)
 - [Caddy `reverse_proxy`](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy)
+- [ngrok HTTP endpoints](https://ngrok.com/docs/http/)
+- [Cloudflare Tunnel routing](https://developers.cloudflare.com/tunnel/routing/)

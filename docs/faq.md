@@ -214,11 +214,11 @@ If you use Jiten Reader, update it to version 1.1.0 or newer, reload Yatsu, and 
 
 See [Using Yatsu with Jiten Reader](jiten-reader.md) for setup and fallback steps.
 
-### What is ttu-whispersync for?
+### What is Yatsu Whispersync for?
 
-`ttu-whispersync` is a userscript workflow for syncing playback and subtitles with the reader, with optional Anki export support.
+Yatsu Whispersync is a Yatsu-compatible userscript build of `ttu-whispersync` for syncing playback and subtitles with the reader, with optional Anki export support.
 
-Use [Using Yatsu with ttu-whispersync](ttu-whispersync.md) if you are trying to align audio or video subtitles with a Yatsu book. You do not need it for normal reading, normal statistics, or Yatsu Account Settings Sync.
+Use [Yatsu Whispersync](ttu-whispersync.md) if you are trying to align audio or video subtitles with a Yatsu book. You do not need it for normal reading, normal statistics, or Yatsu Account Settings Sync.
 
 ## Support
 

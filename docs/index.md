@@ -1,6 +1,6 @@
 # Yatsu Reader Docs
 
-Yatsu Reader is a web-based ebook reader built for Japanese learners, with support for reader customization, language-specific text handling, reading statistics, offline use, account settings sync, and optional integrations with tools such as Jiten Reader, Google Drive, and ttu-whispersync.
+Yatsu Reader is a web-based ebook reader built for Japanese learners, with support for reader customization, language-specific text handling, reading statistics, offline use, account settings sync, and optional integrations with tools such as Jiten Reader, Google Drive, and Yatsu Whispersync.
 
 These docs focus on the parts of Yatsu that usually need extra explanation: how reading behavior works, what sync does and does not cover, how to set up external storage, how statistics are recorded, and how Yatsu stays compatible with related TTU/Ttsu workflows.
 
@@ -31,4 +31,4 @@ These docs focus on the parts of Yatsu that usually need extra explanation: how 
 ## Integrations
 
 - [Using Yatsu with Jiten Reader](jiten-reader.md): How to connect Jiten Reader to Yatsu and what to try if parsing does not start right away.
-- [Using Yatsu with ttu-whispersync](ttu-whispersync.md): How the Yatsu-compatible userscript syncs playback and subtitles, exports Anki cards, and works with external storage.
+- [Yatsu Whispersync](ttu-whispersync.md): How the Yatsu-compatible userscript syncs playback and subtitles, exports Anki cards, and works with external storage.

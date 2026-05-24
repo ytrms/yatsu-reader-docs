@@ -21,7 +21,7 @@ nav:
       - Compatibility with Ttsu: ttsu-compatibility.md
   - Integrations:
       - Using Yatsu with Jiten Reader: jiten-reader.md
-      - Using Yatsu with ttu-whispersync: ttu-whispersync.md
+      - Yatsu Whispersync: ttu-whispersync.md
       - Discord Rich Presence: discord-rich-presence.md
   - Support:
       - Frequently Asked Questions: faq.md

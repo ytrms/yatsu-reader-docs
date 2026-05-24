@@ -10,11 +10,13 @@ You need:
 
 - a WebDAV collection URL that the browser can reach
 - a username and password for that WebDAV account
-- permission to create folders, upload files, rename files, and delete files in that collection
+- permission to create folders, upload files, rename files and folders, and delete files in that collection
 
 If you use the hosted Yatsu app over HTTPS, the WebDAV URL should also use HTTPS. Browsers usually block app requests from an HTTPS page to a plain HTTP server.
 
 Your WebDAV server or reverse proxy must allow browser cross-origin requests from Yatsu. If the server does not send the required CORS headers for `PROPFIND`, `MKCOL`, `GET`, `PUT`, `MOVE`, and `DELETE`, the browser will block the connection before Yatsu can read the response.
+
+For rename support, CORS must also allow the `Destination` and `Overwrite` request headers used by WebDAV `MOVE` requests.
 
 If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide](webdav-windows.md). It shows a known-good rclone and Caddy configuration with HTTPS and the CORS headers Yatsu needs.
 
@@ -51,6 +53,14 @@ WebDAV storage sync can move reading data between this browser and your WebDAV s
 
 Yatsu still uses the browser database as the live app database while you read. WebDAV is the external storage source that Yatsu imports from and exports to when sync runs.
 
+## Renaming Books
+
+When you rename a book while browsing a WebDAV library, Yatsu renames that book's folder inside `yatsu-reader-data`.
+
+Yatsu treats the WebDAV folder name as the current book title. If older embedded book data still contains the previous title, Yatsu keeps using the folder title when it opens or syncs the book.
+
+Your WebDAV server must support `MOVE` on folders for this to work. Reverse proxies and CORS rules must pass the `Destination` and `Overwrite` headers through to the WebDAV server.
+
 ## Server Compatibility Notes
 
 WebDAV servers vary. If a source fails to connect, check these common issues:
@@ -58,7 +68,7 @@ WebDAV servers vary. If a source fails to connect, check these common issues:
 - The URL must be reachable from the device and browser where Yatsu is running.
 - Hosted Yatsu pages should use an HTTPS WebDAV endpoint.
 - The WebDAV server must support the methods Yatsu uses: `PROPFIND`, `MKCOL`, `GET`, `PUT`, `MOVE`, and `DELETE`.
-- CORS must allow Yatsu's origin, the `Authorization` header, and the WebDAV methods above.
+- CORS must allow Yatsu's origin, the `Authorization`, `Content-Type`, `Depth`, `Destination`, and `Overwrite` request headers, and the WebDAV methods above.
 - Reverse proxies must pass WebDAV methods and headers through to the server.
 - The account needs write permission in the selected collection.
 
@@ -66,4 +76,4 @@ Some NAS products expose WebDAV under a user-specific path. Others expose a shar
 
 ## Storage Layout
 
-WebDAV storage is a Yatsu-specific source. It uses the `yatsu-reader-data` root folder and Yatsu's existing book data file names inside each title folder.
+WebDAV storage is a Yatsu-specific source. It uses the `yatsu-reader-data` root folder and Yatsu's existing book data file names inside each title folder. Renaming a book in Yatsu renames that title folder.

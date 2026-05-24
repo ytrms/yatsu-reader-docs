@@ -51,6 +51,13 @@ In continuous mode:
 - Autoscroll can move the text for you.
 - The speed indicator shows the current autoscroll multiplier.
 
+In VN mode:
+
+- Yatsu shows one reader block at a time by default, such as a paragraph, heading, list, table, or image.
+- Use `Space`, `Enter`, `PageDown`, `ArrowDown`, or the visible reader controls to move forward. Use `PageUp`, `ArrowUp`, or the opposite horizontal arrow to move back.
+- **VN reveal speed** controls the typewriter-style reveal speed. Set it to Instant to show each screen immediately.
+- Supporters can set **VN screen content** to **Sentences** and choose how many sentences appear on each screen. Images, lists, and tables still stay together as whole blocks.
+
 The default reader shortcuts include:
 
 | Action | Shortcut |
@@ -177,6 +184,7 @@ Use it for changes such as:
 - per-book character counting method for Japanese/Chinese or Korean progress
 - page columns
 - furigana display
+- VN reveal speed and Supporter sentence grouping
 - theme and custom theme adjustments
 - publisher style handling
 

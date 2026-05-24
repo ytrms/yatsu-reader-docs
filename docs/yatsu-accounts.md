@@ -94,6 +94,7 @@ When you are signed in, Yatsu shows a small cloud button next to a few settings:
 - Line height
 - Paragraph margins
 - View mode and page columns
+- VN reveal speed and Supporter screen content
 - Auto-scroll speed
 
 Click or tap the cloud button to stop syncing that setting on the current device.

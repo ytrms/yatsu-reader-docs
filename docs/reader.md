@@ -18,6 +18,7 @@ Common controls include:
 - **Return to current position**: jumps back to your saved current reading position, if one exists.
 - **Current autoscroll speed**: shown in continuous mode when autoscroll is available.
 - **Fullscreen**: toggles browser fullscreen.
+- **Zen mode**: hides the reader chrome, footer, clock/session overlay, and reading position markers until you press `/` again or click the pale `/` in the bottom-right corner.
 - **Appearance**: opens the live appearance panel for reader-specific visual settings.
 - **More reader actions**: opens less frequent reader actions such as completion, custom point controls, image gallery, and keyboard shortcuts.
 
@@ -72,6 +73,7 @@ The default reader shortcuts include:
 | Increase autoscroll speed | `A` |
 | Decrease autoscroll speed | `D` |
 | Toggle fullscreen | `F` |
+| Toggle Zen mode | `/` |
 | Show keyboard shortcuts | `?` |
 | Exit reader | `Esc` twice |
 

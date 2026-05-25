@@ -79,8 +79,10 @@ Yatsu groups non-series shelves by series by default. Use **Group by** ->
 **None** in the library display settings to return to a flat grid. Series
 grouping works on shelves such as All books, Unread, Reading, Completed, Tags,
 and Untagged. Each row header opens that series shelf, matching the Series item
-in the sidebar. Series shelves and the Not in a series shelf stay as normal flat
-grids.
+in the sidebar. Books in the **Not in a series** section use the normal cover
+grid at the bottom instead of a horizontal row, so large loose-book collections
+stay scannable. Series shelves and the Not in a series shelf stay as normal flat
+grids when opened directly.
 
 Yatsu Supporters can also choose **Change cover** from this menu and upload a
 JPG or PNG image. This replaces the book's stored cover. For browser libraries,

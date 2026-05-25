@@ -94,4 +94,6 @@ source, so other devices using the same library can display it.
 Yatsu imports author metadata from new EPUB/HTMLZ imports when the book file
 includes creator metadata. Supporters can also choose **Edit author** from the
 book menu to choose an existing author or add, change, or clear the stored
-author field for any book.
+author field for any book. The Authors section in the sidebar also has
+Supporter-only actions to rename an author across matching books or delete the
+author value from those books.

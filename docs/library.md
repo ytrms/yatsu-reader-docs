@@ -70,9 +70,17 @@ cover visibility, and reading progress. The details submenu shows stored
 metadata such as author, character count, last read time, bookmark time, and
 last update time when available.
 
-The library display settings can show optional cover-card details. Author,
-series, tags, and character count appear as compact strips when those fields are
-enabled and available, with multiple tags shown as comma-separated text.
+The library display settings can show optional cover-card details. Press `Q` in
+the library to toggle this panel. Author, series, tags, and character count
+appear as compact strips when those fields are enabled and available, with
+multiple tags shown as comma-separated text.
+
+Yatsu groups non-series shelves by series by default. Use **Group by** ->
+**None** in the library display settings to return to a flat grid. Series
+grouping works on shelves such as All books, Unread, Reading, Completed, Tags,
+and Untagged. Each row header opens that series shelf, matching the Series item
+in the sidebar. Series shelves and the Not in a series shelf stay as normal flat
+grids.
 
 Yatsu Supporters can also choose **Change cover** from this menu and upload a
 JPG or PNG image. This replaces the book's stored cover. For browser libraries,

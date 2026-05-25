@@ -81,9 +81,12 @@ Grouping works on shelves such as All books, Unread, Reading, Completed, Tags,
 and Untagged. Each row header opens that series or author shelf, matching the
 sidebar. Books in the **Not in a series** or **No author** section use the
 normal cover grid at the bottom instead of a horizontal row, so large loose-book
-collections stay scannable. When a series or author row has more covers off to
-the side, edge arrows appear to move that row one cover at a time. Series
-shelves can be grouped by author, and author shelves can be grouped by series.
+collections stay scannable. Use **Group sort** to order grouped rows by
+alphabetical name, last read, last update, progress, or book count. Progress is
+the percentage of known characters read across the whole group. When a series or
+author row has more covers off to the side, edge arrows appear to move that row
+one cover at a time. Series shelves can be grouped by author, and author shelves
+can be grouped by series.
 A series shelf is not grouped by series, and an author shelf is not grouped by
 author.
 

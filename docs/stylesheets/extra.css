@@ -325,6 +325,7 @@ body::before {
 }
 
 .md-search {
+  --md-default-bg-color: var(--yatsu-paper);
   display: flex;
   width: min(220px, 26vw);
   height: 38px;
@@ -358,7 +359,15 @@ body::before {
 .md-search__input {
   height: 100%;
   color: var(--yatsu-ink);
+}
+
+.md-search__input,
+.md-search__suggest {
+  font-family: var(--md-text-font);
   font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
 }
 
 .md-search__input::placeholder,

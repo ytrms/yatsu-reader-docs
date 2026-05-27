@@ -60,8 +60,6 @@ If your ttsu library is stored in Google Drive or OneDrive, open ttsu while onli
 
    Also select **Audiobook** and **Subtitles** if you used those features in ttsu.
 
-   ![The ttsu export content checkboxes with Book Data, Bookmark, and Statistics selected.](assets/ttsu-export-content.jpg)
-
 6. Click **Start**.
 7. Save the downloaded `.zip` file somewhere you can find it.
 

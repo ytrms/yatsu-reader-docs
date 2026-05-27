@@ -5,6 +5,7 @@ Yatsu is still Japanese-first, but it supports Chinese ebooks and Chinese text i
 The main Chinese-specific features are:
 
 - reader content language selection for Japanese, Simplified Chinese, and Traditional Chinese glyph forms
+- language-specific reader font profiles for Japanese, Simplified Chinese, and Traditional Chinese
 - Simplified Chinese and Traditional Chinese font filters
 - Chinese preview text in the font picker
 - Chinese-capable Google Fonts
@@ -27,9 +28,11 @@ Reader content language is stored locally for the current book. It is available 
 
 ## Chinese Fonts
 
-Open **Appearance**, then use **Font family** to choose the reader font.
+Open **Appearance**, then use **Font profile** to choose which language profile you are editing. The **Default** profile is the fallback. The **Japanese**, **Simplified Chinese**, and **Traditional Chinese** profiles apply automatically when the book's effective reader content language matches that profile.
 
-Use the language filter to narrow the font list:
+Each profile has its own Group 1 and Group 2 font family and weight settings. Use **Reset** on a language profile to inherit the Default fonts again.
+
+Use the language filter in the font picker to narrow the font list:
 
 - **Simplified Chinese** for Simplified Chinese fonts
 - **Traditional Chinese** for Traditional Chinese fonts
@@ -53,7 +56,7 @@ You can also use uploaded fonts or installed system fonts. If the font name or f
 
 !!! note
 
-    Google Fonts are fetched by the browser from Google. Uploaded fonts stay in your browser storage unless you export or sync browser data yourself.
+    Google Fonts are fetched by the browser from Google. Built-in and Google Fonts choices can sync through Yatsu Account Settings Sync, including language font profiles. Uploaded fonts stay in your browser storage unless you export or sync browser data yourself.
 
 ## Character Counting
 
@@ -66,7 +69,7 @@ For Chinese books, leave **Character Counting Method** set to **Auto** or **Japa
 1. Open the Chinese book.
 2. Open **Appearance**.
 3. Set **Reader content language** to **Simplified Chinese** or **Traditional Chinese** if the glyph shapes look wrong.
-4. Pick a matching Chinese font, such as **Noto Sans SC**, **Noto Serif SC**, **Noto Sans TC**, or **Noto Serif TC**.
+4. In **Font profile**, choose the matching Chinese profile and pick fonts such as **Noto Sans SC**, **Noto Serif SC**, **Noto Sans TC**, or **Noto Serif TC**.
 5. Leave **Character Counting Method** on **Auto** or **Japanese/Chinese**.
 
 ## Limitations

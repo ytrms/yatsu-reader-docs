@@ -179,7 +179,7 @@ The **Appearance** action opens live reader settings without leaving the book.
 
 Use it for changes such as:
 
-- font size and font family
+- font size and language-specific font profiles
 - reader content language, including Simplified and Traditional Chinese glyph forms
 - line height
 - text margins
@@ -204,7 +204,7 @@ Even with both settings off, vertical Japanese text may not look like a perfect 
 
 This is usually normal. If you want the strictest alignment Yatsu can provide, keep both vertical spacing settings off, prefer full-width Japanese punctuation and numbers where the book provides them, and turn off publisher typography if the book's own CSS is adding spacing. Large unexpected gaps between ordinary full-width kana and kanji may still be worth reporting.
 
-Yatsu normally uses the language stored in the book file. If Chinese text shows Japanese-style character variants, set **Reader content language** to **Simplified** or **Traditional** in the live appearance panel. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. For more detail, see [Chinese Support](chinese-support.md).
+Yatsu normally uses the language stored in the book file. If Chinese text shows Japanese-style character variants, set **Reader content language** to **Simplified** or **Traditional** in the live appearance panel. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. To use different fonts per language, choose **Font profile** in Appearance or **Settings** -> **Reader** -> **Text Style** and configure the Japanese, Simplified Chinese, or Traditional Chinese profile. For more detail, see [Chinese Support](chinese-support.md).
 
 Yatsu counts Japanese and Chinese characters by default. For Korean books, set **Character Counting Method** to **Auto** or **Korean** in the live appearance panel. **Auto** only uses Korean counting when the book file declares Korean or the book text looks clearly Korean. This choice is stored locally for that book and is not synced by Yatsu Account Settings Sync. For more detail, see [Korean Support](korean-support.md).
 

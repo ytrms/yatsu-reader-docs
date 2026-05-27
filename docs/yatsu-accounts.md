@@ -68,7 +68,7 @@ Settings Sync does not currently sync:
 
 Reading statistics and streaks can still sync, but they use Yatsu's storage sync/import/export system rather than your Yatsu Account Settings Sync. For example, both devices need to use the same Google Drive or OneDrive storage source, and the reading device needs to export statistics while the other device imports them.
 
-Google Fonts and built-in font choices can sync as settings. Uploaded font files stay on the device where you uploaded them, so a synced custom font choice may not work on another device until that font file is also available there.
+Google Fonts, built-in font choices, and language font profiles can sync as settings. Uploaded font files stay on the device where you uploaded them, so a synced custom font choice may not work on another device until that font file is also available there.
 
 ## Sync Status
 

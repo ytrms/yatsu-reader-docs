@@ -199,6 +199,21 @@ Use it for changes such as:
 
 Changes apply while the book is open, so you can adjust the reader until the text feels comfortable.
 
+### Theme typography
+
+Supporters can save typography directly on a custom theme from the theme maker.
+Open a custom theme, turn on **Apply typography with this theme**, choose the
+font settings to save, and save the theme. Whenever that theme becomes active,
+Yatsu applies the saved typography automatically.
+
+Themes without saved typography leave your current font settings alone. To stop a
+theme from changing fonts, edit the theme, turn **Apply typography with this
+theme** off, and save it again.
+
+Theme typography can include font families, font weights, language font profiles,
+and font size. Built-in fonts and Google Fonts can sync as settings. Uploaded or
+installed fonts still need to exist on the device where you use the theme.
+
 ### Vertical text spacing
 
 When **Writing mode** is set to vertical text, Yatsu shows extra text spacing controls:

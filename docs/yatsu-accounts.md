@@ -70,6 +70,10 @@ Reading statistics and streaks can still sync, but they use Yatsu's storage sync
 
 Google Fonts, built-in font choices, and language font profiles can sync as settings. Uploaded font files stay on the device where you uploaded them, so a synced custom font choice may not work on another device until that font file is also available there.
 
+Supporter custom themes can also sync saved theme typography. The saved font
+names and size sync with the theme settings, but uploaded font files themselves
+still stay on the device where they were uploaded.
+
 ## Sync Status
 
 When Settings Sync is on, synced sections show small status labels:

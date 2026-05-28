@@ -568,6 +568,25 @@ body::before {
   max-width: min(100%, 54rem);
 }
 
+.md-typeset a.yatsu-image-link {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  line-height: 0;
+}
+
+.md-typeset a.yatsu-image-link img {
+  margin: 0;
+  cursor: zoom-in;
+}
+
+.md-typeset a.yatsu-image-link:focus-visible {
+  outline: 3px solid var(--yatsu-focus-ring);
+  outline-offset: 4px;
+}
+
 .md-typeset .md-button {
   border-radius: var(--yatsu-control-radius);
   font-weight: 800;

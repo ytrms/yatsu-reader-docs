@@ -22,6 +22,24 @@ mkdocs serve
 
 The local preview runs at `http://127.0.0.1:8000/`.
 
+## Refreshing screenshots
+
+Start the sibling Yatsu app first:
+
+```bash
+cd ../ebook-reader
+pnpm --filter web dev -- --host 127.0.0.1 --port 5174
+```
+
+Then capture the documentation screenshots from this repo:
+
+```bash
+node scripts/capture-yatsu-screenshots.mjs
+```
+
+The script saves screenshots into `docs/assets/` and seeds the temporary browser
+context with sample books from `../yatsu-themes/sample-books`.
+
 ## Deployment
 
 Push to `main` and GitHub Actions will build and deploy the site to GitHub Pages.

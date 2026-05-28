@@ -8,11 +8,22 @@ state, series, or tags, and choose books for bulk actions.
 In normal browsing mode, click a book card or list row to open it in the reader.
 The keyboard-focused book can also be opened with `Enter`.
 
+![Yatsu library showing imported books](assets/yatsu-library-overview.png)
+
+## Importing books
+
+Use **Import** to add EPUB, HTMLZ, and text files, restore a backup zip, or use
+other import options available for the current storage source.
+
+![Yatsu library import menu](assets/yatsu-library-import-menu.png)
+
 ## Select mode
 
 Select mode is for choosing one or more visible books before running a bulk
 action. Use the check control on a book to enter select mode and select that
 book.
+
+![Yatsu library select mode](assets/yatsu-library-select-mode.png)
 
 While select mode is active:
 
@@ -50,6 +61,8 @@ different from exporting a selected set of books: it always reads from the local
 Browser library and includes every supported local book-data type Yatsu can
 export.
 
+![Yatsu library more actions menu](assets/yatsu-library-more-actions.png)
+
 The backup can include local books, current reading positions, saved bookmarks,
 highlights and notes, statistics, reading goals, audiobook state, subtitle data,
 covers, and a versioned settings snapshot. The settings snapshot is limited to
@@ -74,6 +87,8 @@ The library display settings can show optional cover-card details. Press `Q` in
 the library to toggle this panel. Author, series, tags, and character count
 appear as compact strips when those fields are enabled and available, with
 multiple tags shown as comma-separated text.
+
+![Yatsu library display settings](assets/yatsu-library-display-settings.png)
 
 Yatsu groups compatible shelves by series by default. Use **Group by** ->
 **Author** to group by author instead, or **None** to return to a flat grid.

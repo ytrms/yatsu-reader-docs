@@ -22,7 +22,7 @@ If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide]
 
 ## Add a WebDAV source
 
-1. Open **Settings** -> **Data** -> **Sync & Sources**.
+1. Open **Settings** -> **Data** -> **Sources**.
 2. Choose **Add source**.
 3. Give the source a name, such as `NAS Library`.
 4. Choose **WebDAV (Beta)** from the provider dropdown.
@@ -30,6 +30,8 @@ If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide]
 6. Choose whether this source should be the sync target or default WebDAV source.
 7. Save the source.
 8. Return to the Library and choose **WebDAV (Beta)** from the storage picker.
+
+![Yatsu data source settings with Add source](assets/yatsu-settings-sync-sources.png)
 
 The WebDAV URL should point to the parent collection where Yatsu is allowed to create its data folder. For example:
 

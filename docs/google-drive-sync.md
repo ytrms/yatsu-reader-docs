@@ -23,7 +23,9 @@ It is still normal for Google Drive to ask you to sign in again every once in a 
 
 ## Managing the built-in Google Drive source
 
-You can manage the built-in Google Drive connection from **Settings** -> **Data** -> **Sync & Sources**.
+You can manage the built-in Google Drive connection from **Settings** -> **Data** -> **Sources**.
+
+![Yatsu data source settings with the built-in Google Drive source](assets/yatsu-settings-sync-sources.png)
 
 - **Reconnect** refreshes the default Google Drive authorization for the current browser.
 - **Switch account** opens Google's account picker so you can choose a different Google account.
@@ -164,7 +166,7 @@ If you want to keep an intentionally configured ttsu-compatible storage source, 
 
     ![](assets/publish-app.png)
 
-    That's it when it comes to the Google side. Now, in Yatsu, go to Settings, and then click on "Data". Scroll down to "Sync and Sources" and open that box. Then, click on "+ Add":
+    That's it when it comes to the Google side. Now, in Yatsu, go to Settings, click "Data", open "Sources", then click "+ Add":
 
     ![](assets/yatsu-sources.png)
 

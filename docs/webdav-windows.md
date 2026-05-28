@@ -294,7 +294,7 @@ The `MKCOL` and upload requests should return a success status. The cleanup
 ## 7. Add the Source in Yatsu
 
 1. Open Yatsu.
-2. Go to **Settings** -> **Data** -> **Sync & Sources**.
+2. Go to **Settings** -> **Data** -> **Sources**.
 3. Choose **Add source**.
 4. Set **Provider** to **WebDAV (Beta)**.
 5. Enter a name, such as `Home WebDAV`.

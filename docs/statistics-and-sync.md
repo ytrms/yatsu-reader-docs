@@ -83,7 +83,7 @@ If one device shows a 5-day streak and another shows `0`, the second browser pro
 
 Most likely, those statistics have not been imported into this browser yet.
 
-Check **Settings** -> **Data** -> **Sync & Sources** and make sure the sync behavior is **Down** or **All** if you want this browser to import reading data from Drive when opening a book.
+Check **Settings** -> **Data** -> **Sync** and make sure the sync behavior is **Down** or **All** if you want this browser to import reading data from Drive when opening a book.
 
 Then open the relevant book and wait for the opening sync to finish.
 

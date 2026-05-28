@@ -8,6 +8,8 @@ The reader is meant to stay out of the way while still giving quick access to na
 
 The top bar contains the most common reader actions.
 
+![Yatsu reader controls on a text page](assets/yatsu-reader-controls.png)
+
 Depending on screen size and book type, some actions may move into the **More reader actions** menu.
 
 Common controls include:
@@ -95,6 +97,8 @@ Bookmarks are separate saved locations. Open **Bookmarks** to show the drawer, w
 - jump to a saved bookmark
 - rename or delete a bookmark from the row actions menu
 
+![Yatsu bookmarks drawer](assets/yatsu-reader-bookmarks-panel.png)
+
 Saved bookmark markers appear in the reader. When the header is closed, clicking or tapping a bookmark marker opens a small rename/delete flyover for that bookmark.
 
 The default shortcuts are:
@@ -177,6 +181,8 @@ In paginated mode, Yatsu sets the point from the text location you choose on the
 
 The **Appearance** action opens live reader settings without leaving the book.
 
+![Yatsu reader appearance panel](assets/yatsu-reader-appearance-panel.png)
+
 Use it for changes such as:
 
 - font size and language-specific font profiles
@@ -215,6 +221,8 @@ Some layout changes can move your current position. Yatsu tries to preserve the 
 Some books contain images that Yatsu can collect into an image gallery.
 
 When available, **Image gallery** appears in the reader actions menu.
+
+![Yatsu reader more actions menu](assets/yatsu-reader-more-actions.png)
 
 Inside the gallery:
 

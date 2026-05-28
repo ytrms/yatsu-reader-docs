@@ -99,6 +99,8 @@ Yatsu does not count while the tracker is paused. It also pauses or avoids count
 
 Open **Settings** -> **Tracking** to configure these options.
 
+![Yatsu tracking settings](assets/yatsu-settings-tracking.png)
+
 ### Collection & Sync
 
 These settings affect whether statistics exist, how they are stored, and how they merge with synced data.
@@ -216,6 +218,8 @@ Reading goals have their own **Sync**, **Edit**, and **Reset** actions in the Re
 
 The **Statistics** page is where tracked data becomes readable. It includes a reading heatmap, an optional goal heatmap, title filtering, and a summary table.
 
+![Yatsu statistics overview](assets/yatsu-statistics-overview.png)
+
 ### Date Range
 
 Open **View options** on the Statistics page to adjust the range.
@@ -232,6 +236,8 @@ The Statistics page uses **Start Day Hours** from Tracking settings when calcula
 ### Activity Breakdown
 
 The activity breakdown controls which values are displayed in the summary table.
+
+![Yatsu statistics display options](assets/yatsu-statistics-display-options.png)
 
 | Control | Options | Meaning |
 | --- | --- | --- |

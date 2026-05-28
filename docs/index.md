@@ -12,6 +12,7 @@ These docs focus on the parts of Yatsu that usually need extra explanation: how 
 - [Using Yatsu Offline](offline.md): What works offline, how to prepare books, persistent storage, full offline use, cache data, and syncing again after being offline.
 - [Frequently Asked Questions](faq.md): Short answers for common confusing cases.
 - [How to Report Bugs](how-to-report-bugs.md): How to download diagnostics, what to include in a report, and what private data is or is not included.
+- [Advantages of Yatsu over Ttsu](why-yatsu.md): A practical comparison of Yatsu's reader, library, language, sync, tracking, and integration improvements over upstream Ttsu.
 
 ## Reading and language support
 

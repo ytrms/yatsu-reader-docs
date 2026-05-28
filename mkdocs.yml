@@ -26,6 +26,7 @@ nav:
   - Support:
       - Frequently Asked Questions: faq.md
       - How to Report Bugs: how-to-report-bugs.md
+  - Advantages of Yatsu over Ttsu: why-yatsu.md
 
 not_in_nav: |
   webdav-sync.md

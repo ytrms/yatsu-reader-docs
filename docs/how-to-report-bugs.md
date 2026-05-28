@@ -17,6 +17,8 @@ When something breaks in Yatsu, the most useful bug report is a short descriptio
 
 If Yatsu shows an error dialog, you can also click **Download Diagnostics** there.
 
+![Yatsu report a bug dialog](assets/yatsu-bug-report-dialog.png)
+
 ## What to include in your report
 
 Please include:

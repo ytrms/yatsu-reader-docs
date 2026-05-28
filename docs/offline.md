@@ -106,6 +106,8 @@ If that happens:
 
 Yatsu has a **Full Offline Use** setting under [**Settings** -> **Data**](https://app.yatsu.moe/settings?section=data).
 
+![Yatsu data settings with offline storage controls](assets/yatsu-settings-data.png)
+
 This setting controls whether Yatsu downloads the complete app shell for offline use. It is off by default so that regular online use does not make every browser download every app file after each update.
 
 When **Full Offline Use** is off:

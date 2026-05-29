@@ -136,9 +136,9 @@ Yatsu-specific integrations:
 - **Yatsu Whispersync**: a Yatsu-compatible build of ttu-whispersync can add
   audiobook playback, subtitle matching, reader highlighting, playback position,
   and optional Anki export.
-- **Discord Rich Presence**: with Yatsu Companion for Windows, signed-in users
-  can share current reading activity to Discord Desktop, with a privacy mode for
-  generic activity.
+- **Discord Rich Presence**: with the Windows companion app or Anki add-on,
+  signed-in users can share current reading activity to Discord Desktop, with a
+  privacy mode for generic activity.
 
 ## Migration and compatibility
 

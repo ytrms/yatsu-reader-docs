@@ -15,6 +15,7 @@ nav:
       - Korean Support: korean-support.md
   - Sync, Storage, and Data:
       - Google Drive Sync: google-drive-sync.md
+      - Storage Source Security: storage-source-security.md
       - Statistics and Sync: statistics-and-sync.md
       - Migrating from Ttsu to Yatsu: migrating-from-ttsu.md
       - Recovering Old GitHub Pages Data: github-pages-recovery.md

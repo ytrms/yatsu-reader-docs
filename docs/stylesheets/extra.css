@@ -9,6 +9,7 @@
   --yatsu-surface: rgba(255, 255, 255, 0.74);
   --yatsu-surface-hover: rgba(255, 255, 255, 0.82);
   --yatsu-surface-strong: rgba(255, 255, 255, 0.9);
+  --yatsu-sidebar-surface: color-mix(in srgb, var(--yatsu-paper) 88%, var(--yatsu-page-start));
   --yatsu-line: rgba(21, 32, 51, 0.12);
   --yatsu-line-strong: rgba(100, 116, 139, 0.3);
   --yatsu-nav-hover: rgba(255, 255, 255, 0.58);
@@ -34,6 +35,7 @@
   --yatsu-header-height: 54px;
   --yatsu-header-gap: max(16px, env(safe-area-inset-top));
   --yatsu-main-top-offset: clamp(20px, calc(26.75px - 0.33vw), 22px);
+  --yatsu-sidebar-visible-height: calc(100vh - var(--yatsu-header-top) - var(--yatsu-header-height) - var(--yatsu-header-gap));
   --md-primary-fg-color: #169ff5;
   --md-primary-fg-color--light: #4db8ff;
   --md-primary-fg-color--dark: #0b75c9;
@@ -68,6 +70,7 @@
   --yatsu-surface: rgba(25, 28, 32, 0.76);
   --yatsu-surface-hover: rgba(34, 38, 43, 0.86);
   --yatsu-surface-strong: rgba(29, 32, 36, 0.92);
+  --yatsu-sidebar-surface: color-mix(in srgb, var(--yatsu-paper) 88%, var(--yatsu-page-start));
   --yatsu-line: rgba(226, 232, 240, 0.14);
   --yatsu-line-strong: rgba(148, 163, 184, 0.36);
   --yatsu-nav-hover: rgba(125, 211, 252, 0.11);
@@ -484,6 +487,7 @@ body::before {
 }
 
 .md-sidebar__inner {
+  background: var(--yatsu-sidebar-surface);
   padding: 1rem;
   overflow: visible;
 }
@@ -500,16 +504,19 @@ body::before {
 
   .md-sidebar--primary .md-sidebar__scrollwrap,
   .md-sidebar--secondary .md-sidebar__scrollwrap {
-    height: calc(100vh - var(--yatsu-header-top) - var(--yatsu-header-height) - var(--yatsu-header-gap)) !important;
+    height: var(--yatsu-sidebar-visible-height) !important;
   }
 }
 
 .md-nav--primary .md-nav__title,
 .md-nav--secondary .md-nav__title {
+  position: sticky;
+  z-index: 2;
+  top: 0;
   margin-bottom: 0.4rem;
   border-radius: var(--yatsu-control-radius);
-  background: transparent;
-  box-shadow: none;
+  background: var(--yatsu-sidebar-surface);
+  box-shadow: 0 0.5rem 0 0.45rem var(--yatsu-sidebar-surface);
 }
 
 .md-nav__link {

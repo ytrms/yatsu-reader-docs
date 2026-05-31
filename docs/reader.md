@@ -124,7 +124,7 @@ Saved highlights can also create quote images. Click or tap highlighted text in 
 
 The quote image dialog shows a preview and can create a full-resolution PNG. Use **Share image** when your browser supports the system share sheet, **Copy** to copy the PNG to the clipboard, or **Download image** to save it. The quote text follows your current reader font, including language-specific reader font profiles.
 
-Everyone can use the default square quote image with book attribution. Supporters can customize the image size, quote size and alignment, background color, uploaded background image, book-cover background, background opacity, blur, position, and optional display name.
+Everyone can use the default square quote image with book attribution. Supporters can customize the image size, quote size, quote direction, quote alignment, background color, uploaded background image, book-cover background, background opacity, blur, position, and optional display name. Vertical quote direction lays the quote out in columns that start on the right and continue left.
 
 Quote images are generated in your browser. The selected text and custom images are not uploaded to Yatsu servers to create the PNG.
 

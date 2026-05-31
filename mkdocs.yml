@@ -104,5 +104,6 @@ extra_css:
 
 extra_javascript:
   - javascripts/image-links.js
+  - javascripts/sidebar-layout.js
 
 copyright: Copyright © Yatsu Reader

@@ -116,6 +116,18 @@ For a screen-based position, use **Set Point** before saving. The custom reading
 
 Current reading position is stored with progress data. Multiple bookmarks are stored separately and can be synced or exported with your reading data when the relevant sync/export options are enabled.
 
+## Highlights and Quote Images
+
+Select text in the reader to open the highlight pill. Pick a color to save a highlight, or choose the image button to turn the selected passage into a shareable quote image without saving a highlight first.
+
+Saved highlights can also create quote images. Click or tap highlighted text in the reader, then choose the image button from the highlight actions pill. You can also open the **Highlights** drawer and choose **Quote image** from a saved highlight's actions menu.
+
+The quote image dialog shows a preview and can create a full-resolution PNG. Use **Share image** when your browser supports the system share sheet, **Copy** to copy the PNG to the clipboard, or **Download image** to save it. The quote text follows your current reader font, including language-specific reader font profiles.
+
+Everyone can use the default square quote image with book attribution. Supporters can customize the image size, quote size and alignment, background color, uploaded background image, book-cover background, background opacity, blur, position, and optional display name.
+
+Quote images are generated in your browser. The selected text and custom images are not uploaded to Yatsu servers to create the PNG.
+
 ## Table of Contents
 
 The table of contents appears when the book includes chapter data that Yatsu can read.

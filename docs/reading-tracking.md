@@ -129,7 +129,7 @@ These settings appear after **Enable Statistics** is on.
 | **Forward Skip Threshold** | `2700` | If one tick jumps forward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold. |
 | **Backward Skip Threshold** | `2700` | If one tick jumps backward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold. |
 | **Threshold Action** | Ignore | Appears when either skip threshold is enabled. **Ignore** keeps tracking but counts the jump as `0` characters. **Pause Tracker** pauses instead. |
-| **Dictionary Detection** | Off | Attempts to detect Yomitan/Yomichan or jpdb-browser-reader popups and avoid unwanted auto-pauses while using them. Yomitan detection may require disabling Yomitan's Secure Container setting. |
+| **Dictionary Detection** | Off | Attempts to detect Yomitan/Yomichan or jpdb-browser-reader popups and avoid unwanted auto-pauses while using them. For Yomitan, turn off **Security** -> **Use a secure container around popups**. **Use secure popup frame URL** can stay on. |
 | **Rollback Statistics on Idle** | On | Appears when Idle Time is greater than `0`. When on, Yatsu tries to subtract the idle period from the session before pausing. When off, the elapsed idle time can remain counted. |
 
 ### Tracker Auto Pause Modes
@@ -141,6 +141,8 @@ These settings appear after **Enable Statistics** is on.
 **Strict** pauses when the browser window loses focus. It resumes on focus when the pause was caused by auto-pause and you had not manually paused first.
 
 Dictionary Detection changes how popup dictionaries interact with Moderate and Strict mode. With detection enabled, Yatsu tries not to treat dictionary lookup focus changes as a reason to pause. With detection disabled, dictionary popups may pause the tracker under auto-pause behavior.
+
+Yatsu also counts detected popup dictionary opens in reading statistics. This is a detected-popup count, not a guarantee that every dictionary lookup inside the extension was counted. Yomitan's **Use a secure container around popups** setting puts the popup iframe inside a closed shadow DOM, so Yatsu cannot discover the popup. The **Use secure popup frame URL** setting can remain enabled because Yatsu does not inspect the extension URL.
 
 ## Reading Goals
 

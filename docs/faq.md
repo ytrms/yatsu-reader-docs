@@ -210,6 +210,8 @@ For Korean books, open the reader's **Appearance** panel and set **Character Cou
 
 Yatsu works with browser-based popup dictionary extensions such as [Yomitan](https://yomitan.wiki/) and Jiten Reader.
 
+For Yomitan popup detection and popup dictionary statistics, open Yomitan **Settings** -> **Security** and turn off **Use a secure container around popups**. **Use secure popup frame URL** can stay on.
+
 If you use Jiten Reader, update it to version 1.1.0 or newer, reload Yatsu, and open a book at a `https://app.yatsu.moe/b` URL. Newer Jiten Reader versions include native Yatsu support.
 
 See [Using Yatsu with Jiten Reader](jiten-reader.md) for setup and fallback steps.

@@ -53,7 +53,6 @@ If your ttsu library is stored in Google Drive or OneDrive, open ttsu while onli
 5. In **Export Content**, choose what to include.
 
    For a normal migration, select:
-
    - **Book Data**
    - **Bookmark**
    - **Statistics**
@@ -72,7 +71,6 @@ The downloaded file is the backup you will import into Yatsu. Do not unzip it fi
 3. Choose the Yatsu storage source you want to import into.
 
    For example:
-
    - choose **Browser** if you want the migrated library stored locally in this browser
    - choose **Google Drive** or **OneDrive** if you have already connected that source in Yatsu and want the imported books stored there
 
@@ -90,15 +88,15 @@ When the import completes, the imported books should appear in the current Yatsu
 
 Yatsu imports the parts that are present in the backup zip. If you did not select a content type during export, Yatsu cannot recreate that part later.
 
-| ttsu export option | What Yatsu imports | Notes |
-| --- | --- | --- |
-| **Book Data** | The books themselves, stored book content, title, series, tags, cover data, character counts, sections, and other library metadata. | Select this if you want the books to appear in Yatsu without importing the original EPUB/HTMLZ/TXT files again. |
-| **Bookmark** | The current reading position and progress for each book. | In ttsu, **Bookmark** means the main saved position. In Yatsu this becomes the book's current reading position. |
-| **Statistics** | Reading history such as daily entries, reading time, characters read, reading speed data, and book completion markers. | These entries feed Yatsu's Statistics page. Yatsu's statistics merge setting controls how imported statistics combine with existing local statistics. |
-| **Audiobook** | Linked audiobook state and playback position, if present. | This does not move an external audio file that lives outside ttsu. |
-| **Subtitles** | Stored subtitle data and subtitle state, if present. | Use this if you used subtitle-linked workflows in ttsu. |
+| ttsu export option | What Yatsu imports                                                                                                                  | Notes                                                                                                                                                 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Book Data**      | The books themselves, stored book content, title, series, tags, cover data, character counts, sections, and other library metadata. | Select this if you want the books to appear in Yatsu without importing the original EPUB/HTMLZ/TXT files again.                                       |
+| **Bookmark**       | The current reading position and progress for each book.                                                                            | In ttsu, **Bookmark** means the main saved position. In Yatsu this becomes the book's current reading position.                                       |
+| **Statistics**     | Reading history such as daily entries, reading time, characters read, reading speed data, and book completion markers.              | These entries feed Yatsu's Statistics page. Yatsu's statistics merge setting controls how imported statistics combine with existing local statistics. |
+| **Audiobook**      | Linked audiobook state and playback position, if present.                                                                           | This does not move an external audio file that lives outside ttsu.                                                                                    |
+| **Subtitles**      | Stored subtitle data and subtitle state, if present.                                                                                | Use this if you used subtitle-linked workflows in ttsu.                                                                                               |
 
-Backup imports can also restore extra Yatsu-compatible data if the zip contains it, such as saved bookmarks, highlights, highlight notes, reading goals, and cover images. Older ttsu exports may not contain all of those newer Yatsu-specific files.
+Backup imports can also restore extra Yatsu-compatible data if the zip contains it, such as saved bookmarks, highlights, highlight notes, book notes, reading goals, and cover images. Older ttsu exports may not contain all of those newer Yatsu-specific files.
 
 Yatsu's own **Get complete local backup** zip can also contain a versioned
 safe settings snapshot. That settings snapshot is restored only when importing

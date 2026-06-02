@@ -66,14 +66,15 @@ some local reading data after a browser book is deleted:
 - **Keep Statistics on Deletion** keeps reading statistics for deleted books.
   Statistics are title-based, so they can be reused if a book with the same
   title returns later.
-- **Keep Highlights and Bookmarks on Deletion** keeps highlights, highlight
-  notes, saved bookmarks, bookmark labels, bookmark notes, and snippets. If you
-  import a book with the same title again, Yatsu reattaches those retained
-  highlights and saved bookmarks to the new local copy.
+- **Keep Highlights, Notes, and Bookmarks on Deletion** keeps highlights,
+  highlight notes, plain book notes, saved bookmarks, bookmark labels, bookmark
+  notes, and snippets. If you import a book with the same title again, Yatsu
+  reattaches those retained highlights, notes, and saved bookmarks to the new
+  local copy.
 
 The same settings group has cleanup actions for **Deleted-book statistics** and
-**Deleted-book highlights and bookmarks** when you want to remove retained local
-data for books that are no longer in the library.
+**Deleted-book annotations** when you want to remove retained local data for
+books that are no longer in the library.
 
 These retention options only apply to local **Browser** deletion. Deleting books
 from Google Drive, OneDrive, WebDAV, or a filesystem source removes that title's

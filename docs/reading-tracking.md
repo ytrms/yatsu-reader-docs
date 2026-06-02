@@ -42,7 +42,7 @@ Yatsu also stores reading goals separately. A goal can have a time target, a cha
 
 Reading statistics stay in browser storage unless you export them or sync the **Statistics** data type to another storage source. Reading goals work the same way with the **Reading Goals** data type.
 
-Yatsu Account Settings Sync does not sync reading statistics, reading goals, bookmarks, highlights, or book progress. It only syncs Reader and Tracking settings.
+Yatsu Account Settings Sync does not sync reading statistics, reading goals, bookmarks, highlights, book notes, or book progress. It only syncs Reader and Tracking settings.
 
 If you sync to an external provider, that provider receives the data types you choose to sync.
 
@@ -105,32 +105,32 @@ Open **Settings** -> **Tracking** to configure these options.
 
 These settings affect whether statistics exist, how they are stored, and how they merge with synced data.
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| **Keep Local Data on Deletion** | On | Keeps local statistics when you remove a local book copy. This is useful if you plan to reimport or sync the book later. |
-| **Clear Zombie Statistics** | Action | Deletes statistics that no longer match a local book. Use it when old deleted-book stats are cluttering the Statistics page. |
-| **Overwrite Book Completion** | Off | When off, Yatsu keeps the first recorded completion for a book. When on, completing the book again can move the completion marker to the latest completion. |
-| **Start Day Hours** | `0` | Changes when a tracking day starts. For example, `4` means reading before 4:00 counts toward the previous day. |
-| **Statistics Merge** | Merge | Controls how statistics combine during sync. **Merge** keeps entries by date and prefers newer data. **Replace** lets the incoming dataset replace existing entries. |
-| **Reading Goals Merge** | Merge | Controls how reading goals combine during sync. **Merge** combines compatible goal windows. **Replace** lets the incoming goal dataset replace existing goals. |
-| **Enable Statistics** | Off | Shows the tracker in the reader and enables statistics collection. |
+| Setting                         | Default | What it does                                                                                                                                                         |
+| ------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Keep Local Data on Deletion** | On      | Keeps local statistics when you remove a local book copy. This is useful if you plan to reimport or sync the book later.                                             |
+| **Clear Zombie Statistics**     | Action  | Deletes statistics that no longer match a local book. Use it when old deleted-book stats are cluttering the Statistics page.                                         |
+| **Overwrite Book Completion**   | Off     | When off, Yatsu keeps the first recorded completion for a book. When on, completing the book again can move the completion marker to the latest completion.          |
+| **Start Day Hours**             | `0`     | Changes when a tracking day starts. For example, `4` means reading before 4:00 counts toward the previous day.                                                       |
+| **Statistics Merge**            | Merge   | Controls how statistics combine during sync. **Merge** keeps entries by date and prefers newer data. **Replace** lets the incoming dataset replace existing entries. |
+| **Reading Goals Merge**         | Merge   | Controls how reading goals combine during sync. **Merge** combines compatible goal windows. **Replace** lets the incoming goal dataset replace existing goals.       |
+| **Enable Statistics**           | Off     | Shows the tracker in the reader and enables statistics collection.                                                                                                   |
 
 ### Tracker
 
 These settings appear after **Enable Statistics** is on.
 
-| Setting | Default | What it does |
-| --- | --- | --- |
-| **Tracker Auto Pause** | Moderate | Controls focus-based auto-pause behavior. See the next section for the modes. |
-| **Open Tracker on Completion** | On | Opens the tracker menu after you complete a book, so you can review completion data. |
-| **Update on Completion** | Off | When completing a book, adds the missing character count between your current position and the end of the book. Leave it off if you do not want book completion to create a large character jump. |
-| **Autostart tracker (sec)** | `0` | If greater than `0`, the tracker starts automatically after the reader has had no page-change events for that many seconds. `0` disables autostart. |
-| **Idle Time (min)** | `0` | If greater than `0`, the tracker pauses after this many minutes without page changes, pointer movement, or text selection changes. `0` disables idle auto-pause. |
-| **Forward Skip Threshold** | `2700` | If one tick jumps forward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold. |
-| **Backward Skip Threshold** | `2700` | If one tick jumps backward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold. |
-| **Threshold Action** | Ignore | Appears when either skip threshold is enabled. **Ignore** keeps tracking but counts the jump as `0` characters. **Pause Tracker** pauses instead. |
-| **Dictionary Detection** | Off | Attempts to detect Yomitan/Yomichan or jpdb-browser-reader popups and avoid unwanted auto-pauses while using them. For Yomitan, turn off **Security** -> **Use a secure container around popups**. **Use secure popup frame URL** can stay on. |
-| **Rollback Statistics on Idle** | On | Appears when Idle Time is greater than `0`. When on, Yatsu tries to subtract the idle period from the session before pausing. When off, the elapsed idle time can remain counted. |
+| Setting                         | Default  | What it does                                                                                                                                                                                      |
+| ------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Tracker Auto Pause**          | Moderate | Controls focus-based auto-pause behavior. See the next section for the modes.                                                                                                                     |
+| **Open Tracker on Completion**  | On       | Opens the tracker menu after you complete a book, so you can review completion data.                                                                                                              |
+| **Update on Completion**        | Off      | When completing a book, adds the missing character count between your current position and the end of the book. Leave it off if you do not want book completion to create a large character jump. |
+| **Autostart tracker (sec)**     | `0`      | If greater than `0`, the tracker starts automatically after the reader has had no page-change events for that many seconds. `0` disables autostart.                                               |
+| **Idle Time (min)**             | `0`      | If greater than `0`, the tracker pauses after this many minutes without page changes, pointer movement, or text selection changes. `0` disables idle auto-pause.                                  |
+| **Forward Skip Threshold**      | `2700`   | If one tick jumps forward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                      |
+| **Backward Skip Threshold**     | `2700`   | If one tick jumps backward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                     |
+| **Threshold Action**            | Ignore   | Appears when either skip threshold is enabled. **Ignore** keeps tracking but counts the jump as `0` characters. **Pause Tracker** pauses instead.                                                 |
+| **Dictionary Detection**        | Off      | Attempts to detect Yomitan/Yomichan or jpdb-browser-reader popups and avoid unwanted auto-pauses while using them. For Yomitan, turn off **Security** -> **Use a secure container around popups**. **Use secure popup frame URL** can stay on. |
+| **Rollback Statistics on Idle** | On       | Appears when Idle Time is greater than `0`. When on, Yatsu tries to subtract the idle period from the session before pausing. When off, the elapsed idle time can remain counted.                 |
 
 ### Tracker Auto Pause Modes
 
@@ -226,11 +226,11 @@ The **Statistics** page is where tracked data becomes readable. It includes a re
 
 Open **View options** on the Statistics page to adjust the range.
 
-| Control | What it does |
-| --- | --- |
-| **Template** | Selects Today, This Week, This Month, This Year, or Custom. |
-| **From** / **To** | Sets an exact date range. Changing either date switches the template to Custom. |
-| **Start of week** | Changes how weekly ranges and heatmap week labels are aligned. |
+| Control                                      | What it does                                                                        |
+| -------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **Template**                                 | Selects Today, This Week, This Month, This Year, or Custom.                         |
+| **From** / **To**                            | Sets an exact date range. Changing either date switches the template to Custom.     |
+| **Start of week**                            | Changes how weekly ranges and heatmap week labels are aligned.                      |
 | **Set to all time for selected book titles** | Expands the date range to include all statistics for the currently selected titles. |
 
 The Statistics page uses **Start Day Hours** from Tracking settings when calculating what "today" means.
@@ -241,12 +241,12 @@ The activity breakdown controls which values are displayed in the summary table.
 
 ![Yatsu statistics display options](assets/yatsu-statistics-display-options.png)
 
-| Control | Options | Meaning |
-| --- | --- | --- |
-| **Time Data Source** | Total Time, Average Time, Weighted Time | Chooses which time value appears in the table. |
-| **Characters Data Source** | Characters, Average Characters, Weighted Characters | Chooses which character value appears in the table. |
-| **Speed Data Source** | Speed, Min Speed, Alt Min Speed, Max Speed | Chooses which speed value appears in the table. |
-| **Primary Aggregation** | None, Date, Title | Chooses whether rows are individual date/title entries, grouped by date, or grouped by title. |
+| Control                    | Options                                             | Meaning                                                                                       |
+| -------------------------- | --------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **Time Data Source**       | Total Time, Average Time, Weighted Time             | Chooses which time value appears in the table.                                                |
+| **Characters Data Source** | Characters, Average Characters, Weighted Characters | Chooses which character value appears in the table.                                           |
+| **Speed Data Source**      | Speed, Min Speed, Alt Min Speed, Max Speed          | Chooses which speed value appears in the table.                                               |
+| **Primary Aggregation**    | None, Date, Title                                   | Chooses whether rows are individual date/title entries, grouped by date, or grouped by title. |
 
 When aggregation is **None**, each row is one stored book/date entry. This is the mode where individual rows can be edited.
 

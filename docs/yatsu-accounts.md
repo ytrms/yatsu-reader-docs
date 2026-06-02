@@ -4,7 +4,7 @@ Yatsu Accounts let you sign in to Yatsu so Reader and Tracking settings can foll
 
 Making an account is free. The main account feature is **Settings Sync**.
 
-Settings Sync is account sync for preferences. It is separate from Google Drive, OneDrive, Browser storage, and manual backups. Reading data such as statistics, streaks, progress, highlights, and reading goals does not move through Settings Sync.
+Settings Sync is account sync for preferences. It is separate from Google Drive, OneDrive, Browser storage, and manual backups. Reading data such as statistics, streaks, progress, highlights, book notes, and reading goals does not move through Settings Sync.
 
 ## Signing in
 
@@ -59,6 +59,7 @@ Settings Sync does not currently sync:
 - Book progress
 - Bookmarks
 - Highlights
+- Notes
 - Reading statistics
 - Reading goals
 - Storage sources such as Google Drive, OneDrive, or local folders

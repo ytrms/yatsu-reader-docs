@@ -6,7 +6,7 @@ Even if your books are in Google Drive, OneDrive, or another external storage so
 
 This is inherited from ttsu, the reader Yatsu comes from. It helps keep the reader fast and usable offline, but it also means the Statistics page can look different from what is currently stored on Drive until sync has happened.
 
-This is also separate from Yatsu Account **Settings Sync**. Settings Sync syncs Reader and Tracking preferences only. It does not import reading statistics, streaks, progress, highlights, reading goals, or books.
+This is also separate from Yatsu Account **Settings Sync**. Settings Sync syncs Reader and Tracking preferences only. It does not import reading statistics, streaks, progress, highlights, book notes, reading goals, or books.
 
 ## Short version
 

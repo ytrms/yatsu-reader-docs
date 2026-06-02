@@ -96,6 +96,6 @@ When Discord Rich Presence is on, Yatsu sends the local companion enough activit
 
 Privacy mode is available directly from the Discord Rich Presence menu. When privacy mode is on, Yatsu keeps Rich Presence active but sends generic Yatsu activity instead of the current book title, progress, or chapter.
 
-Yatsu does not send book files, book content, bookmarks, highlights, storage credentials, or your Yatsu account identifiers to the companion for Rich Presence. The Anki add-on is only used as a local host for the companion bridge; it does not need access to your Anki notes or cards.
+Yatsu does not send book files, book content, bookmarks, highlights, book notes, storage credentials, or your Yatsu account identifiers to the companion for Rich Presence. The Anki add-on is only used as a local host for the companion bridge; it does not need access to your Anki notes or cards.
 
 Supporter customization is stored in this browser for the signed-in Yatsu account. It does not upload books or reading data.

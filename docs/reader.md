@@ -2,7 +2,7 @@
 
 This page is about the actual reading screen: the place you use after opening a book from the library.
 
-The reader is meant to stay out of the way while still giving quick access to navigation, bookmarks, appearance controls, tracking, and book-specific actions.
+The reader is meant to stay out of the way while still giving quick access to navigation, bookmarks, highlights, notes, appearance controls, tracking, and book-specific actions.
 
 ## Main Reader Controls
 
@@ -17,7 +17,9 @@ Common controls include:
 - **Table of contents**: opens the book's chapter list, if Yatsu can find one.
 - **Save current position** or **Update current position**: saves the current reading position Yatsu uses for progress and returning later.
 - **Bookmarks**: opens the saved bookmarks drawer, where you can add, name, rename, delete, and jump to bookmarks.
-- **Return to current position**: jumps back to your saved current reading position, if one exists.
+- **Highlights**: opens the saved highlights drawer for the current book.
+- **Notes**: opens plain book notes for the current book. These notes are not tied to a specific passage.
+- **Return to current position**: jumps back to your saved current reading position, if one exists. This action is in **More reader actions**.
 - **Current autoscroll speed**: shown in continuous mode when autoscroll is available.
 - **Fullscreen**: toggles browser fullscreen.
 - **Zen mode**: hides the reader chrome, footer, clock/session overlay, and reading position markers until you press `Z` again or click the pale `Z` in the bottom-right corner.
@@ -63,22 +65,23 @@ In VN mode:
 
 The default reader shortcuts include:
 
-| Action | Shortcut |
-| --- | --- |
-| Previous page | `PageUp` / `ArrowUp` |
-| Next page | `PageDown` / `Space` / `ArrowDown` |
-| Flip toward left edge | `ArrowLeft` |
-| Flip toward right edge | `ArrowRight` |
-| Previous chapter | `N` |
-| Next chapter | `M` |
-| Toggle autoscroll | `S` |
-| Increase autoscroll speed | `A` |
-| Decrease autoscroll speed | `D` |
-| Search current book | `/` / `Ctrl+F` / `Cmd+F` |
-| Toggle fullscreen | `F` |
-| Toggle Zen mode | `Z` |
-| Show keyboard shortcuts | `?` |
-| Exit reader | `Esc` twice |
+| Action                    | Shortcut                           |
+| ------------------------- | ---------------------------------- |
+| Previous page             | `PageUp` / `ArrowUp`               |
+| Next page                 | `PageDown` / `Space` / `ArrowDown` |
+| Flip toward left edge     | `ArrowLeft`                        |
+| Flip toward right edge    | `ArrowRight`                       |
+| Previous chapter          | `N`                                |
+| Next chapter              | `M`                                |
+| Toggle autoscroll         | `S`                                |
+| Increase autoscroll speed | `A`                                |
+| Decrease autoscroll speed | `D`                                |
+| Search current book       | `/` / `Ctrl+F` / `Cmd+F`           |
+| Toggle fullscreen         | `F`                                |
+| Toggle Zen mode           | `Z`                                |
+| New book note             | `Shift+N`                          |
+| Show keyboard shortcuts   | `?`                                |
+| Exit reader               | `Esc` twice                        |
 
 !!! note
 
@@ -103,12 +106,12 @@ Saved bookmark markers appear in the reader. When the header is closed, clicking
 
 The default shortcuts are:
 
-| Action | Shortcut |
-| --- | --- |
-| Open bookmarks drawer | `B` |
-| Add a quick bookmark | `Shift+B` |
-| Save current reading position | `O` |
-| Return to current reading position | `R` |
+| Action                             | Shortcut  |
+| ---------------------------------- | --------- |
+| Open bookmarks drawer              | `B`       |
+| Add a quick bookmark               | `Shift+B` |
+| Save current reading position      | `O`       |
+| Return to current reading position | `R`       |
 
 If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a current reading position or bookmark. Otherwise, it uses the current reader position.
 
@@ -116,11 +119,20 @@ For a screen-based position, use **Set Point** before saving. The custom reading
 
 Current reading position is stored with progress data. Multiple bookmarks are stored separately and can be synced or exported with your reading data when the relevant sync/export options are enabled.
 
-## Highlights and Quote Images
+## Highlights, Notes, and Quote Images
 
 Select text in the reader to open the highlight pill. Pick a color to save a highlight, or choose the image button to turn the selected passage into a shareable quote image without saving a highlight first.
 
 Saved highlights can also create quote images. Click or tap highlighted text in the reader, then choose the image button from the highlight actions pill. You can also open the **Highlights** drawer and choose **Quote image** from a saved highlight's actions menu.
+
+Use **Notes** in the reader header to create plain text notes for the current
+book without selecting a passage. Notes can include an optional title. Press
+`Shift+N` to open a new note quickly. Book notes appear in the reader Notes
+drawer and on the app-level **Notes** page. The Notes page opens to the
+Highlights tab by default and has a second tab for plain notes.
+
+Highlights and book notes can be exported, included in complete local backups,
+and synced through supported storage sources when those data types are selected.
 
 The quote image dialog shows a preview and can create a full-resolution PNG. Use **Share image** when your browser supports the system share sheet, **Copy** to copy the PNG to the clipboard, or **Download image** to save it. The quote text follows your current reader font, including language-specific reader font profiles.
 
@@ -156,9 +168,9 @@ Use **Set Point** from the reader actions menu to choose the point. If a point a
 
 The default shortcut is:
 
-| Action | Shortcut |
-| --- | --- |
-| Set custom reading point | `T` |
+| Action                   | Shortcut |
+| ------------------------ | -------- |
+| Set custom reading point | `T`      |
 
 ### Save the current reading position at a screen location
 
@@ -274,10 +286,10 @@ The tracker can record:
 
 Useful defaults:
 
-| Action | Shortcut |
-| --- | --- |
-| Toggle tracking | `P` |
-| Freeze tracking position | `E` |
+| Action                   | Shortcut |
+| ------------------------ | -------- |
+| Toggle tracking          | `P`      |
+| Freeze tracking position | `E`      |
 
 Use **Freeze tracking position** when you are about to jump around and do not want that movement counted as normal reading.
 

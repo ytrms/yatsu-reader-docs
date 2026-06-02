@@ -49,6 +49,7 @@ WebDAV storage sync can move reading data between this browser and your WebDAV s
 - current reading progress
 - saved bookmarks
 - highlights
+- plain book notes
 - reading statistics and streak data
 - reading goals
 - audiobook and subtitle data

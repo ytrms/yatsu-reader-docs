@@ -247,24 +247,19 @@ If the bug involves sync or storage, include which source you use, which device 
 
 ### Why is this not open source, or at least source available?
 
-I develop Yatsu as a hobby, and I want to keep maintaining it. Supporter
-subscriptions help make time for that work. In return, Supporters get optional
-customization features in the app. I prefer this arrangement to asking for
-donations without offering something in return.
+In short, it's because right now, I don't think the pros outweigh the cons. If I ever felt they did (for example, if it gets to the point where I can't/won't work on it anymore), then I may release its source permissively so that others may fork it and continue working on it.
 
-For now, I keep the source private because I am concerned that someone could
-copy and rehost the app, reducing support for the original project and my
-motivation to maintain it. I do not think the benefits of releasing the source
-outweigh that risk at the moment.
+As a solo dev doing this as a hobby, I have already spent hundreds of hours on Yatsu, and I'd like to keep spending hundreds more in the future, so that it's always maintained and kept up to date for the community, to avoid a repeat of the past. To achieve this, I decided to set up this project such that people can, in exchange for a symbolic monthly contribution, get some cosmetic, non-essential enhancements to support development. This earning, albeit extremely small, is one of the elements that can keep Yatsu's development going in the long run, be that even just for a few hours each month, which is more time than Ttsu received in the last few years.
 
-My commitment is to keep every feature that was free in Ttsu at the time of the
-fork free in Yatsu. If I can no longer maintain Yatsu, I may release the source
-under a permissive license so others can continue it.
+A Patreon, or a form of contribution that is not tied to obtaining something tangible in return, is not something I personally want for myself right now, because I feel that if I am to ask people for contributions, I would like for them to get something tangible, even small, in return, directly on the app. That's just how I work.
 
-I understand that some people prefer open-source or source-available software.
-Alternatives include:
+I do feel that currently, in the age of AI, where it's already extremely easy to copy others by sending a model a screenshot of a front end or the public minified code (Yatsu's code is currently ~98% the front end, the rest being optional auth), giving out the source code directly, even if it were with a restrictive license, would make it even easier for someone else to copy Yatsu wholesale, modify it slightly, rehost it, and make it less enticing for people to support the original project, lowering my motivation to work on maintaining it for everyone.
+
+In the past I have, and I still do, commit and pledge to keep all features that were free in Ttsu at the time of forking free in Yatsu. And since I started working on Yatsu, only ~2% of new code went to cosmetic features exclusive to Supporters of the project.
+
+That said, I do understand that some are only comfortable using open source or source available software. The original Ttsu reader is permissively open source, so anyone may fork it and do what I did. Here are some open source browser-based ebook readers that may be used instead of Yatsu Reader:
 
 - [Original Ttsu Reader](https://reader.ttsu.app)
 - [Kamper's Ttsu fork](https://kamperemu.github.io/ebook-reader/manage)
 
-Let me know if there are other readers I should add to this list.
+Please do let me know if there are any other forks or projects I can add to this list.

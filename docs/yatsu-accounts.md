@@ -1,10 +1,8 @@
 # Yatsu Accounts and Settings Sync
 
-Yatsu Accounts let you sign in to Yatsu so Reader and Tracking settings can follow you across devices.
-
-Making an account is free. The main account feature is **Settings Sync**.
-
-Settings Sync is account sync for preferences. It is separate from Google Drive, OneDrive, Browser storage, and manual backups. Reading data such as statistics, streaks, progress, highlights, book notes, and reading goals does not move through Settings Sync.
+A free Yatsu account lets you sync Reader and Tracking preferences between devices.
+You can read without an account. Books and reading history use separate
+[storage sync](statistics-and-sync.md) or backups.
 
 ## Signing in
 
@@ -47,33 +45,17 @@ Synced settings include:
 - Reader session settings
 - Tracking preferences
 
-Settings Sync is meant for the common case where you read on one device, then continue using Yatsu on another device and want the app to feel familiar.
-
-It does not make the Statistics page shared by itself. If you want reading statistics to move between a phone and a computer, set up storage sync with the same Google Drive or OneDrive source on both devices.
-
 ## What Does Not Sync
 
-Settings Sync does not currently sync:
+| Not included | How to use it on another device |
+| --- | --- |
+| Books, progress, bookmarks, highlights, notes, statistics, and goals | Use [storage sync](statistics-and-sync.md) or a backup. |
+| Storage sources, credentials, cloud permissions, and Data settings | Configure them on each device. |
+| Uploaded font files | Upload the same font files on each device. |
 
-- Books
-- Book progress
-- Bookmarks
-- Highlights
-- Notes
-- Reading statistics
-- Reading goals
-- Storage sources such as Google Drive, OneDrive, or local folders
-- Storage credentials or cloud provider permissions
-- Data settings
-- Uploaded font files
-
-Reading statistics and streaks can still sync, but they use Yatsu's storage sync/import/export system rather than your Yatsu Account Settings Sync. For example, both devices need to use the same Google Drive or OneDrive storage source, and the reading device needs to export statistics while the other device imports them.
-
-Google Fonts, built-in font choices, and language font profiles can sync as settings. Uploaded font files stay on the device where you uploaded them, so a synced custom font choice may not work on another device until that font file is also available there.
-
-Supporter custom themes can also sync saved theme typography. The saved font
-names and size sync with the theme settings, but uploaded font files themselves
-still stay on the device where they were uploaded.
+Built-in font choices, Google Fonts choices, and language font profiles sync as
+settings. Supporter themes can also sync saved font names and sizes. A synced
+font choice only works if that font is available on the receiving device.
 
 ## Sync Status
 
@@ -83,17 +65,15 @@ When Settings Sync is on, synced sections show small status labels:
 - **Synced** means the latest sync completed successfully.
 - **Does not sync** means that section stays local to the device.
 
-The Settings page also shows when Reader and Tracking settings last synced while Settings Sync is on. You can use the refresh button in that status box to manually check for remote changes.
-
-Yatsu also shows the sync status note in the live reader settings panel while Settings Sync is on, so you can check sync state without leaving your book.
+Check sync status in Settings or the reader's Appearance panel. Settings also
+shows the last sync time and a refresh button to check for remote changes.
 
 When Settings Sync is off, Reader and Tracking settings show a short note at the bottom instead of sync status labels or per-setting cloud buttons.
 
 ## Per-Device Setting Overrides
 
-Some settings are naturally device-specific. For example, you may want a larger font size on your phone than on your computer.
-
-When you are signed in, Yatsu shows a small cloud button next to a few settings:
+To keep a setting different on one device—for example, a larger font on your
+phone—use its cloud button. These buttons appear when Settings Sync is on for:
 
 - Font size
 - Line height
@@ -114,11 +94,10 @@ If you turn sync back on for that setting, the device rejoins the synced value f
 
 ## Sync Timing and Conflicts
 
-Settings sync automatically while you are signed in and Settings Sync is on.
-
 Yatsu syncs after local changes, checks for remote changes while the app is active, and lets you manually refresh from the Settings page. Sync checks pause while the app is inactive.
 
-If the same synced setting changes on two devices, Yatsu uses the most recent setting change for that individual setting. In normal use, this should feel seamless.
+If the same setting changes on two devices, Yatsu uses the most recent change
+for that setting.
 
 ## Streamer Mode
 
@@ -134,7 +113,7 @@ Streamer mode only affects the current browser or device. It does not change you
 
 When you use a Yatsu Account, Yatsu stores account information needed for sign-in, such as your email address, and the synced settings associated with your account.
 
-Yatsu does not upload your local books as part of free Settings Sync.
+Settings Sync does not upload your books.
 
 If you use external storage sources such as Google Drive or OneDrive, those sources keep their own data and permissions. Yatsu Accounts do not replace those storage accounts.
 

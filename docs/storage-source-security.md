@@ -2,7 +2,8 @@
 
 Yatsu can save connection details for custom storage sources so the app can reconnect from this browser. This includes sources such as custom Google Drive, OneDrive, and WebDAV setups.
 
-This page explains the warning shown when you choose **Store password in browser manager** or **Disable password encryption** in storage source settings.
+The **Store password in browser manager** and **Disable password encryption**
+options change how those saved credentials are protected.
 
 ## What Yatsu Stores
 
@@ -27,7 +28,9 @@ When the source needs to be unlocked, Yatsu asks for the password and decrypts t
 
 When **Store password in browser manager** is enabled, Yatsu asks the browser's password manager to remember the Yatsu unlock password.
 
-This is more convenient because you do not need to type the unlock password every time. The tradeoff is that anyone who can access your browser profile, unlocked device, or unlocked password manager may also be able to unlock the saved storage source.
+You can unlock the source without typing the password each time. Anyone with
+access to your unlocked device, browser profile, or password manager may also
+be able to unlock it.
 
 Use this only on a trusted personal device with device lock and browser account protection enabled.
 

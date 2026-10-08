@@ -36,27 +36,24 @@ For sync or metadata issues, it is especially helpful to mention if retrying eve
 
 ## What the diagnostics ZIP contains
 
-The diagnostics bundle includes a bounded history from the last 24 hours or 1200 entries, whichever is smaller.
+The bundle includes up to 1,200 log entries from the last 24 hours.
 
 It can include:
 
 - Recent actions inside Yatsu
 - Detailed logs and captured errors
 - Request timing and request failure data
-- Navigation and lifecycle events
-- A snapshot of the current runtime environment
+- Page navigation and app startup or shutdown events
+- Browser and device information
 - A snapshot of current Yatsu settings
 - A snapshot of local browser storage used by Yatsu
 - A library and database summary, including book titles, series, tags, progress, and storage-source summaries
 
 ## Privacy notes
 
-The diagnostics bundle is intended to help troubleshoot issues, but you should still review it before sharing.
-
-- It is created entirely in your browser
-- It is not uploaded automatically
-- It does **not** include full book contents or exported book files
-- It **can** include book titles, series, tags, settings, browser state, and other troubleshooting context
+Review the ZIP before sharing it. It can include book titles, series, tags,
+settings, and browser state. It does **not** include full book contents or
+exported book files.
 
 ## Where to send bug reports
 

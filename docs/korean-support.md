@@ -1,13 +1,17 @@
 # Korean Support
 
-Yatsu is still Japanese-first, but it has support for reading Korean ebooks more comfortably.
+Yatsu supports Korean fonts and Hangul character counting for progress and
+reading statistics.
 
-The main Korean-specific features are:
+## Recommended Setup for Korean Books
 
-- Korean fonts in the reader font picker
-- a Korean font filter and Korean preview text
-- Korean character counting for progress and reading statistics
-- automatic detection for books that declare Korean or clearly contain Korean text
+1. Open the Korean book.
+2. Open **Appearance**.
+3. Pick a Korean font, such as **Noto Sans KR** or **Noto Serif KR**.
+4. Set **Character Counting Method** to **Auto**.
+5. If the character counter stays at zero or looks too low, set it to **Korean**.
+
+If you use the tracker, update or restart the tracker after changing the counting method so the current session starts from the corrected character position.
 
 ## Korean Fonts
 
@@ -26,7 +30,7 @@ You can also use uploaded fonts or installed system fonts. If the font name or f
 
 !!! note
 
-    Google Fonts are fetched by the browser from Google. Uploaded fonts stay in your browser storage unless you export or sync browser data yourself.
+    Google Fonts are fetched by the browser from Google. Uploaded font files are not included in Settings Sync or complete local backups. Upload them separately on each device.
 
 ## Character Counting
 
@@ -50,18 +54,9 @@ Existing statistics entries are not rewritten. If you have already tracked readi
 
 The character counting method is stored locally per book. Yatsu Account Settings Sync does not sync it between devices.
 
-## Recommended Setup for Korean Books
-
-1. Open the Korean book.
-2. Open **Appearance**.
-3. Pick a Korean font, such as **Noto Sans KR** or **Noto Serif KR**.
-4. Set **Character Counting Method** to **Auto**.
-5. If the character counter stays at zero or looks too low, set it to **Korean**.
-
-If you use the tracker, update or restart the tracker after changing the counting method so the current session starts from the corrected character position.
-
 ## Limitations
 
 Yatsu does not currently add a separate Korean reader content language override. The **Reader content language** setting is mainly for choosing Japanese, Simplified Chinese, or Traditional Chinese glyph forms for shared CJK characters.
 
-Dictionary, tokenizer, and morphology features are still outside Yatsu's built-in Korean support. For Korean books, Yatsu focuses on display, progress, and statistics.
+Yatsu does not include a Korean dictionary or morphology tool. Use an external
+tool for lookup and text analysis.

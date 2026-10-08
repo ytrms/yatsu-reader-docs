@@ -6,6 +6,15 @@ Use the Windows companion app if you read on Windows. If you read on macOS, Linu
 
 Discord Rich Presence is controlled from the account menu in the top-right of Yatsu. Open **Discord Rich Presence** to turn it on or off, reset the elapsed timer, toggle privacy mode, customize its display, open help, or check the current companion status.
 
+## Requirements
+
+- You must be signed in to Yatsu.
+- Discord Desktop must be running on the same device as Yatsu.
+- One companion must be installed and running: the Windows companion app, or the Anki add-on with Anki Desktop open.
+- The browser must allow Yatsu to contact the local companion on `127.0.0.1`.
+
+The companion only listens on the local device. It receives the current activity from Yatsu over loopback and publishes it to Discord Desktop. Discord web, mobile, and console clients do not support this local Rich Presence flow.
+
 ## Install a Companion
 
 Yatsu needs one local companion running on the same device as Yatsu, Discord Desktop, and your browser. You do not need both companion options.
@@ -42,15 +51,6 @@ To install it from Anki:
 
 Keep Anki open while using Discord Rich Presence. The add-on starts a local companion inside Anki and clears the Discord activity automatically if the Yatsu tab stops sending updates.
 
-## Requirements
-
-- You must be signed in to Yatsu.
-- Discord Desktop must be running on the same device as Yatsu.
-- One companion must be installed and running: the Windows companion app, or the Anki add-on with Anki Desktop open.
-- The browser must allow Yatsu to contact the local companion on `127.0.0.1`.
-
-The companion only listens on the local device. It receives the current activity from Yatsu over loopback and publishes it to Discord Desktop. Discord web, mobile, and console clients do not support this local Rich Presence flow.
-
 ## Status
 
 The status row in the Discord Rich Presence menu shows whether Yatsu can reach the companion and Discord:
@@ -60,7 +60,7 @@ The status row in the Discord Rich Presence menu shows whether Yatsu can reach t
 - **Blocked** or **Error** means the local request or Discord update failed.
 - **Off** means Yatsu is not sharing activity.
 
-When everything is connected, Discord shows Yatsu Reader under your current activity.
+Once connected, Discord shows Yatsu Reader under your current activity.
 
 ![Yatsu Reader Discord Rich Presence shown alongside the Yatsu status menu](assets/discord-rich-presence-activity.jpg){ .yatsu-doc-screenshot .yatsu-doc-screenshot--wide }
 
@@ -68,7 +68,7 @@ When everything is connected, Discord shows Yatsu Reader under your current acti
 
 Yatsu Supporters can open **Customize** from the Discord Rich Presence menu.
 
-The customization dialog lets Supporters change:
+Supporters can change:
 
 - the Discord detail line
 - the reading line

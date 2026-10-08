@@ -2,7 +2,8 @@
 
 [Yatsu Whispersync](https://github.com/ytrms/yatsu-whispersync) is a Yatsu-compatible userscript build of [ttu-whispersync](https://github.com/Renji-XD/ttu-whispersync), a community userscript / browser extension for listening to an audiobook while reading.
 
-Yatsu does not include Whispersync natively. This script runs through a browser userscript manager, so it can be useful, but it still depends on browser extension behavior and on Yatsu's reader page structure.
+Whispersync is installed separately through a browser userscript manager. Its
+compatibility depends on the browser and Yatsu's reader page structure.
 
 ## What it does
 
@@ -14,11 +15,13 @@ Yatsu Whispersync adds an audiobook control panel to the reader. After you load 
 - remember playback position
 - optionally export sentence/audio cards to Anki
 
-Despite the name, this is not the same thing as Yatsu account sync or Drive Sync. The "sync" part is about keeping audiobook playback, subtitle timing, and the text you are reading aligned.
+Here, "sync" means aligning audiobook playback, subtitles, and book text. For
+transferring reading data between devices, see [Statistics and Sync](statistics-and-sync.md).
 
 ## What you need
 
-For the smoothest setup, use a desktop Chromium browser such as Chrome, Edge, or Brave.
+Desktop Chromium browsers such as Chrome, Edge, and Brave support reopening
+local audio files. Other browsers may ask you to select the files again.
 
 You need:
 
@@ -35,12 +38,6 @@ Anki is only required if you want to export cards from Yatsu Whispersync. For li
     Install userscripts only from people or projects you trust. A userscript runs inside the Yatsu page in your browser, so it can interact with page content and browser storage available to that page.
 
 ## Install the Yatsu-compatible script
-
-The quickest way to get started is to install the latest Yatsu Whispersync userscript release:
-
-[Install the Yatsu Whispersync userscript](https://github.com/ytrms/yatsu-whispersync/releases/latest/download/yatsu-whispersync.user.js)
-
-If you already have Violentmonkey or another userscript manager installed, opening that link should show an installation prompt.
 
 !!! note
 
@@ -75,9 +72,10 @@ If the script loaded successfully, you should see a new Whispersync icon or cont
 5. Open the **Match** tab.
 6. Match the subtitle lines against the book text.
 7. Choose **Save & reload page** when Whispersync asks you to.
-8. After the page reloads, reopen the menu and adjust the settings you care about.
+8. After the page reloads, reopen the menu to start playback or adjust its settings.
 
-The match step is important. Until the subtitles are matched to the book, features such as reader highlighting, reader actions, and autoscroll may be limited or unavailable.
+Match the subtitles before using highlighting or autoscroll; those features
+depend on the matched text.
 
 ## Using Anki export
 

@@ -1,6 +1,7 @@
 # Windows WebDAV Setup
 
-This guide shows one reliable Windows setup for Yatsu WebDAV storage:
+This advanced setup serves a Windows folder to Yatsu over WebDAV. It requires
+command-line tools and an HTTPS address reachable from your reading devices:
 
 - `rclone` serves a local Windows folder as WebDAV on `127.0.0.1`.
 - `Caddy` adds the browser CORS headers Yatsu needs and either exposes HTTPS
@@ -8,9 +9,8 @@ This guide shows one reliable Windows setup for Yatsu WebDAV storage:
 - Yatsu connects to the public HTTPS URL, not directly to the local rclone
   address.
 
-This is the recommended pattern for the hosted Yatsu app. Direct WebDAV servers
-often fail in browsers because they do not allow `PROPFIND`, `MKCOL`, `PUT`,
-`MOVE`, `DELETE`, or the `Authorization` header in CORS preflight requests.
+Caddy handles the cross-origin requests that a browser sends before using the
+WebDAV server. The configurations below allow Yatsu's required methods and headers.
 
 ## What Yatsu Needs
 

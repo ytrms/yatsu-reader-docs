@@ -1,8 +1,9 @@
 # WebDAV Storage
 
-Yatsu can use a WebDAV server as an external library and sync source. This is useful if you keep your books on a NAS, a self-hosted file server, or a service that exposes a WebDAV collection.
+Yatsu can use a WebDAV server as an external library and sync source. Use it to connect a NAS, self-hosted file server, or WebDAV service.
 
-WebDAV storage is separate from Yatsu Accounts and Settings Sync. A Yatsu account can sync some app settings, while WebDAV stores books and book-related data in your own server.
+WebDAV stores books and reading data on your server. [Account Settings Sync](yatsu-accounts.md)
+handles preferences separately.
 
 ## Requirements
 
@@ -18,7 +19,7 @@ Your WebDAV server or reverse proxy must allow browser cross-origin requests fro
 
 For rename support, CORS must also allow the `Destination` and `Overwrite` request headers used by WebDAV `MOVE` requests.
 
-If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide](webdav-windows.md). It shows a known-good rclone and Caddy configuration with HTTPS and the CORS headers Yatsu needs.
+If you are setting up WebDAV on Windows, follow the [Windows WebDAV setup guide](webdav-windows.md). It includes rclone and Caddy configurations for HTTPS and the required CORS headers.
 
 ## Add a WebDAV source
 

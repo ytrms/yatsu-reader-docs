@@ -14,7 +14,7 @@ https://app.yatsu.moe
 
 If you used the old GitHub Pages version and your books were stored in **Browser** storage, the current Yatsu app cannot read that data directly. Browser data is separated by website origin, so `app.yatsu.moe` is not allowed to access data saved under `ytrms.github.io`.
 
-To help with this, there is a small recovery tool hosted on the old GitHub Pages origin:
+Use the recovery tool at the old address to export the saved browser data:
 
 [Open the Yatsu Recovery Tool](https://ytrms.github.io/yatsu-reader-recovery/){ .md-button .md-button--primary }
 
@@ -28,13 +28,7 @@ The tool does not upload your books or reading data to a server. The export is c
 
 ## Before you start
 
-Use the same:
-
-- device
-- browser
-- browser profile
-
-that you used with the old GitHub Pages version of Yatsu.
+Use the same device, browser, and browser profile you used with the old version.
 
 If you used old Yatsu in Chrome on a laptop, open the recovery tool in that same Chrome profile on that same laptop. Opening the recovery tool in a different browser, a private window, or another device will usually not find the old data.
 
@@ -62,7 +56,7 @@ If you used old Yatsu in Chrome on a laptop, open the recovery tool in that same
 
    [https://app.yatsu.moe](https://app.yatsu.moe)
 
-6. In the library, open the import menu and choose the backup import option.
+6. In the Library, choose **Import** > **Import Backup**.
 
 7. Select the `.zip` file you downloaded from the recovery tool.
 

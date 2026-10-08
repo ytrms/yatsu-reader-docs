@@ -12,17 +12,17 @@ If you are setting up sync or moving between devices, read [Yatsu Accounts and S
 
 No. You can use Yatsu without signing in.
 
-A Yatsu account is mainly useful for **Settings Sync**, which can sync Reader and Tracking settings between devices. It does not replace Google Drive, OneDrive, local browser storage, or manual backups.
+A free account lets you sync Reader and Tracking preferences between devices.
+Books and reading history use storage sync or backups.
 
 See [Yatsu Accounts and Settings Sync](yatsu-accounts.md) for details.
 
-### What does Settings Sync actually sync?
+### What does Settings Sync include? {#what-does-settings-sync-actually-sync}
 
-Settings Sync syncs Reader and Tracking settings, such as appearance, reading mode, text style, layout preferences, navigation preferences, and tracking preferences.
-
-It does not sync books, book progress, bookmarks, highlights, book notes, reading statistics, reading goals, storage sources, cloud credentials, data settings, or uploaded font files.
-
-If you want statistics, streaks, progress, highlights, book notes, or reading goals to move between devices, use storage sync with the same Google Drive, OneDrive, or other storage source on each device.
+It syncs Reader and Tracking preferences, including appearance, layout, navigation,
+and tracking options. It does not transfer books, reading history, or storage
+connections. See [what does not sync](yatsu-accounts.md#what-does-not-sync) for
+the full list and how to move those data types.
 
 ### Why did my synced font setting not work on another device?
 
@@ -96,27 +96,27 @@ See [Using Yatsu Offline](offline.md) for the full checklist.
 
 No. Offline support comes from the browser saving Yatsu's app files and local data. A normal browser tab can work offline after the app has loaded and cached the needed files.
 
-The installed PWA can be nicer on mobile, but it still needs to be opened and prepared while online first.
+An installed PWA also needs to be opened and prepared while online first.
 
 ### Why does Yatsu show the browser's offline page?
 
-That means the browser did not have enough of Yatsu saved to start the app while offline.
-
-Go online, open Yatsu, turn on **Full Offline Use** in **Settings** -> **Data** if you want full offline PWA behavior, wait until saving finishes, then try offline again.
+Check that Yatsu was saved for offline use in this browser profile or installed
+app. Follow the [offline troubleshooting checklist](offline.md#why-do-i-see-the-browsers-youre-offline-page),
+then disconnect and test again.
 
 ### Do I need the Google Drive setup?
 
 Only if you want to use Google Drive as a remote library or sync target.
 
-Most users can use the built-in one-click setup: open the Library, choose **Google Drive** from the storage picker, and sign in with Google. The old bring-your-own Google Cloud project flow is still available for custom or advanced storage sources.
+Most users can use the built-in connection: open the Library, choose **Google Drive** from the storage picker, and sign in with Google. The old bring-your-own Google Cloud project flow is still available for custom or advanced storage sources.
 
 Yatsu Accounts and Settings Sync do not set up Google Drive book sync for you.
 
 ### Can I use the same Google Drive folder with Yatsu and ttsu?
 
-Yes, but only with an intentionally configured custom storage source.
+Yes, with a custom Ttsu-compatible storage source connected to the same folder.
 
-The built-in one-click Google Drive source uses Yatsu's own `yatsu-reader-data` folder and is not meant to interoperate with ttsu's default folder. Custom ttsu-compatible sources can still use the shared storage layout. See [Compatibility with Ttsu](ttsu-compatibility.md) for details and caveats.
+The built-in Google Drive source uses Yatsu's own `yatsu-reader-data` folder and is not meant to interoperate with ttsu's default folder. Custom ttsu-compatible sources can still use the shared storage layout. See [Compatibility with Ttsu](ttsu-compatibility.md) for details and caveats.
 
 ### How do I move my ttsu library into Yatsu?
 
@@ -170,6 +170,17 @@ Turn on **Update on Completion** if you want completing a book to add the missin
 
 ## Reader behavior
 
+### Can I use my phone's volume buttons to turn pages?
+
+Websites cannot normally receive phone volume-button presses. On Android, an
+advanced workaround can remap the buttons to Yatsu's existing `PageUp` and
+`PageDown` shortcuts. See
+[Volume-button page turns on Android](reader.md#volume-button-page-turns-on-android)
+for the requirements, setup steps, and limitations.
+
+There is no equivalent supported workaround for Yatsu in a browser on iPhone or
+iPad.
+
 ### Why are some reader buttons missing?
 
 Some reader controls only appear when they apply.
@@ -186,7 +197,9 @@ Use **Save current position** or **Update current position** for progress. Use *
 
 ### Why does my saved position or bookmark feel slightly off?
 
-The reader has to choose a text position from the current page or scroll location. If that default point does not match where your eyes treat "current" as being, use **Set Point** before saving the current position or adding a bookmark.
+Yatsu calculates a text position from the page or scroll location. To choose
+a specific line, use **Set Point** before saving the current position or adding
+a bookmark.
 
 The custom reading point is explained in [Using the Reader](reader.md#custom-reading-point).
 
@@ -234,19 +247,24 @@ If the bug involves sync or storage, include which source you use, which device 
 
 ### Why is this not open source, or at least source available?
 
-In short, it's because right now, I don't think the pros outweigh the cons. If I ever felt they did (for example, if it gets to the point where I can't/won't work on it anymore), then I may release its source permissively so that others may fork it and continue working on it.
+I develop Yatsu as a hobby, and I want to keep maintaining it. Supporter
+subscriptions help make time for that work. In return, Supporters get optional
+customization features in the app. I prefer this arrangement to asking for
+donations without offering something in return.
 
-As a solo dev doing this as a hobby, I have already spent hundreds of hours on Yatsu, and I'd like to keep spending hundreds more in the future, so that it's always maintained and kept up to date for the community, to avoid a repeat of the past. To achieve this, I decided to set up this project such that people can, in exchange for a symbolic monthly contribution, get some cosmetic, non-essential enhancements to support development. This earning, albeit extremely small, is one of the elements that can keep Yatsu's development going in the long run, be that even just for a few hours each month, which is more time than Ttsu received in the last few years.
+For now, I keep the source private because I am concerned that someone could
+copy and rehost the app, reducing support for the original project and my
+motivation to maintain it. I do not think the benefits of releasing the source
+outweigh that risk at the moment.
 
-A Patreon, or a form of contribution that is not tied to obtaining something tangible in return, is not something I personally want for myself right now, because I feel that if I am to ask people for contributions, I would like for them to get something tangible, even small, in return, directly on the app. That's just how I work.
+My commitment is to keep every feature that was free in Ttsu at the time of the
+fork free in Yatsu. If I can no longer maintain Yatsu, I may release the source
+under a permissive license so others can continue it.
 
-I do feel that currently, in the age of AI, where it's already extremely easy to copy others by sending a model a screenshot of a front end or the public minified code (Yatsu's code is currently ~98% the front end, the rest being optional auth), giving out the source code directly, even if it were with a restrictive license, would make it even easier for someone else to copy Yatsu wholesale, modify it slightly, rehost it, and make it less enticing for people to support the original project, lowering my motivation to work on maintaining it for everyone.
-
-In the past I have, and I still do, commit and pledge to keep all features that were free in Ttsu at the time of forking free in Yatsu. And since I started working on Yatsu, only ~2% of new code went to cosmetic features exclusive to Supporters of the project.
-
-That said, I do understand that some are only comfortable using open source or source available software. The original Ttsu reader is permissively open source, so anyone may fork it and do what I did. Here are some open source browser-based ebook readers that may be used instead of Yatsu Reader:
+I understand that some people prefer open-source or source-available software.
+Alternatives include:
 
 - [Original Ttsu Reader](https://reader.ttsu.app)
 - [Kamper's Ttsu fork](https://kamperemu.github.io/ebook-reader/manage)
 
-Please do let me know if there are any other forks or projects I can add to this list.
+Let me know if there are other readers I should add to this list.

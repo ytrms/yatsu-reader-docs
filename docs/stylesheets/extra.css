@@ -516,7 +516,8 @@ body::before {
   margin-bottom: 0.4rem;
   border-radius: var(--yatsu-control-radius);
   background: var(--yatsu-sidebar-surface);
-  box-shadow: 0 0.5rem 0 0.45rem var(--yatsu-sidebar-surface);
+  /* Keep the sticky heading's opaque shadow within the gap before the links. */
+  box-shadow: 0 0.2rem 0 0.15rem var(--yatsu-sidebar-surface);
 }
 
 .md-nav__link {

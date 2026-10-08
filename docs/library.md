@@ -12,8 +12,9 @@ The keyboard-focused book can also be opened with `Enter`.
 
 ## Importing books
 
-Use **Import** to add EPUB, HTMLZ, and text files, restore a backup zip, or use
-other import options available for the current storage source.
+Choose a storage source in the Library header, then open **Import**. Use
+**Import File(s)** for EPUB, HTMLZ, and text files, or **Import Backup** to
+restore a backup ZIP.
 
 ![Yatsu library import menu](assets/yatsu-library-import-menu.png)
 
@@ -92,10 +93,9 @@ export.
 
 The backup can include local books, current reading positions, saved bookmarks,
 highlights and notes, statistics, reading goals, audiobook state, subtitle data,
-covers, and a versioned settings snapshot. The settings snapshot is limited to
-known safe Yatsu settings such as Reader, Tracking, Library, and Statistics
-preferences. It does not include account sign-in, cloud authorization, browser
-extension data, uploaded local font files, or unrelated browser storage.
+covers, and supported Reader, Tracking, Library, and Statistics settings. It does
+not include account sign-in, cloud authorization, browser extension data, uploaded
+local font files, or unrelated browser storage.
 
 To restore the backup in another browser, choose **Browser** as the storage
 source, then use **Import** -> **Import Backup** and select the downloaded zip.
@@ -110,20 +110,23 @@ cover visibility, and reading progress. The details submenu shows stored
 metadata such as author, character count, last read time, bookmark time, and
 last update time when available.
 
-The library display settings can show optional cover-card details. Press `Q` in
+### Display settings
+
+The library display settings can show optional details on book cards. Press `Q` in
 the library to toggle this panel. Author, series, tags, and character count
 appear as compact strips when those fields are enabled and available, with
 multiple tags shown as comma-separated text.
 
 ![Yatsu library display settings](assets/yatsu-library-display-settings.png)
 
+### Grouping and sorting
+
 Yatsu groups compatible shelves by series by default. Use **Group by** ->
 **Author** to group by author instead, or **None** to return to a flat grid.
 Grouping works on shelves such as All books, Unread, Reading, Completed, Tags,
 and Untagged. Each row header opens that series or author shelf, matching the
-sidebar. Books in the **Not in a series** or **No author** section use the
-normal cover grid at the bottom instead of a horizontal row, so large loose-book
-collections stay scannable. Use **Group sort** to order grouped rows by
+sidebar. Books without a series or author appear in the **Not in a series** or **No author**
+grid below the grouped rows. Use **Group sort** to order grouped rows by
 alphabetical name, last read, last update, progress, or book count. Progress is
 the percentage of known characters read across the whole group. When a series or
 author row has more covers off to the side, edge arrows appear to move that row
@@ -132,11 +135,15 @@ can be grouped by series.
 A series shelf is not grouped by series, and an author shelf is not grouped by
 author.
 
-Yatsu Supporters can also choose **Change cover** from this menu and upload a
+### Custom covers (Supporter)
+
+Choose **Change cover** from a book's three-dot menu and upload a
 JPG or PNG image. This replaces the book's stored cover. For browser libraries,
 the replacement is saved in this browser. For Drive, OneDrive, and file-system
 libraries, the replacement is saved as the book's cover file in that storage
 source, so other devices using the same library can display it.
+
+### Authors
 
 Yatsu imports author metadata from new EPUB/HTMLZ imports when the book file
 includes creator metadata. Supporters can also choose **Edit author** from the

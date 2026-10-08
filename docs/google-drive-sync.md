@@ -1,14 +1,13 @@
 # Google Drive Sync
 
-Yatsu can use Google Drive as a remote library and sync target. For most people, the built-in Google Drive source is now the recommended setup: no Google Cloud project, no OAuth client ID, and no client secret.
+Google Drive can store your books and reading data. The built-in connection
+requires a Google account; you do not need your own Google Cloud project or
+OAuth credentials.
 
-Yatsu Accounts and Settings Sync are separate from Google Drive. A Yatsu account can sync some app settings, while Google Drive stores books and book-related data in your own Drive.
+Account Settings Sync handles preferences separately. To share reading history,
+connect Drive on both devices and [configure storage sync](statistics-and-sync.md#recommended-setup).
 
-If you want statistics or streaks to appear on another device, Google Drive must be used as storage sync on both devices. Turning on Settings Sync in the account menu is not enough, because Settings Sync only syncs Reader and Tracking preferences.
-
-## Recommended: one-click Google Drive
-
-You only need a Google account.
+## Connect Google Drive {#recommended-one-click-google-drive}
 
 1. Open Yatsu and go to the Library.
 2. Click the storage picker in the header.
@@ -19,7 +18,9 @@ You only need a Google account.
 
 The first time you connect, Yatsu creates its own `yatsu-reader-data` folder in your Drive. After that, Yatsu stores the authorization in this browser's local Yatsu data, so reloading the page should not ask you to log in again.
 
-It is still normal for Google Drive to ask you to sign in again every once in a while. The built-in Drive source stores a short-lived Google access token in this browser, not a permanent Google password or a long-lived server-side Drive session. You may need to authorize Drive again after the token expires, after clearing Yatsu site data, after revoking Yatsu's access from your Google account, after using a different browser profile or device, or after Google asks Yatsu to refresh the authorization.
+Yatsu stores a short-lived access token in this browser. You may need to
+authorize Drive again when it expires, if Google requests authorization, or
+after clearing site data, revoking access, or changing browser profiles or devices.
 
 ## Managing the built-in Google Drive source
 
@@ -47,7 +48,7 @@ Google Drive storage sync can move reading data between this browser and your Dr
 
 Yatsu still uses the browser database as the live app database while you read. Drive is the shared storage source that Yatsu imports from and exports to when sync runs.
 
-For statistics, that means a device can show `0` locally even when another device has a streak, until statistics have been exported to Drive and imported on the second device. See [Statistics and Sync](statistics-and-sync.md) for the exact behavior.
+If reading history is missing on another device, follow [Statistics and Sync](statistics-and-sync.md#common-situations).
 
 ## What Yatsu can access
 
@@ -57,13 +58,14 @@ Because of that limited permission, the built-in source will not automatically p
 
 ## Compatibility with ttsu
 
-The one-click Google Drive source is a Yatsu default source and is not meant to interoperate with ttsu.
+The built-in Google Drive source is a Yatsu default source and is not meant to interoperate with ttsu.
 
-If you want to keep an intentionally configured ttsu-compatible storage source, use a custom Google Drive source instead. The old bring-your-own Google Cloud setup is still available below for that advanced case.
+To share a Ttsu library, use a custom Google Drive source. The advanced setup
+below uses your own Google Cloud project and OAuth credentials.
 
 ??? note "Legacy custom Google Drive setup"
 
-    Use this only if you need a custom Google Drive storage source, your own OAuth client, or an advanced ttsu-compatible setup. Most users should use the one-click Google Drive source above.
+    Use this only if you need a custom Google Drive storage source, your own OAuth client, or an advanced ttsu-compatible setup. Most users should use the built-in Google Drive source above.
 
     ## Prerequisites
 
@@ -71,7 +73,7 @@ If you want to keep an intentionally configured ttsu-compatible storage source, 
 
     ## Steps
 
-    Go to [this page](https://console.cloud.google.com/projectselector2/home/dashboard) and click on "Create Project".
+    Open the [Google Cloud project selector](https://console.cloud.google.com/projectselector2/home/dashboard) and click on "Create Project".
 
     In the "Project name" field, give it any name you want, then click on Create. You don't need to pick an organization in the "Parent resource" field.
 
@@ -167,7 +169,7 @@ If you want to keep an intentionally configured ttsu-compatible storage source, 
 
     ![](assets/publish-app.png)
 
-    That's it when it comes to the Google side. Now, in Yatsu, go to Settings, click "Data", open "Sources", then click "+ Add":
+    In Yatsu, open **Settings** > **Data** > **Sources**, then choose **+ Add**:
 
     ![](assets/yatsu-sources.png)
 
@@ -179,11 +181,16 @@ If you want to keep an intentionally configured ttsu-compatible storage source, 
 
     Pick "Google Drive" from the provider dropdown.
 
-    In "Behavior", pick whatever behavior suits you best.
+    Under **Behavior**, enable **Use as sync target** if automatic import/export
+    should use this source. You can also make it the default source for the provider.
+    Configure sync directions separately in **Settings** > **Data** > **Sync**; see
+    [Statistics and Sync](statistics-and-sync.md#recommended-setup).
 
     In "Credentials", enter the Client ID and Client Secret that you stored before.
 
-    In Protection, you may optionally set a password which will be asked by Yatsu every single time you load books.
+    Under **Protection**, configure how Yatsu protects saved credentials. See
+    [Storage Source Security](storage-source-security.md) before changing the
+    password protection options.
 
     Click on "Save".
 

@@ -1,35 +1,36 @@
 # Yatsu Reader Docs
 
-Yatsu Reader is a web-based ebook reader built for Japanese learners, with support for reader customization, language-specific text handling, reading statistics, offline use, account settings sync, and optional integrations with tools such as Jiten Reader, Google Drive, and Yatsu Whispersync.
-
-These docs focus on the parts of Yatsu that usually need extra explanation: how reading behavior works, what sync does and does not cover, how to set up external storage, how statistics are recorded, and how Yatsu stays compatible with related TTU/Ttsu workflows.
+Yatsu is a browser-based ebook reader for Japanese learners, with support for
+Chinese and Korean books. [Open Yatsu](https://app.yatsu.moe) to start reading.
 
 ## Start here
 
-- [Using the Reader](reader.md): Reader controls, page movement, bookmarks, table of contents, appearance settings, image gallery, reading tracking, and completion behavior.
-- [Using the Library](library.md): Opening books, select mode, range selection, drag selection, and bulk library actions.
-- [Yatsu Accounts and Settings Sync](yatsu-accounts.md): Signing in, usernames, what Settings Sync includes, what stays local, sync status, per-device overrides, and privacy basics.
-- [Using Yatsu Offline](offline.md): What works offline, how to prepare books, persistent storage, full offline use, cache data, and syncing again after being offline.
-- [Frequently Asked Questions](faq.md): Short answers for common confusing cases.
-- [How to Report Bugs](how-to-report-bugs.md): How to download diagnostics, what to include in a report, and what private data is or is not included.
-- [Advantages of Yatsu over Ttsu](why-yatsu.md): A practical comparison of Yatsu's reader, library, language, sync, tracking, and integration improvements over upstream Ttsu.
+- [Using the Library](library.md): Import a book, organize your library, or make a backup.
+- [Using the Reader](reader.md): Turn pages, save bookmarks, highlight text, and adjust the layout.
+- [Yatsu Accounts and Settings Sync](yatsu-accounts.md): Sync reading preferences between devices.
+- [Using Yatsu Offline](offline.md): Save the app and your books before going offline.
+- [What Yatsu adds to Ttsu](why-yatsu.md): Compare features and find migration instructions.
+- [Frequently Asked Questions](faq.md): Find answers to common problems.
+- [How to Report Bugs](how-to-report-bugs.md): Download diagnostics and send a report.
 
 ## Reading and language support
 
-- [Reading Tracking](reading-tracking.md): What Yatsu records, how time and characters are counted, reading goals, statistics controls, privacy, sync, and export behavior.
-- [Chinese Support](chinese-support.md): Content language settings, Chinese fonts, character counting, recommended setup, and current limitations.
-- [Korean Support](korean-support.md): Korean fonts, character counting methods, setup recommendations, and current limitations.
+- [Reading Tracking](reading-tracking.md): Record reading time, set goals, and review statistics.
+- [Chinese Support](chinese-support.md): Choose Chinese glyph forms, fonts, and character counting.
+- [Korean Support](korean-support.md): Choose Korean fonts and count Hangul for progress and statistics.
 
 ## Sync, storage, and data
 
-- [WebDAV Storage](webdav-sync.md): Use a NAS, self-hosted server, or other WebDAV endpoint as a Yatsu library and sync source.
-- [Google Drive Sync](google-drive-sync.md): The one-click Google Drive setup, what Yatsu stores in Drive, and the legacy custom Google Cloud setup.
-- [Statistics and Sync](statistics-and-sync.md): How reading statistics behave across local books, Drive-backed books, synced libraries, and multiple devices.
-- [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md): How to export a backup zip from ttsu and import it into Yatsu.
-- [Recovering Old GitHub Pages Data](github-pages-recovery.md): How to export and import data from the old GitHub Pages version of Yatsu.
-- [Compatibility with Ttsu](ttsu-compatibility.md): How Yatsu treats TTU/Ttsu data compatibility, what should transfer cleanly, and where behavior may still differ.
+- [Google Drive Sync](google-drive-sync.md): Connect Drive to store books and sync reading data.
+- [WebDAV Storage](webdav-sync.md): Connect a NAS or another WebDAV server.
+- [Storage Source Security](storage-source-security.md): Protect saved connection credentials.
+- [Statistics and Sync](statistics-and-sync.md): Set up reading history across devices or troubleshoot missing statistics.
+- [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md): Transfer a library with a backup ZIP.
+- [Recovering Old GitHub Pages Data](github-pages-recovery.md): Export books from Yatsu's old address.
+- [Compatibility with Ttsu](ttsu-compatibility.md): Use a shared custom storage source with both apps.
 
 ## Integrations
 
-- [Using Yatsu with Jiten Reader](jiten-reader.md): How to connect Jiten Reader to Yatsu and what to try if parsing does not start right away.
-- [Yatsu Whispersync](ttu-whispersync.md): How the Yatsu-compatible userscript syncs playback and subtitles, exports Anki cards, and works with external storage.
+- [Jiten Reader](jiten-reader.md): Parse Japanese text with the browser extension.
+- [Yatsu Whispersync](ttu-whispersync.md): Match audiobook audio and subtitles to your book.
+- [Discord Rich Presence](discord-rich-presence.md): Show reading activity in Discord Desktop.

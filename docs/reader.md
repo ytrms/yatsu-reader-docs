@@ -1,12 +1,11 @@
 # Using the Reader
 
-This page is about the actual reading screen: the place you use after opening a book from the library.
-
-The reader is meant to stay out of the way while still giving quick access to navigation, bookmarks, highlights, notes, appearance controls, tracking, and book-specific actions.
+Open a book from the Library to read it. Use the reader toolbar to navigate,
+save positions, add bookmarks and notes, or adjust the text.
 
 ## Main Reader Controls
 
-The top bar contains the most common reader actions.
+Click or tap the upper area of the page to open the reader toolbar.
 
 ![Yatsu reader controls on a text page](assets/yatsu-reader-controls.png)
 
@@ -26,33 +25,21 @@ Common controls include:
 - **Appearance**: opens the live appearance panel for reader-specific visual settings.
 - **More reader actions**: opens less frequent reader actions such as completion, custom point controls, image gallery, and keyboard shortcuts.
 
-On narrow screens, the reader uses a compact actions menu so the reading area keeps more space.
-
 ## Moving Through a Book
 
-Yatsu has two reader modes: paginated and continuous. The controls are similar, but movement feels different.
+Yatsu has three reader modes: paginated, continuous, and VN.
 
 In paginated mode:
 
 - Use the page controls, tap edges, or keyboard shortcuts to move page by page.
-- In supported browsers, you can also use a connected controller for navigation.
-  The standard layout uses D-pad left or L1/LB for previous page and D-pad right
-  or R1/RB for next page. A/Cross saves the current reading position, and
-  B/Circle asks to exit the reader. Press the exit binding again within the
-  confirmation window to return to the library. Open **Controller navigation**
-  from Settings or the live reader settings panel to rebind the controller
-  inputs, tune the stick deadzone, or add optional bindings for auto-scroll
-  controls, toggling the table of contents, and the reading tracker panel.
+- You can also use a [connected controller](#controller-navigation) in supported browsers.
 - Use **Table of contents** to jump between chapters.
-- Arrow keys can flip pages. Left and right follow the visible page edges, which means vertical text can feel different from horizontal text.
+- Left and right arrow keys turn toward the corresponding screen edge. The reading direction determines which edge advances the book.
 
 In continuous mode:
 
 - Scroll normally.
-- In supported browsers, either controller stick can scroll continuously. Push
-  down or up in horizontal text, and left or right in vertical text. The farther
-  you push the stick, the faster Yatsu scrolls. If the reader moves while the
-  sticks are centered, raise the stick deadzone in **Controller navigation**.
+- A [connected controller](#controller-navigation) can scroll in supported browsers.
 - Autoscroll can move the text for you.
 - The speed indicator shows the current autoscroll multiplier.
 
@@ -91,7 +78,9 @@ The default reader shortcuts include:
 
 Yatsu separates the **current reading position** from user-created **bookmarks**.
 
-The current reading position is the one place Yatsu uses for progress, returning later, and compatibility with older TTU-style progress data. Use **Save current position** or **Update current position** to store it, then use **Return to current position** to jump back.
+The **current reading position** is the saved location used for book progress
+and returning later. Use **Save current position** or **Update current position**
+to store it, then **Return to current position** to jump back.
 
 Bookmarks are separate saved locations. Open **Bookmarks** to show the drawer, where you can:
 
@@ -115,7 +104,8 @@ The default shortcuts are:
 
 If text selection bookmarking is enabled in settings, Yatsu can use the selected text location when creating a current reading position or bookmark. Otherwise, it uses the current reader position.
 
-For a screen-based position, use **Set Point** before saving. The custom reading point changes what Yatsu treats as "here", so the next saved current position or bookmark can land at the spot you chose on the screen instead of the default page or scroll reference.
+To save a specific place on the visible page, use **Set Point** first. See
+[Custom reading point](#custom-reading-point).
 
 Current reading position is stored with progress data. Multiple bookmarks are stored separately and can be synced or exported with your reading data when the relevant sync/export options are enabled.
 
@@ -144,25 +134,15 @@ Quote images are generated in your browser. The selected text and custom images 
 
 The table of contents appears when the book includes chapter data that Yatsu can read.
 
-Use it when:
-
-- You want to jump to a specific chapter.
-- You need to check where you are in the book structure.
-- Keyboard chapter shortcuts are too coarse.
-
-If a book does not include usable chapter data, the table of contents control may not appear.
+Open **Table of contents** and choose a chapter to jump to it. The control is
+hidden if Yatsu cannot read chapter data from the book.
 
 ## Custom Reading Point
 
 The custom reading point tells Yatsu which part of the screen should count as your reading position.
 
-This matters for:
-
-- progress calculation
-- current reading position
-- bookmarks
-- reading statistics
-- returning to a stable spot after resizing or changing layout
+Yatsu uses this point when calculating progress, saving positions and bookmarks,
+and tracking character movement.
 
 Use **Set Point** from the reader actions menu to choose the point. If a point already exists, the menu can also show **Show Point** and **Reset Point**.
 
@@ -199,7 +179,7 @@ In paginated mode, Yatsu sets the point from the text location you choose on the
 
 !!! tip
 
-    If progress or bookmarks feel slightly ahead or behind where you expect, set the custom reading point to the place your eyes naturally treat as "current".
+    If a bookmark lands ahead of or behind the line you wanted, use **Set Point** on that line before saving it.
 
 ## Appearance
 
@@ -221,7 +201,7 @@ Use it for changes such as:
 - theme and custom theme adjustments
 - publisher style handling
 
-Changes apply while the book is open, so you can adjust the reader until the text feels comfortable.
+Changes apply to the open book immediately.
 
 ### Theme typography
 
@@ -307,11 +287,68 @@ Completion data can appear in statistics and can be affected by tracking setting
 
 Pressing `Esc` once shows a warning. Pressing `Esc` again within a few seconds returns to the library.
 
-This is meant to prevent accidental exits while reading.
-
 You can also return to the library from the app navigation.
 
 If close confirmation is enabled and your current reading position has not been saved, Yatsu may ask for confirmation before leaving.
+
+## Controller navigation
+
+In supported browsers, you can also use a connected controller for navigation.
+The standard layout uses D-pad left or L1/LB for previous page and D-pad right
+or R1/RB for next page. A/Cross saves the current reading position, and
+B/Circle asks to exit the reader. Press the exit binding again within the
+confirmation window to return to the library. Open **Controller navigation**
+from Settings or the live reader settings panel to rebind the controller
+inputs, tune the stick deadzone, or add optional bindings for auto-scroll
+controls, toggling the table of contents, and the reading tracker panel.
+
+In supported browsers, either controller stick can scroll continuously. Push
+down or up in horizontal text, and left or right in vertical text. The farther
+you push the stick, the faster Yatsu scrolls. If the reader moves while the
+sticks are centered, raise the stick deadzone in **Controller navigation**.
+
+## Volume-button page turns on Android
+
+??? info "Android volume-button setup (advanced)"
+
+    A webpage cannot normally read a phone's volume buttons. Android users can work
+    around this by using [Key Mapper](https://github.com/keymapperorg/KeyMapper) to
+    convert the volume buttons into the `PageUp` and `PageDown` keyboard shortcuts
+    that Yatsu already supports.
+
+    This is an advanced, Android-only workaround. It requires a third-party app with
+    accessibility or system-level permissions, and it is not available on iPhone or
+    iPad. Only continue if you are comfortable granting those permissions.
+
+    On Android 11 and newer, Key Mapper recommends using
+    [Shizuku](https://shizuku.rikka.app/guide/setup/) for its **Input key code**
+    action. After starting Shizuku, enable it from **Key Mapper** > **Settings** >
+    **Shizuku support** and approve the permission request. Key Mapper's
+    [Shizuku guide](https://docs.keymapper.club/user-guide/shizuku/) explains the
+    connection in more detail.
+
+    Then create two key maps:
+
+    1. Use **Volume Up** as the trigger and **Input key code** > `KEYCODE_PAGE_UP`
+       as the action. This turns to the previous page.
+    2. Use **Volume Down** as the trigger and **Input key code** >
+       `KEYCODE_PAGE_DOWN` as the action. This turns to the next page.
+    3. Add a constraint so each key map only runs while your browser, or the Yatsu
+       PWA, is in the foreground. This leaves the volume buttons unchanged in other
+       apps.
+    4. Open a book in Yatsu and test both buttons. Swap the two key codes if you
+       prefer the opposite direction.
+
+    Shizuku may need to be started again after restarting the phone. If the buttons
+    still change the volume but do not turn pages, check that Shizuku is running,
+    that Key Mapper's accessibility service is enabled, and that the foreground-app
+    constraint matches the browser actually displaying Yatsu. Browser and device
+    behavior can differ, so this workaround is not guaranteed on every Android
+    phone.
+
+    Older community instructions used Kiwi Browser. Kiwi was archived in 2025 and
+    is no longer maintained, so try this setup in your current Android browser
+    first.
 
 ## When Controls Are Missing
 
@@ -325,5 +362,3 @@ For example:
 - **Fullscreen** depends on browser support and current context.
 - **Tracking** needs statistics to be enabled.
 - **Custom point** controls depend on reader mode and custom point settings.
-
-If you do not see a control, it usually means the current book, mode, or settings do not make that function available.

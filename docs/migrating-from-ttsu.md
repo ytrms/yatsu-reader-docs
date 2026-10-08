@@ -1,21 +1,14 @@
 # Migrating from Ttsu to Yatsu
 
-Yatsu can import a backup zip exported from ttsu. This is the safest way to move a ttsu library into Yatsu because the export is a normal downloaded file: you can keep it as a backup, move it to another device, and import it into whichever Yatsu storage source you want to use.
-
-Use this guide if you currently read in ttsu and want to move your books, reading positions, and reading history into Yatsu.
+Export a backup ZIP from Ttsu, then import it into Yatsu to move your books,
+saved positions, and reading history. Keep the ZIP until you have checked the
+imported data.
 
 ## Short version
 
-1. In ttsu, select the books you want to move.
-2. Click the export button in the library header.
-3. Choose **Zip File** as the export target.
-4. Select the content you want to include, usually **Book Data**, **Bookmark**, and **Statistics**.
-5. Click **Start** and save the downloaded `.zip` file.
-6. In Yatsu, choose the library or storage source you want to import into.
-7. Open **Import** -> **Import Backup**.
-8. Select the `.zip` file exported from ttsu.
-
-After the import finishes, the books should appear in the selected Yatsu library.
+In Ttsu, export the selected books to **Zip File**, including **Book Data**,
+**Bookmark**, and **Statistics**. In Yatsu, select the destination storage source
+and choose **Import** > **Import Backup**. The steps below show both dialogs.
 
 ## Before you start
 
@@ -29,7 +22,7 @@ If your ttsu library is stored in Google Drive or OneDrive, open ttsu while onli
 
     If you want a one-time migration, use the backup zip workflow on this page.
 
-    If you want to intentionally keep using the same custom ttsu-compatible cloud folder from both apps, read [Compatibility with Ttsu](ttsu-compatibility.md) too.
+    To keep using a shared custom Ttsu-compatible cloud folder in both apps, read [Compatibility with Ttsu](ttsu-compatibility.md) too.
 
 ## Export from ttsu
 
@@ -99,7 +92,7 @@ Yatsu imports the parts that are present in the backup zip. If you did not selec
 Backup imports can also restore extra Yatsu-compatible data if the zip contains it, such as saved bookmarks, highlights, highlight notes, book notes, reading goals, and cover images. Older ttsu exports may not contain all of those newer Yatsu-specific files.
 
 Yatsu's own **Get complete local backup** zip can also contain a versioned
-safe settings snapshot. That settings snapshot is restored only when importing
+settings snapshot. That settings snapshot is restored only when importing
 into the Browser storage source. Older ttsu backup zips do not contain this
 Yatsu settings file.
 
@@ -124,7 +117,7 @@ After migrating, review Yatsu settings separately. If you want future reading st
 
 Importing a backup writes into the currently selected Yatsu storage source.
 
-If a matching title already exists in that storage source, Yatsu uses your current import/sync behavior and merge settings. By default, Yatsu avoids blindly replacing newer existing book data, and statistics are merged with existing statistics.
+If a matching title already exists in that storage source, Yatsu uses your current import/sync behavior and merge settings. By default, Yatsu preserves newer existing book data and merges statistics.
 
 For the cleanest first migration, import into an empty Yatsu library or make a backup of your current Yatsu data first.
 

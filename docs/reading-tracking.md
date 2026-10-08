@@ -1,25 +1,22 @@
 # Reading Tracking and Statistics
 
-Yatsu has a reading tracker that can record how much time you spend reading, how many characters you move through, reading speed, book completion dates, and reading goal progress.
+The reading tracker records time, character movement, reading speed, completion
+dates, and progress toward your reading goals.
 
-## Quick version
+## Start tracking {#quick-version}
 
-If you only want basic reading stats:
+1. Turn on **Settings** > **Tracking** > **Enable Statistics**.
+2. Open a book.
+3. Press `P` or double-click the tracker icon in the bottom-left corner to start tracking.
 
-1. Open **Settings**.
-2. Open **Tracking**.
-3. Turn **Enable Statistics** on.
-4. Open a book.
-5. Use the tracker icon in the bottom-left corner of the reader.
-
-The tracker icon uses these states:
+Tracker controls:
 
 - A red play icon means tracking is paused.
 - A pause icon means tracking is running.
 - Click the icon once to open the tracker menu.
 - Double-click the icon to start or pause tracking without opening the menu.
-- Press `p` in the reader to toggle tracking with the default keybind.
-- Press `e` in the reader to toggle position freeze with the default keybind.
+- Press `P` in the reader to toggle tracking with the default keybind.
+- Press `E` in the reader to toggle position freeze with the default keybind.
 
 When the tracker is running, Yatsu updates reading time every second and compares your current character position with the previous tracked position. The difference becomes the characters read for the current session.
 
@@ -70,20 +67,17 @@ The menu actions are:
 - **Play/Pause**: starts or pauses the tracker.
 - **Update Position**: resets the tracker reference point to the current reader position.
 - **Freeze Position**: temporarily protects the current position so a jump or layout change is not counted as normal reading progress.
-- **Save**: flushes pending statistics to the local database.
+- **Save**: saves pending statistics in this browser.
 - **Revert Item** in Recent History: adds the opposite time and character change for that history entry.
 
 Clicking some tracker values toggles blur for those values. This is meant for screenshots or streaming when you do not want to show exact numbers.
 
 ## How Time and Characters Are Counted
 
-When tracking is running:
-
-1. Yatsu starts a one-second timer.
-2. Every tick, it checks the current character position.
-3. It calculates the character difference since the last tracked position.
-4. It adds elapsed time and the character difference to the session, today's entry, and the all-time entry.
-5. It periodically saves pending changes, and it also saves when tracking is paused.
+While tracking is running, Yatsu checks your position every second and adds the
+elapsed time and character movement to the current session, today's total, and
+the all-time total. It saves periodically and when you pause. Staying on the
+same passage adds time without adding characters.
 
 Reading speed is recalculated from the stored values:
 
@@ -91,9 +85,10 @@ Reading speed is recalculated from the stored values:
 reading speed = characters read / reading time, shown as characters per hour
 ```
 
-If a reading update crosses the configured start-of-day boundary, Yatsu uses the boundary to decide which date keys need to be updated.
+**Start Day Hours** determines which day receives the reading activity. For
+example, setting it to `4` assigns reading before 4:00 a.m. to the previous day.
 
-Yatsu does not count while the tracker is paused. It also pauses or avoids counting in several app flows that can change position without normal reading, such as opening full settings, leaving the reader, using some dialogs, resizing the reader, or using custom reading point controls.
+Yatsu does not count while the tracker is paused. It also pauses or skips position changes during actions such as opening full settings, leaving the reader, using some dialogs, resizing the reader, or using custom reading point controls.
 
 ## Tracking Settings
 
@@ -101,14 +96,14 @@ Open **Settings** -> **Tracking** to configure these options.
 
 ![Yatsu tracking settings](assets/yatsu-settings-tracking.png)
 
-### Collection & Sync
+### Stored statistics and sync {#collection-sync}
 
 These settings affect whether statistics exist, how they are stored, and how they merge with synced data.
 
 | Setting                         | Default | What it does                                                                                                                                                         |
 | ------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Keep Local Data on Deletion** | On      | Keeps local statistics when you remove a local book copy. This is useful if you plan to reimport or sync the book later.                                             |
-| **Clear Zombie Statistics**     | Action  | Deletes statistics that no longer match a local book. Use it when old deleted-book stats are cluttering the Statistics page.                                         |
+| **Keep Statistics on Deletion** | On      | Keeps local statistics when you remove a local book copy. This is useful if you plan to reimport or sync the book later.                                             |
+| **Deleted-book statistics**     | Action  | Choose **Clear** beside this label under **Tracking** > **Statistics** to remove statistics for deleted local books.                                         |
 | **Overwrite Book Completion**   | Off     | When off, Yatsu keeps the first recorded completion for a book. When on, completing the book again can move the completion marker to the latest completion.          |
 | **Start Day Hours**             | `0`     | Changes when a tracking day starts. For example, `4` means reading before 4:00 counts toward the previous day.                                                       |
 | **Statistics Merge**            | Merge   | Controls how statistics combine during sync. **Merge** keeps entries by date and prefers newer data. **Replace** lets the incoming dataset replace existing entries. |
@@ -126,8 +121,8 @@ These settings appear after **Enable Statistics** is on.
 | **Update on Completion**        | Off      | When completing a book, adds the missing character count between your current position and the end of the book. Leave it off if you do not want book completion to create a large character jump. |
 | **Autostart tracker (sec)**     | `0`      | If greater than `0`, the tracker starts automatically after the reader has had no page-change events for that many seconds. `0` disables autostart.                                               |
 | **Idle Time (min)**             | `0`      | If greater than `0`, the tracker pauses after this many minutes without page changes, pointer movement, or text selection changes. `0` disables idle auto-pause.                                  |
-| **Forward Skip Threshold**      | `2700`   | If one tick jumps forward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                      |
-| **Backward Skip Threshold**     | `2700`   | If one tick jumps backward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                     |
+| **Forward Skip Threshold**      | `2700`   | If a one-second update jumps forward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                      |
+| **Backward Skip Threshold**     | `2700`   | If a one-second update jumps backward by this many characters or more, Yatsu treats it as a skip instead of normal reading. `0` disables this threshold.                                                     |
 | **Threshold Action**            | Ignore   | Appears when either skip threshold is enabled. **Ignore** keeps tracking but counts the jump as `0` characters. **Pause Tracker** pauses instead.                                                 |
 | **Dictionary Detection**        | Off      | Attempts to detect Yomitan/Yomichan or jpdb-browser-reader popups and avoid unwanted auto-pauses while using them. For Yomitan, turn off **Security** -> **Use a secure container around popups**. **Use secure popup frame URL** can stay on. |
 | **Rollback Statistics on Idle** | On       | Appears when Idle Time is greater than `0`. When on, Yatsu tries to subtract the idle period from the session before pausing. When off, the elapsed idle time can remain counted.                 |
@@ -204,9 +199,9 @@ The **Dot tracks** control in the popover chooses which target colors the light.
 
 When the light tracks speed, the estimate is based on forward page turns while the tracker is running. Yatsu compares the characters advanced with the tracked time since the previous forward movement, then smooths the most recent samples. Backward movement, large skips, pauses, and tiny samples are ignored so the light reflects current reading speed rather than navigation noise.
 
-Temporary auto-pauses, such as popup dictionary detection, stop adding time to the speed sample but keep the latest light color visible. Manual pauses and navigation discontinuities can still reset the speed sample back to waiting.
+Temporary auto-pauses, such as popup dictionary detection, stop adding time to the speed sample but keep the latest light color visible. Manually pausing or jumping to another part of the book can reset the speed estimate to waiting.
 
-The goal progress tracker uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Progress Tracker** off if you want to keep the reader footer quieter.
+The goal progress tracker uses the same local statistics and reading goal data as the tracker. It does not upload extra data by itself. Turn **Goal Progress Tracker** off to hide the light.
 
 ### Goal Sync and Maintenance
 
@@ -218,7 +213,7 @@ Reading goals have their own **Sync**, **Edit**, and **Reset** actions in the Re
 
 ## Statistics Page Controls
 
-The **Statistics** page is where tracked data becomes readable. It includes a reading heatmap, an optional goal heatmap, title filtering, and a summary table.
+The **Statistics** page shows a reading heatmap, an optional goal heatmap, title filtering, and a summary table.
 
 ![Yatsu statistics overview](assets/yatsu-statistics-overview.png)
 
@@ -322,19 +317,16 @@ The heatmap layout follows **Start of week** from Statistics view options.
 
 Tracking data is included in Yatsu's data types as **Statistics** and **Reading Goals**.
 
-Statistics and goals are stored locally first. They can then move through:
-
-- Manual export backups.
-- Manual sync between storage sources.
-- Auto sync, if you have configured automatic replication.
-- External sources such as Drive or another configured storage backend.
+Statistics and goals are stored in this browser. Transfer them with a backup,
+manual sync, or automatic storage sync. See [Statistics and Sync](statistics-and-sync.md)
+for setting up multiple devices.
 
 The two merge settings matter most when more than one device can change tracking data:
 
 - Use **Merge** when you want Yatsu to combine local and remote entries and prefer newer entries where they overlap.
 - Use **Replace** when you intentionally want one source to overwrite the other. This is usually the mode to use after deleting statistics or reading goals and wanting that deletion to propagate.
 
-## Common Confusing Cases
+## Troubleshooting {#common-confusing-cases}
 
 ### The tracker is visible, but nothing is counting
 
@@ -361,9 +353,9 @@ Leave it off if you use completion as a status marker and do not want it to chan
 
 ### Stats reappeared after I deleted a local book
 
-If **Keep Local Data on Deletion** is on, deleting a local book copy keeps its statistics. This is intentional.
-
-Use **Clear Zombie Statistics** if you want to remove statistics that no longer match local books.
+If **Keep Statistics on Deletion** is on, deleting a local book keeps its
+statistics. To remove them, open **Settings** > **Tracking** > **Statistics**
+and choose **Clear** beside **Deleted-book statistics**.
 
 ### Deleted statistics still exist on another device
 

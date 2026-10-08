@@ -1,78 +1,51 @@
 # Compatibility with Ttsu
 
-Yatsu comes from ttsu, and one of my goals is that people should be able to use both without worrying that one will ruin the other's data.
+Yatsu can import Ttsu backup ZIPs and use custom Ttsu-compatible storage sources.
+For a one-time move, follow [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md).
 
-If you intentionally connect both Yatsu and ttsu to the same custom Google Drive folder, the intended result is that both apps can keep using that same library.
-
-If you only want to move your library once, use [Migrating from Ttsu to Yatsu](migrating-from-ttsu.md) instead. That guide explains the backup zip export/import workflow.
-
-## Short version
-
-Yes, using Yatsu and ttsu together is supported for custom ttsu-compatible storage sources.
-
-In normal use:
-
-- Books saved by ttsu in a shared custom source should continue to work in Yatsu.
-- Books saved by Yatsu in a shared custom source should continue to work in ttsu.
-- Using one app should not make your library unusable in the other.
-
-Yatsu's built-in one-click Google Drive source is different. It uses Yatsu's own `yatsu-reader-data` folder and is not meant to share ttsu's default Drive folder.
+<span id="short-version"></span>
 
 ## What this means in practice
 
-If you already use ttsu and want to try Yatsu with the same Drive library, use a custom ttsu-compatible storage source.
+To share a cloud library between the two apps, connect both to the same custom
+Ttsu-compatible source. Yatsu's built-in Google Drive connection uses its own
+`yatsu-reader-data` folder and does not connect to Ttsu's default library.
+See the [custom Google Drive setup](google-drive-sync.md#compatibility-with-ttsu).
 
-If you use Yatsu's built-in one-click Google Drive source, Yatsu creates and uses a separate `yatsu-reader-data` folder. That default source is simpler to set up, but it is not the shared ttsu-compatible route.
-
-Yatsu may store a little more information than ttsu does, but it does so in a way that ttsu is expected to ignore rather than break on.
+Shared storage is designed to preserve Ttsu's book data format. Yatsu stores
+additional data, such as highlights and extra library metadata, in separate
+files alongside it. Ttsu can ignore those files.
 
 ## Things that may still look different
 
-Compatibility does not mean the two apps are identical.
+- Yatsu-specific features and metadata may not appear in Ttsu.
+- Changes do not appear on another device or in the other app until sync completes.
+- The two apps can display the same book differently because their reader settings differ.
 
-For example:
-
-- Yatsu may show extra metadata that ttsu does not use
-- Yatsu-specific features may store extra files that ttsu simply ignores
-- some changes may appear in one app before the other if sync has not completed yet
-
-That is normal. The important part is that your library should remain usable in both.
+Format compatibility does not guarantee that every feature or edit transfers in
+both directions. Keep a backup before connecting an existing library, and check
+a few books, saved positions, and statistics in both apps before relying on the
+shared setup.
 
 ## FAQ
 
 ### Do I need two different Google Drive folders?
 
-For the built-in one-click Google Drive source, yes: Yatsu uses its own `yatsu-reader-data` folder.
-
-For custom ttsu-compatible storage, no. If you intentionally configure both apps to use the same compatible source, the goal is that one shared folder should be enough.
+Yatsu's built-in connection uses a separate folder. A custom Ttsu-compatible
+connection can share the folder used by Ttsu.
 
 ### Can Yatsu make my ttsu library unusable?
 
-That is exactly what I try to avoid.
-
-While no sync system is perfect, Yatsu is intentionally written so that its extra data should not make ttsu unable to read your books.
-
-??? info "Technical details"
-
-    Yatsu uses the same general cloud folder layout as ttsu.
-
-    Extra Yatsu-only data is stored in separate files, rather than by changing the shape of ttsu's main book files.
-
-??? info "What Yatsu stores in addition to ttsu"
-
-    Yatsu can store extra per-book metadata such as library metadata and highlights.
-
-    These are stored as additional files alongside the normal book data, so ttsu can ignore them if it does not know about them.[^1]
+Yatsu is designed to keep shared book files readable by Ttsu, but a shared source
+is still writable by both apps. Compatibility is not protection against deletion,
+conflicting edits, or sync errors. Keep a backup that is separate from the shared
+folder.
 
 ## If something seems wrong
 
-If a shared Yatsu/ttsu library behaves strangely, please report it.
+[Report the problem](how-to-report-bugs.md) and include:
 
-It is especially helpful to say:
-
-- whether you are using Google Drive
-- whether the same folder is connected in both Yatsu and ttsu
-- whether the issue happens only in one app or in both
-- whether the problem goes away after waiting a bit and refreshing
-
-[^1]: In other words, Yatsu tries to extend the shared storage format additively, not by replacing ttsu's core data format with a different one.
+- the storage provider and whether both apps use the same folder
+- whether the problem appears in one app or both
+- which app last changed the affected book or reading data
+- any sync error, and whether refreshing after sync changes the result

@@ -1,15 +1,15 @@
 # Chinese Support
 
-Yatsu is still Japanese-first, but it supports Chinese ebooks and Chinese text inside mixed-language books.
+Yatsu supports Chinese ebooks and Chinese text in mixed-language books. You can
+choose glyph forms and fonts separately for Simplified and Traditional Chinese.
 
-The main Chinese-specific features are:
+## Recommended Setup for Chinese Books
 
-- reader content language selection for Japanese, Simplified Chinese, and Traditional Chinese glyph forms
-- language-specific reader font profiles for Japanese, Simplified Chinese, and Traditional Chinese
-- Simplified Chinese and Traditional Chinese font filters
-- Chinese preview text in the font picker
-- Chinese-capable Google Fonts
-- character counting through Yatsu's normal Japanese/Chinese counting method
+1. Open the Chinese book.
+2. Open **Appearance**.
+3. Set **Reader content language** to **Simplified Chinese** or **Traditional Chinese** if the glyph shapes look wrong.
+4. In **Font profile**, choose the matching Chinese profile and pick fonts such as **Noto Sans SC**, **Noto Serif SC**, **Noto Sans TC**, or **Noto Serif TC**.
+5. Leave **Character Counting Method** on **Auto** or **Japanese/Chinese**.
 
 ## Reader Content Language
 
@@ -56,7 +56,7 @@ You can also use uploaded fonts or installed system fonts. If the font name or f
 
 !!! note
 
-    Google Fonts are fetched by the browser from Google. Built-in and Google Fonts choices can sync through Yatsu Account Settings Sync, including language font profiles. Uploaded fonts stay in your browser storage unless you export or sync browser data yourself.
+    Google Fonts are fetched by the browser from Google. Built-in and Google Fonts choices can sync through Yatsu Account Settings Sync, including language font profiles. Uploaded font files are not included in Settings Sync or complete local backups. Upload them separately on each device.
 
 ## Character Counting
 
@@ -64,16 +64,9 @@ Chinese books use Yatsu's normal Japanese/Chinese counting method. This counts C
 
 For Chinese books, leave **Character Counting Method** set to **Auto** or **Japanese/Chinese**. The **Korean** method is only for Korean books and will undercount Chinese text.
 
-## Recommended Setup for Chinese Books
-
-1. Open the Chinese book.
-2. Open **Appearance**.
-3. Set **Reader content language** to **Simplified Chinese** or **Traditional Chinese** if the glyph shapes look wrong.
-4. In **Font profile**, choose the matching Chinese profile and pick fonts such as **Noto Sans SC**, **Noto Serif SC**, **Noto Sans TC**, or **Noto Serif TC**.
-5. Leave **Character Counting Method** on **Auto** or **Japanese/Chinese**.
-
 ## Limitations
 
 Yatsu does not currently distinguish every regional Chinese glyph preference beyond the Simplified, Traditional, and Hong Kong/Taiwan-oriented fonts available in the font picker.
 
-Dictionary, tokenizer, and segmentation features are outside Yatsu's built-in Chinese support. For Chinese books, Yatsu focuses on display, progress, bookmarks, and statistics.
+Yatsu does not include a Chinese dictionary or word segmentation tool. Use an
+external tool for lookup and text analysis.

@@ -1,3 +1,7 @@
+---
+description: "Serve a Windows folder to Yatsu Reader over WebDAV using rclone and Caddy. Configure HTTPS access and the browser headers required for sync."
+---
+
 # Windows WebDAV Setup
 
 This advanced setup serves a Windows folder to Yatsu over WebDAV. It requires

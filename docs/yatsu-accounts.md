@@ -1,3 +1,7 @@
+---
+description: "Use a free Yatsu account to sync Reader and Tracking preferences between devices. Learn which settings sync and how book storage stays separate."
+---
+
 # Yatsu Accounts and Settings Sync
 
 A free Yatsu account lets you sync Reader and Tracking preferences between devices.

@@ -1,3 +1,7 @@
+---
+description: "Set up Yatsu Whispersync to listen to audiobooks while reading. Load audio and subtitles, match text, and configure optional Anki export."
+---
+
 # Yatsu Whispersync
 
 [Yatsu Whispersync](https://github.com/ytrms/yatsu-whispersync) is a Yatsu-compatible userscript build of [ttu-whispersync](https://github.com/Renji-XD/ttu-whispersync), a community userscript / browser extension for listening to an audiobook while reading.

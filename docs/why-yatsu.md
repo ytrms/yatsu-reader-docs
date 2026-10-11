@@ -1,8 +1,14 @@
+---
+title: "Yatsu vs Ttsu Reader (ttu): Features and Migration"
+description: "Compare Yatsu with Ttsu (ttu reader): named bookmarks, VN mode, settings sync, Chinese and Korean reading controls, and importing your existing library."
+---
+
 <span id="advantages-of-yatsu-over-ttsu"></span>
 
 # What Yatsu adds to Ttsu
 
-Yatsu is based on Ttsu. It keeps EPUB, HTMLZ, and plain text reading, horizontal
+Yatsu is based on [Ttsu Reader](https://github.com/ttu-ttu/ebook-reader), also known
+as ttu reader. It keeps EPUB, HTMLZ, and plain text reading, horizontal
 and vertical layouts, and support for browser dictionary extensions.
 
 The differences below focus on Yatsu's reader controls, library tools, language

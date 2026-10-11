@@ -1,3 +1,7 @@
+---
+description: "Use Ttsu backups and custom Ttsu-compatible storage with Yatsu Reader. Learn how shared libraries differ from the built-in Google Drive connection."
+---
+
 # Compatibility with Ttsu
 
 Yatsu can import Ttsu backup ZIPs and use custom Ttsu-compatible storage sources.

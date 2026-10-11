@@ -1,3 +1,7 @@
+---
+description: "Set up Yatsu Reader for Korean ebooks. Choose Korean fonts and configure Hangul character counting for reading progress and statistics."
+---
+
 # Korean Support
 
 Yatsu supports Korean fonts and Hangul character counting for progress and

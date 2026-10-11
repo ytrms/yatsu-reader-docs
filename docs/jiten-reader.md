@@ -1,3 +1,7 @@
+---
+description: "Set up the Jiten Reader browser extension for Yatsu Reader. Parse Japanese text, view dictionary information, and troubleshoot extension recognition."
+---
+
 # Using Yatsu with Jiten Reader
 
 [Jiten Reader](https://github.com/Sirush/JitenReader) is a browser extension that can parse Japanese text on web pages and show dictionary information while you read.

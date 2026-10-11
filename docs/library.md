@@ -1,3 +1,7 @@
+---
+description: "Import EPUB, HTMLZ, and text files into Yatsu Reader. Organize books, edit library metadata, choose storage sources, and create backups."
+---
+
 # Using the Library
 
 The Library is where you import books, switch storage sources, browse by reading

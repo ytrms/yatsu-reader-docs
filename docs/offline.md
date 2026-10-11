@@ -1,3 +1,7 @@
+---
+description: "Prepare Yatsu Reader and your books for offline reading. Save app files, download book content, and check your setup before disconnecting."
+---
+
 # Using Yatsu Offline
 
 To read offline, this browser needs both Yatsu's app files and the books you

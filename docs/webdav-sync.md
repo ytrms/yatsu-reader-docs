@@ -1,3 +1,7 @@
+---
+description: "Connect a NAS or WebDAV server to Yatsu Reader for book storage and reading-data sync. Check server requirements and configure the connection."
+---
+
 # WebDAV Storage
 
 Yatsu can use a WebDAV server as an external library and sync source. Use it to connect a NAS, self-hosted file server, or WebDAV service.

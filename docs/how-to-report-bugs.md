@@ -1,3 +1,7 @@
+---
+description: "Report a Yatsu Reader problem with reproduction steps and a locally generated diagnostics bundle. Learn what to include and how to share it."
+---
+
 # How to Report Bugs
 
 When something breaks in Yatsu, the most useful bug report is a short description of the problem plus a diagnostics bundle.

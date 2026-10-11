@@ -1,3 +1,7 @@
+---
+description: "Sync Yatsu reading statistics between devices using shared storage. Understand the browser database, merge settings, and missing reading history."
+---
+
 # Statistics and Sync
 
 The Statistics page shows data stored in this browser. To see reading activity

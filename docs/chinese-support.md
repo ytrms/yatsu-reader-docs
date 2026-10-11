@@ -1,3 +1,7 @@
+---
+description: "Read Chinese ebooks in Yatsu Reader with Simplified and Traditional Chinese glyphs, separate font profiles, and character counting settings."
+---
+
 # Chinese Support
 
 Yatsu supports Chinese ebooks and Chinese text in mixed-language books. You can

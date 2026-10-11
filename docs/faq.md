@@ -1,3 +1,7 @@
+---
+description: "Find answers about Yatsu Reader accounts, offline reading, storage sync, Ttsu migration, dictionary extensions, and common reading problems."
+---
+
 # Frequently Asked Questions
 
 ## Getting started

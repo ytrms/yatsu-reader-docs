@@ -1,3 +1,7 @@
+---
+description: "Connect Google Drive to Yatsu Reader to store books and sync reading data. Use the built-in connection or configure a custom storage source."
+---
+
 # Google Drive Sync
 
 Google Drive can store your books and reading data. The built-in connection

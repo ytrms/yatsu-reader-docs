@@ -1,3 +1,7 @@
+---
+description: "Learn to use Yatsu Reader: import ebooks, adjust reading controls, sync settings and reading data, and move your library from Ttsu."
+---
+
 # Yatsu Reader Docs
 
 Yatsu is a browser-based ebook reader for Japanese learners, with support for

@@ -1,3 +1,7 @@
+---
+description: "Show Yatsu reading activity in Discord Desktop with the Windows companion or Anki add-on. Set up the connection and control what you share."
+---
+
 # Discord Rich Presence
 
 Yatsu can share your current reading activity with Discord Desktop through a local companion.

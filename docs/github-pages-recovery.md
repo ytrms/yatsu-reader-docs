@@ -1,3 +1,7 @@
+---
+description: "Recover books and reading data from the old Yatsu GitHub Pages address. Export a backup and import it into the current Yatsu Reader app."
+---
+
 # Recovering Data from the Old GitHub Pages Version
 
 Yatsu used to be available at:

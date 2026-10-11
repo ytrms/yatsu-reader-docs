@@ -1,6 +1,11 @@
+---
+description: "Move books, reading positions, and statistics from Ttsu (ttu reader) to Yatsu with a backup ZIP. See what transfers and what to check after import."
+---
+
 # Migrating from Ttsu to Yatsu
 
-Export a backup ZIP from Ttsu, then import it into Yatsu to move your books,
+Export a backup ZIP from Ttsu Reader (also known as ttu reader), then import it
+into Yatsu to move your books,
 saved positions, and reading history. Keep the ZIP until you have checked the
 imported data.
 

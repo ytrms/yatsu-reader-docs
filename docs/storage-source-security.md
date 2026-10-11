@@ -1,3 +1,7 @@
+---
+description: "Understand how Yatsu Reader stores custom storage credentials, protects saved passwords, and reconnects to Google Drive, OneDrive, or WebDAV."
+---
+
 # Storage Source Security
 
 Yatsu can save connection details for custom storage sources so the app can reconnect from this browser. This includes sources such as custom Google Drive, OneDrive, and WebDAV setups.

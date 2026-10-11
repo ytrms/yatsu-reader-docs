@@ -1,3 +1,7 @@
+---
+description: "Learn Yatsu Reader controls for page movement, vertical text, fonts, bookmarks, highlights, notes, dictionary lookup, and reading modes."
+---
+
 # Using the Reader
 
 Open a book from the Library to read it. Use the reader toolbar to navigate,

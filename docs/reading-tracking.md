@@ -1,3 +1,7 @@
+---
+description: "Track reading time, characters, speed, and goals in Yatsu Reader. Use tracker controls, review statistics, and export images of your progress."
+---
+
 # Reading Tracking and Statistics
 
 The reading tracker records time, character movement, reading speed, completion

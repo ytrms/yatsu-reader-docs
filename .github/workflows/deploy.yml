@@ -56,3 +56,32 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out deployed revision
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+
+      - name: Restore last acknowledged page fingerprints
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .indexnow/state.json
+          key: indexnow-docs-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: indexnow-docs-v1-
+
+      - name: Notify IndexNow of production changes
+        run: python3 scripts/submit_indexnow.py --site https://docs.yatsu.moe --key-file docs/indexnow-key.txt
+
+      - name: Save acknowledged page fingerprints
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .indexnow/state.json
+          key: indexnow-docs-v1-${{ github.run_id }}-${{ github.run_attempt }}

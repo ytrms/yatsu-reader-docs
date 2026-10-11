@@ -46,6 +46,23 @@ Push to `main` and GitHub Actions will build and deploy the site to GitHub Pages
 
 The Pages site is configured for workflow-based publishing, not branch-based publishing.
 
+### Search discovery
+
+Keep `docs/BingSiteAuth.xml` published to maintain Bing Webmaster Tools ownership verification. Submit `https://docs.yatsu.moe/sitemap.xml` in Bing's Sitemaps report.
+
+After the production Pages deployment succeeds, the separate `indexnow` job checks the live verification key and sitemap, fingerprints each page's HTML, and notifies `https://api.indexnow.org/indexnow` about new, changed, and removed sitemap URLs. Participating search engines share these submissions. Failed deployments do not notify IndexNow.
+
+The last acknowledged fingerprints are retained in a GitHub Actions cache. Unchanged pages are skipped. If that cache expires, all current sitemap URLs are submitted once; removed URLs can only be detected while the previous snapshot is available. Changes confined to CSS, JavaScript, or image bytes do not trigger page notifications.
+
+`docs/indexnow-key.txt` is an intentionally public ownership-verification file, not an account credential. Keep it served at `/indexnow-key.txt`. Transient request failures are retried. A rejected notification fails the job without rolling back the deployed docs or replacing the last acknowledged snapshot. Re-run the failed job to retry. HTTP 200/202 acknowledges receipt, not indexing.
+
+Check without submitting or updating state:
+
+```sh
+python3 scripts/submit_indexnow.py --site https://docs.yatsu.moe --key-file docs/indexnow-key.txt --dry-run
+python3 -m unittest discover -s scripts -p 'test_*.py'
+```
+
 ## DNS
 
 The intended public host is `docs.yatsu.moe`.
